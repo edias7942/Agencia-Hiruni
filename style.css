@@ -396,9 +396,9 @@ header {
     filter: brightness(0.3);
 }
 
-/* #menu-mobile {
-    isp
-} */
+#menu-mobile {
+    display: none;
+}
 
 @media (max-width: 600px) {
     #body-background-image {

@@ -17,4 +17,4 @@ jobs:
                   server: ${{ secrets.ftp_host }}
                   username: ${{ secrets.ftp_user }}
                   password: ${{ secrets.ftp_password }}
-                  server-dir: /home1/emstec15/public_html/
+                  server-dir: home1/emstec15/public_html/

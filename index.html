@@ -1,1 +1,127 @@
-Hello, World!b
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>WeHave Creation</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <div id="body-background-image"></div>
+        <header>
+            <img
+                id="header-icon"
+                src="./assets/icons/light-logo.png"
+                alt="Light Logo"
+            />
+            <div id="header-right">
+                <div id="portfolio" class="item">
+                    <div id="portfolio-text" class="item-text">Portfólio</div>
+                    <div class="item-popup" id="servicos-popup"></div>
+                </div>
+                <div class="divisor"></div>
+                <div id="servicos" class="item last-item">
+                    <div id="servicos-text" class="item-text">Serviços</div>
+                    <div class="item-popup" id="servicos-popup">
+                        <div class="popup-item">
+                            <img
+                                src="./assets/icons/icon-identidade-visual.png"
+                                alt=""
+                                class="popup-icon"
+                            />
+                            <div class="popup-text">Identidade Visual</div>
+                        </div>
+                        <div class="divisor"></div>
+                        <div class="popup-item">
+                            <img
+                                src="./assets/icons/icon-identidade-visual.png"
+                                alt=""
+                                class="popup-icon"
+                            />
+                            <div class="popup-text">Criação de Logo</div>
+                        </div>
+                        <div class="divisor"></div>
+                        <div class="popup-item">
+                            <img
+                                src="./assets/icons/icon-identidade-visual.png"
+                                alt=""
+                                class="popup-icon"
+                            />
+                            <div class="popup-text">Criação de Site</div>
+                        </div>
+                        <div class="botao-ver-mais-container">
+                            <div class="botao-ver-mais">
+                                <img
+                                    class="botao-ver-mais-icon"
+                                    src="./assets/icons/light-logo.png"
+                                    alt="Logo da WeVe Company"
+                                />
+                                <div class="botao-ver-mais-text">
+                                    Ver Mais...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="hamburguer" onclick="toggleMenuMobile()">
+                <div class="line" id="line-1"></div>
+                <div class="line" id="line-2"></div>
+                <div class="line" id="line-3"></div>
+            </div>
+        </header>
+        <div id="menu-mobile">
+            <div class="menu-item" id="menu-item-1">
+                <div id="triangle">
+                    <div class="line" id="line-1"></div>
+                    <div class="line" id="line-2"></div>
+                    <div class="line" id="line-3"></div>
+                </div>
+                Serviços
+            </div>
+            
+        </div>
+        <div id="container">
+            <div id="circle-container">
+                <img
+                    id="main-logo"
+                    src="./assets/icons/light-logo.png"
+                    alt=""
+                />
+                <div id="title">
+                    We Have <br />
+                    Creation
+                </div>
+                <div id="subtitle">
+                    Profissionais cuidando <br />
+                    da sua Imagem
+                </div>
+                    <div id="prosseguir-button" onclick="window.open('./home', '_self')">
+                        Prosseguir
+                        <div id="arrows">
+                            <img
+                                id="arrow-1"
+                                class="first arrow"
+                                src="./assets/icons/arrow.png"
+                                alt="Icon Arrow"
+                            />
+                            <img
+                                id="arrow-2"
+                                class="arrow"
+                                src="./assets/icons/arrow.png"
+                                alt="Icon Arrow"
+                            />
+                            <img
+                                id="arrow-3"
+                                class="last arrow"
+                                src="./assets/icons/arrow.png"
+                                alt="Icon Arrow"
+                            />
+                        </div>
+                    </div>
+                <img id="icon-info" src="./assets/icons/icon-info.png" alt="" />
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Home - WeHave Creation</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <header>
+            <img
+                id="header-icon"
+                src="./../assets/icons/light-logo.png"
+                alt="Light Logo"
+            />
+            <div id="header-right">
+                <div id="portfolio" class="item">
+                    <div id="portfolio-text" class="item-text">Portfólio</div>
+                    <div class="item-popup" id="servicos-popup"></div>
+                </div>
+                <div class="divisor"></div>
+                <div id="servicos" class="item last-item">
+                    <div id="servicos-text" class="item-text">Serviços</div>
+                    <div class="item-popup" id="servicos-popup">
+                        <div class="popup-item">
+                            <img
+                                src="./../assets/icons/icon-identidade-visual.png"
+                                alt=""
+                                class="popup-icon"
+                            />
+                            <div class="popup-text">Identidade Visual</div>
+                        </div>
+                        <div class="divisor"></div>
+                        <div class="popup-item">
+                            <img
+                                src="./../assets/icons/icon-identidade-visual.png"
+                                alt=""
+                                class="popup-icon"
+                            />
+                            <div class="popup-text">Criação de Logo</div>
+                        </div>
+                        <div class="divisor"></div>
+                        <div class="popup-item">
+                            <img
+                                src="./../assets/icons/icon-identidade-visual.png"
+                                alt=""
+                                class="popup-icon"
+                            />
+                            <div class="popup-text">Criação de Site</div>
+                        </div>
+                        <div class="botao-ver-mais-container">
+                            <div class="botao-ver-mais">
+                                <img
+                                    class="botao-ver-mais-icon"
+                                    src="./../assets/icons/light-logo.png"
+                                    alt="Logo da WeVe Company"
+                                />
+                                <div class="botao-ver-mais-text">
+                                    Ver Mais...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="hamburguer" onclick="toggleMenuMobile()">
+                <div class="line" id="line-1"></div>
+                <div class="line" id="line-2"></div>
+                <div class="line" id="line-3"></div>
+            </div>
+        </header>
+        <div id="menu-mobile">
+            <div class="header">
+                <div id="botao-fechar-menu" onclick="toggleMenuMobile()">
+                    <!-- <div class="line" id="line-1"></div>
+                <div class="line" id="line-2"></div> -->
+                </div>
+            </div>
+        </div>
+
+        <section class="pageSection" id="section1">
+            <div class="illumination left"></div>
+            <div class="illumination right"></div>
+            <div class="containerChildjs">
+                <script>
+                    let container = [
+                        ...document.getElementsByClassName("containerChildjs"),
+                    ][0];
+
+                    for (index = 1; index <= 15; index++) {
+                        // Criando Item
+                        let item = document.createElement("div");
+                        item.classList.add("item", `i${index}`);
+
+                        let heightItem = Math.floor(Math.random() * 20 + 10);
+                        item.style.height = `${heightItem}px`;
+
+                        let widthItem = Math.floor(Math.random() * 25 + 25);
+                        item.style.width = `${widthItem}%`;
+
+                        let animationTime = Math.floor(Math.random() * 10 + 5);
+
+                        // Criando Line
+                        let line = document.createElement("div");
+                        line.classList.add("line");
+
+                        line.style.animation = `line ${animationTime}s infinite`;
+
+                        line.style.height = `${heightItem / 5}px`;
+
+                        // Criando Circle
+                        let circle = document.createElement("div");
+                        circle.classList.add("circle");
+
+                        circle.style.animation = `circle ${animationTime}s infinite`;
+
+                        circle.style.height = `${heightItem}px`;
+                        circle.style.width = `${heightItem}px`;
+
+                        item.appendChild(line);
+                        item.appendChild(circle);
+                        container.appendChild(item);
+                    }
+                </script>
+            </div>
+            <img id="mainImage" src="milerson_executive.png" alt="" />
+            <svg
+            id="connectionPersonSquare1"
+                width="571"
+                height="96"
+                viewBox="0 0 571 96"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <g id="Liga&#195;&#167;&#195;&#163;o: Personagem - Container">
+                    <path
+                        id="circle2"
+                        d="M569.5 10.2283C569.5 15.0431 565.67 18.9021 561 18.9021C556.33 18.9021 552.5 15.0431 552.5 10.2283C552.5 5.41337 556.33 1.55444 561 1.55444C565.67 1.55444 569.5 5.41337 569.5 10.2283Z"
+                        stroke="white"
+                        stroke-width="3"
+                    />
+                    <path
+                        id="vetor"
+                        d="M10 20.4021V83.1623C10 89.2374 14.9249 94.1622 21 94.1622H550C556.075 94.1622 561 89.2374 561 83.1622V20.4021"
+                        stroke="white"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                    />
+                    <path
+                        id="circle1"
+                        d="M18.5 10.2283C18.5 15.0431 14.6702 18.9021 10 18.9021C5.32984 18.9021 1.5 15.0431 1.5 10.2283C1.5 5.41337 5.32984 1.55444 10 1.55444C14.6702 1.55444 18.5 5.41337 18.5 10.2283Z"
+                        stroke="white"
+                        stroke-width="3"
+                    />
+                </g>
+            </svg>
+        </section>
+    </body>
+</html>

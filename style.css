@@ -396,7 +396,9 @@ header {
     filter: brightness(0.3);
 }
 
-#menu-mobile
+/* #menu-mobile {
+    isp
+} */
 
 @media (max-width: 600px) {
     #body-background-image {

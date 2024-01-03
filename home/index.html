@@ -86,13 +86,13 @@
             </div>
         </div>
 
-        <section class="pageSection" id="section1">
-            <div class="illumination left"></div>
-            <div class="illumination right"></div>
-            <div class="containerChildjs">
+        <section id="section1">
+            <div class="illumination-left"></div>
+            <div class="illumination-right"></div>
+            <div class="container-child-js">
                 <script>
                     let container = [
-                        ...document.getElementsByClassName("containerChildjs"),
+                        ...document.getElementsByClassName("container-child-js"),
                     ][0];
 
                     for (index = 1; index <= 15; index++) {
@@ -131,41 +131,45 @@
                     }
                 </script>
             </div>
-            <img id="mainImage" src="milerson_executive.png" alt="" />
+            <div id="content">
+                <div class="container" id="left">
+                    <h1 id="first">Criação</h1>
+                    <h1 id="second">de Sites</h1>
+                </div>
+                <img id="main-image" src="milerson_executive.png" alt="" />
+                <div class="container" id="right"></div>
+            </div>
         </section>
-        <section class="pageSection" id="section1">
-            <div class="container father">
-                <div id="containerLeft">
-                    <h1 id="containerLeftTitle">Bruna Hosti</h1>
-                    <h2 id="containerLeftSubtitle">Landing Page</h2>
-                    <p id="containerLeftText">
+        <section id="section2">
+            <div class="container">
+                <div id="left-side">
+                    <h1>Bruna Hosti</h1>
+                    <h2>Landing Page</h2>
+                    <p>
                         Esse foi um site desenvolvido com o objetivo de mostrar
                         aos clientes da Bruna todo seu trabalho como fotógrafa,
                         divulgar seu nome, além de centralizar toda sua imagem
                         digital
                     </p>
-                    <div id="containerLeftButtons">
+                    <div id="buttons">
                         <div
-                            class="containerLeftButton"
                             id="containerLeftButtonAnterior"
                         >
                             Anterior
                         </div>
                         <div
-                            class="containerLeftButton"
-                            id="containerLeftButtonVerMais"
+                            id="main-button"
                         >
                             Ver Mais
                         </div>
                         <div
-                            class="containerLeftButton"
                             id="containerLeftButtonPosterior"
                         >
                             Próximo
                         </div>
                     </div>
                 </div>
-                <div id="containerRight"></div>
+                <div id="right-side"></div>
             </div>
         </section>
     </body>

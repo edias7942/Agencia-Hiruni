@@ -2,7 +2,6 @@
 
 let menuMobileOption = false;
 let menuMobile = document.getElementById("menu-mobile");
-let bortaoFecharMenu = document.getElementById('bota-fechar-menu')
 
 function toggleMenuMobile() {
     if (menuMobileOption) {

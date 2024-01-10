@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&family=Kantumruy+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
+html {
+    font-size: 9px;
+}
+
 * {
+    font-family: "Kantumruy Pro", sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -15,7 +20,7 @@ header {
     background: linear-gradient(
         180deg,
         #450079 0%,
-        rgba(69, 0, 121, 0.1) 84.48%,
+        rgb(23, 0, 40) 84.48%,
         rgba(69, 0, 121, 0) 100%
     );
     display: flex;
@@ -46,9 +51,10 @@ header > .right > .item {
     display: flex;
     flex-direction: column;
     font-family: "Karla", sans-serif;
-    font-size: 1.3rem;
+    font-size: 2rem;
     letter-spacing: 2px;
     padding: 0 0 10px 0;
+    position: relative;
     transition: 200ms;
     /* width: 200px; */
 }
@@ -57,7 +63,6 @@ header > .right > .item > .text {
     border-radius: 10px;
     cursor: default;
     padding: 5px 10px;
-    width: min-content;
 }
 
 header > .right > .item:hover > .text {
@@ -69,12 +74,13 @@ header > .right > .item > .popup {
     background-color: #e5c1ff;
     border-radius: 10px;
     box-shadow: -4.31579px 4.31579px 4.31579px 0px rgba(0, 0, 0, 0.25);
-    /* display: flex; */
+    display: flex;
     display: none;
     flex-direction: column;
     padding: 10px 0 10px 0;
     position: absolute;
-    top: 45px;
+    right: 0;
+    top: 40px;
     transition: 300ms;
     width: 250px;
 }
@@ -89,7 +95,7 @@ header > .right > .item:hover > .popup {
 }
 
 header > .right > .divisor {
-    background-color: #320351;
+    background-color: white;
     height: 30px;
     width: 1px;
 }
@@ -109,7 +115,7 @@ header > .right > .item > .popup > .item {
     color: #762caf;
     cursor: pointer;
     display: flex;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-weight: 500;
     gap: 10px;
     height: min-content;
@@ -181,7 +187,9 @@ header
     > .botao-ver-mais-container
     > .botao-ver-mais
     > .text {
-    font-size: 0.9rem;
+    align-items: center;
+    display: flex;
+    font-size: 1.5rem;
     font-weight: 700;
     width: max-content;
 }
@@ -296,6 +304,7 @@ header
         rgba(81, 57, 81, 0.41) 44.79%,
         rgba(128, 0, 128, 0) 100%
     );
+    display: none;
     height: 100vh;
     right: -15vw;
     position: absolute;
@@ -323,7 +332,7 @@ header
     position: relative;
 }
 
-#section1 > .container-child-js > .item >.line {
+#section1 > .container-child-js > .item > .line {
     background: linear-gradient(
         90deg,
         #00277000 0%,
@@ -371,6 +380,8 @@ header
 #section1 > #content {
     display: flex;
     gap: 110px;
+    justify-content: center;
+    position: relative;
     z-index: 2;
 }
 
@@ -378,35 +389,90 @@ header
     align-items: center;
     border: 4px solid white;
     border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.473);
     display: flex;
     flex-direction: column;
-    transition: 200ms ease-out;
+    justify-content: center;
+    transition: 150ms ease-in;
     width: 300px;
 }
 
 #section1 > #content > .container:hover {
-    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.473);
+    background-color: rgba(0, 0, 138, 0.124);
+}
+
+#section1 > #content > .container#right:hover {
+    background-color: rgba(84, 0, 84, 0.176);
+}
+
+#section1 > #content > .container:hover {
+    box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.473);
 }
 
 #section1 > #content > .container > h1 {
-    font-size: 3rem;
+    cursor: default;
+    font-size: 5rem;
     font-weight: 800;
+    letter-spacing: 4px;
+    line-height: 1;
 }
 
-#section1 > #content > .container > #first {
+#section1 > #content > .container > h1#first {
     background: linear-gradient(180deg, #9b9bff 0%, #d9d9ff 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    padding: 0 0 10px 0;
 
     font-family: "Karla", sans-serif;
+    /* margin: 30px 0 0 0; */
+}
+
+#section1 > #content > .container#right > h1#first {
+    background: linear-gradient(180deg, #b7b 0%, #ffc2ff 100%);
+    background-clip: text;
+}
+
+#section1 > #content > .container > h1#second {
+    color: rgb(0, 0, 30);
+    font-family: "Karla", sans-serif;
+    text-shadow: #d9d9ff -1px 0px, #d9d9ff 1px 0px, #d9d9ff 0px 1px,
+        #d9d9ff 0px -1px;
+    margin: -10px 0 0 0;
+}
+
+#section1 > #content > .container > p {
+    color: white;
+    cursor: default;
+    font-family: "Kantumruy Pro", sans-serif;
+    font-size: 2.4rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    line-height: 1.5;
     margin: 20px 0 0 0;
 }
 
-#section1 > #content > .container > #second {
-    color: rgb(0, 0, 30);
-    font-family: "Karla", sans-serif;
-    text-shadow: #d9d9ff -1px 0px, #d9d9ff 1px 0px, #d9d9ff 0px 1px,  #d9d9ff 0px -1px
+#section1 > #content > .container > button {
+    background-color: #0000c5;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px -15px 20px -7px inset black;
+    color: white;
+    cursor: pointer;
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin: 20px 0 0 0;
+    padding: 5px 20px;
+    transition: 300ms;
+}
+
+#section1 > #content > .container#right > button {
+    background-color: #800080;
+}
+
+#section1 > #content > .container > button:hover {
+    box-shadow: 0px -2px 10px 0px inset black;
 }
 
 #section1 > #content > #main-image {
@@ -419,6 +485,25 @@ header
     width: 400px;
 }
 
+#section1 > #content > #main-image-gradient {
+    background: linear-gradient(180deg, #0f002300 66%, rgb(15, 0, 35) 100%);
+    bottom: 0;
+    height: 400px;
+    position: absolute;
+    transition: 200ms;
+    width: 400px;
+}
+
+#section1 > #content > #arrows-bottom {
+    position: absolute;
+    top: 100%;
+    transition: 200ms;
+}
+
+#section1 > #content > #arrows-bottom:hover {
+    filter: drop-shadow(0px 0px 2px rgba(255, 255, 255, 0.491));
+}
+
 #section2 {
     background-color: transparent;
 }
@@ -427,34 +512,40 @@ header
     background: linear-gradient(180deg, rgba(21, 0, 31, 0) 0%, #4f064f 100%);
     display: flex;
     height: 150vh;
-    position: absolute;
+    position: relative;
     width: 100vw;
-    margin: 300px 0 0 0;
+    margin: 150px 0 0 0;
+}
+
+#section2 > .container > title {
+    color: white;
 }
 
 #section2 > .container > #left-side {
     align-items: center;
-    background-color: transparent;
-    border-radius: 60px;
-    border: 3px solid #824a22;
-    border-radius: 10%;
     display: flex;
     flex-direction: column;
-    height: 72vh;
-    width: 35vw;
-    margin: 21vh 0 0 7vw;
+    height: 60vh;
+    width: 30vw;
+    margin: 25vh 0 0 4vw;
 }
 
 #section2 > .container > #left-side > h1 {
     color: white;
     font-family: "Karla", sans-serif;
+    font-size: 5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
     text-align: center;
     margin: 50px 0 0 0;
 }
 
 #section2 > .container > #left-side > h2 {
     color: white;
-    font-family: "Kantumruy Pro" sans-serif;
+    font-family: "Kantumruy Pro", sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 2px;
     text-align: center;
     margin: 10px 0 0 0;
 }
@@ -462,41 +553,66 @@ header
 #section2 > .container > #left-side > p {
     color: white;
     font-family: "Kantumruy Pro", sans-serif;
-    font-size: 1.2rem;
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 1.5;
     margin: 20px 0 0 0;
-    width: 70%;
+    width: 85%;
     text-align: center;
 }
 
 #section2 > .container > #left-side > #buttons {
-    justify-content: center;
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    margin: 120px 0 0 0;
+    justify-content: center;
+    margin: 40px 0 0 0;
     width: 100%;
 }
 
-#section2 > .container > #left-side > #buttons > div {
-    border: 2px solid white;
-    border-radius: 30px;
+#section2 > .container > #left-side > #buttons > div:not(#main-button) {
+    align-items: center;
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 50%;
     color: white;
     cursor: pointer;
-    font-size: 1.2rem;
-    padding: 15px 35px;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    padding: 5px 2px 5px 8px;
+    transition: 150ms;
+    width: 40px;
+}
+
+#section2 > .container > #left-side > #buttons > #left {
+    transform: rotate(180deg);
+}
+
+#section2 > .container > #left-side > #buttons > div:not(#main-button):hover {
+    background-color: rgba(255, 255, 255, 0.134);
+    /* border: 2px solid white; */
 }
 
 #section2 > .container > #left-side > #buttons > #main-button {
+    align-items: center;
     background-color: white;
+    border-radius: 30px;
     color: rgb(0, 0, 36);
+    display: flex;
+    font-size: 1.8rem;
+    font-weight: 800;
+    max-height: 30px;
+    padding: 8px 20px;
 }
 
 #section2 > .container > #right-side {
     border: 2px solid white;
-    border-radius: 40px;
+    border-radius: 30px 0 0 30px;
     height: 76vh;
     position: absolute;
-    right: -50px;
+    right: 0px;
     top: 130px;
-    width: 37vw;
+    width: 45vw;
 }

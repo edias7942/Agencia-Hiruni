@@ -27,6 +27,7 @@ header {
     height: 70px;
     position: fixed;
     width: 100%;
+    max-width: 100%;
     z-index: 3;
 }
 
@@ -281,7 +282,7 @@ header
     display: flex;
     height: 100vh;
     justify-content: center;
-    width: 100vw;
+    max-width: 100vw;
 }
 
 #section1 > .illumination-left {
@@ -292,7 +293,7 @@ header
         rgba(0, 0, 125, 0) 100%
     );
     height: 100vh;
-    left: -15vw;
+    left: 0px;
     position: absolute;
     width: 30vw;
 }
@@ -306,7 +307,7 @@ header
     );
     display: none;
     height: 100vh;
-    right: -15vw;
+    right: 0px;
     position: absolute;
     width: 30vw;
 }
@@ -509,16 +510,17 @@ header
 }
 
 #section2 > .container {
+    justify-content: space-between;
     background: linear-gradient(180deg, rgba(21, 0, 31, 0) 0%, #4f064f 100%);
     display: flex;
     height: 150vh;
-    position: relative;
     width: 100vw;
     margin: 150px 0 0 0;
 }
 
-#section2 > .container > title {
+#section2 > .container > .title {
     color: white;
+    position: absolute;
 }
 
 #section2 > .container > #left-side {
@@ -579,11 +581,11 @@ header
     color: white;
     cursor: pointer;
     display: flex;
-    height: 40px;
+    height: 30px;
     justify-content: center;
-    padding: 5px 2px 5px 8px;
+    padding: 5px 2px 5px 6px;
     transition: 150ms;
-    width: 40px;
+    width: 30px;
 }
 
 #section2 > .container > #left-side > #buttons > #left {
@@ -591,28 +593,172 @@ header
 }
 
 #section2 > .container > #left-side > #buttons > div:not(#main-button):hover {
-    background-color: rgba(255, 255, 255, 0.134);
+    background-color: rgba(255, 255, 255, 0.298);
     /* border: 2px solid white; */
 }
 
 #section2 > .container > #left-side > #buttons > #main-button {
     align-items: center;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    border: 2px solid white;
     border-radius: 30px;
-    color: rgb(0, 0, 36);
+    cursor: pointer;
     display: flex;
     font-size: 1.8rem;
     font-weight: 800;
     max-height: 30px;
     padding: 8px 20px;
+    transition: 200ms ease-out;
+}
+
+#section2 > .container > #left-side > #buttons > #main-button:hover {
+    background-color: white;
+    color: rgb(0, 0, 36);
 }
 
 #section2 > .container > #right-side {
     border: 2px solid white;
     border-radius: 30px 0 0 30px;
     height: 76vh;
-    position: absolute;
     right: 0px;
     top: 130px;
     width: 45vw;
+    align-items: center;
+    display: flex;
+    position: relative;
+}
+
+#section2 > .container > #right-side > .item {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    position: absolute;
+}
+
+#section2 > .container > #right-side > .item.saindo-fundo {
+    animation: saindo-fundo 1000ms ease-out forwards;
+}
+
+@keyframes saindo-fundo {
+    0% {
+    }
+    66% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+}
+
+#section2 > .container > #right-side > .entrando-direita {
+    left: -170px;
+}
+
+#section2 > .container > #right-side > .quase-entrando {
+    left: 450px;
+}
+
+#section2 > .container > #right-side > .item > img {
+    height: 325px;
+    margin: 0 0 20px 0;
+}
+
+#section2 > .container > #right-side > .item.quase-entrando > img {
+    margin: 0;
+    opacity: 0.3;
+}
+
+#section2 > .container > #right-side > .item > .subtitle {
+    align-items: center;
+    background-color: white;
+    border-radius: 32.5px;
+    display: flex;
+    font-size: 1.6rem;
+    font-weight: 500;
+    height: 65px;
+    justify-content: space-between;
+    letter-spacing: 2px;
+    padding: 0 10px 0 10px;
+    position: relative;
+    text-align: center;
+    transition-delay: 200ms;
+    transition: 500ms ease-out;
+    width: 485px;
+}
+
+#section2 > .container > #right-side > .item.quase-entrando > .subtitle {
+    display: none;
+}
+
+#section2 > .container > #right-side > .item.saindo-fundo > .subtitle {
+    animation: saindo-fundo-subtitle 1s forwards;
+}
+
+@keyframes saindo-fundo-subtitle {
+    0% {
+    }
+    33% {
+        border-radius: 32.5px;
+        height: 65px;
+        padding: 0;
+        width: 65px;
+    }
+    66% {
+        border-radius: 0;
+        height: 0;
+        padding: 0;
+        width: 0;
+    }
+    100% {
+        border-radius: 0;
+        height: 0;
+        padding: 0;
+        width: 0;
+    }
+}
+
+#section2 > .container > #right-side > .item > .subtitle > p {
+    transition: 200ms;
+    width: calc(100% - 65px);
+}
+
+#section2 > .container > #right-side > .item.saindo-fundo > .subtitle > p {
+    display: none;
+    opacity: 0%;
+}
+
+#section2 > .container > #right-side > .item > .subtitle > img {
+    position: absolute;
+    right: 10px;
+    width: 45px;
+}
+
+#section2 > .container > #right-side > .item.saindo-fundo > .subtitle > img {
+    animation: saindo-fundo-subtitle-img 1s forwards;
+}
+
+@keyframes saindo-fundo-subtitle-img {
+    0% {
+    }
+    33% {
+        right: 10px;
+        width: 45px;
+    }
+    66% {
+        right: 0;
+        width: 0;
+    }
+    100% {
+        right: 0;
+        width: 0;
+    }
+}
+
+#menu-mobile {
+    display: none;
 }

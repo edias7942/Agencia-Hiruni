@@ -127,7 +127,10 @@ function changeImage(section, direction) {
             mainItem.classList.remove("entrando-direita");
         } else {
             mainItem.classList.remove('entrando-fundo')
-            rightItem.classList.remove('quase-entrando-esquerda')
+            
+            setTimeout(() => {
+                rightItem.classList.remove('quase-entrando-esquerda')
+            }, 330);
         }
     }
 

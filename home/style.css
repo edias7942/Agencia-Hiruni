@@ -636,41 +636,13 @@ header
     justify-content: center;
     height: 100%;
     position: absolute;
-}
-
-#section2 > .container > #right-side > .item.saindo-fundo {
-    animation: saindo-fundo 1000ms ease-out forwards;
-}
-
-@keyframes saindo-fundo {
-    0% {
-    }
-    66% {
-        transform: scale(1);
-        opacity: 1;
-    }
-    100% {
-        transform: scale(0.8);
-        opacity: 0;
-    }
-}
-
-#section2 > .container > #right-side > .entrando-direita {
-    left: -170px;
-}
-
-#section2 > .container > #right-side > .quase-entrando {
-    left: 450px;
+    left: 1000px;
+    transition: 1s;
 }
 
 #section2 > .container > #right-side > .item > img {
     height: 325px;
     margin: 0 0 20px 0;
-}
-
-#section2 > .container > #right-side > .item.quase-entrando > img {
-    margin: 0;
-    opacity: 0.3;
 }
 
 #section2 > .container > #right-side > .item > .subtitle {
@@ -691,8 +663,40 @@ header
     width: 485px;
 }
 
-#section2 > .container > #right-side > .item.quase-entrando > .subtitle {
-    display: none;
+#section2 > .container > #right-side > .item > .subtitle > p {
+    transition: 200ms;
+    width: calc(100% - 65px);
+}
+
+#section2 > .container > #right-side > .item > .subtitle > img {
+    position: absolute;
+    right: 10px;
+    width: 45px;
+}
+
+#section2 > .container > #right-side > .item.saindo-fundo {
+    animation: saindo-fundo 1000ms ease-out forwards;
+}
+
+@keyframes saindo-fundo {
+    0% {
+        left: -170px;
+    }
+    66% {
+        left: -170px;
+        transform: scale(1);
+        opacity: 1;
+    }
+    80% {
+        left: -170px;
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        left: -170px;
+        transform: scale(0.9);
+        opacity: 0;
+    }
 }
 
 #section2 > .container > #right-side > .item.saindo-fundo > .subtitle {
@@ -722,20 +726,8 @@ header
     }
 }
 
-#section2 > .container > #right-side > .item > .subtitle > p {
-    transition: 200ms;
-    width: calc(100% - 65px);
-}
-
 #section2 > .container > #right-side > .item.saindo-fundo > .subtitle > p {
     display: none;
-    opacity: 0%;
-}
-
-#section2 > .container > #right-side > .item > .subtitle > img {
-    position: absolute;
-    right: 10px;
-    width: 45px;
 }
 
 #section2 > .container > #right-side > .item.saindo-fundo > .subtitle > img {
@@ -757,6 +749,187 @@ header
         right: 0;
         width: 0;
     }
+}
+
+#section2 > .container > #right-side > .item.entrando-direita {
+    animation: entrando-direita 1000ms ease-out forwards;
+    opacity: 0.3;
+}
+
+@keyframes entrando-direita {
+    0% {
+        left: 450px;
+    }
+    46% {
+        left: -170px;
+        opacity: 1;
+    }
+    100% {
+        left: -170px;
+        opacity: 1;
+    }
+}
+
+#section2 > .container > #right-side > .item.entrando-direita > .subtitle {
+    animation: entrando-direita-subtitle 1s forwards;
+    animation-delay: 330ms;
+    border-radius: 0;
+    height: 0;
+    padding: 0;
+    width: 0;
+}
+
+@keyframes entrando-direita-subtitle {
+    0% {
+        border-radius: 0;
+        height: 0;
+        padding: 0;
+        width: 0;
+    }
+    33% {
+        border-radius: 0;
+        height: 0;
+        padding: 0;
+        width: 0;
+    }
+    66% {
+        border-radius: 32.5px;
+        height: 65px;
+        padding: 0;
+        width: 65px;
+    }
+    100% {
+        border-radius: 32.5px;
+        height: 65px;
+        padding: 0 10px 0 10px;
+        width: 485px;
+    }
+}
+
+#section2 > .container > #right-side > .item.entrando-direita > .subtitle > p {
+    animation: entrando-direita-subtitle-p 100ms forwards;
+    animation-delay: 1200ms;
+    opacity: 0;
+}
+
+@keyframes entrando-direita-subtitle-p {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#section2
+    > .container
+    > #right-side
+    > .item.entrando-direita
+    > .subtitle
+    > img {
+        animation: entrando-direita-subtitle-img 1s forwards;
+        animation-delay: 330ms;
+        right: 0;
+        width: 0;
+}
+
+@keyframes entrando-direita-subtitle-img {
+    0% {
+        right: 0;
+        width: 0;
+    }
+    33%{
+        right: 0;
+        width: 0;
+    }
+    66%{
+        right: 10px;
+        width: 45px;
+    }
+    100%{
+        right: 10px;
+        width: 45px;
+    }
+}
+
+#section2 > .container > #right-side > .item.quase-entrando {
+    animation: quase-entrando 600ms ease-out forwards;
+}
+
+@keyframes quase-entrando {
+    0%{
+        left: 1000px;
+    }
+    100% {
+        left: 450px;
+    }
+}
+
+#section2 > .container > #right-side > .item.quase-entrando {
+    margin: 0;
+    opacity: 0.3;
+}
+
+#section2 > .container > #right-side > .item.quase-entrando > .subtitle {
+    display: none;
+}
+
+#section2>.container>#right-side>.item.quase-entrando-esquerda {
+    left: -170px;
+}
+
+#section2>.container>#right-side>.item.quase-entrando-esquerda {
+    animation: quase-entrando-esquerda 660ms ease-in forwards;
+    animation-delay: 760ms;
+}
+
+@keyframes quase-entrando-esquerda {
+    0% {
+        left: -170px;
+        opacity: 1;
+    }
+    100% {
+        left: 450px;
+        opacity: 0.3;
+    }
+}
+
+#section2>.container>#right-side>.item.quase-entrando-esquerda>.subtitle {
+    animation: saindo-fundo-subtitle 1s ease-out forwards;
+}
+
+#section2 > .container > #right-side > .item.item.quase-entrando-esquerda > .subtitle > p {
+    display: none;
+}
+
+#section2>.container>#right-side>.item.quase-entrando-esquerda>.subtitle>img{
+    animation: saindo-fundo-subtitle-img 1s forwards;
+}
+
+#section2>.container>#right-side>.item.saindo-direita {
+    animation: saindo-direita 660ms ease-in forwards;
+    opacity: 0.3;
+}
+
+@keyframes saindo-direita {
+    0% {
+        left: 450px;
+    }
+    33% {
+        left: 450px;
+    }
+    100%{
+        left: 1000px;
+    }
+}
+
+#section2>.container>#right-side>.item.saindo-direita>.subtitle{
+    display: none;
+}
+
+#section2>.container>#right-side>.item.entrando-fundo {
+    animation: saindo-fundo 1s forwards reverse;
+    animation-delay: 1000ms;
 }
 
 #menu-mobile {

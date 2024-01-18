@@ -26,33 +26,18 @@
                     <div class="text">Serviços</div>
                     <div class="popup">
                         <div class="item">
-                            <!-- <img
-                                src="./../assets/icons/icon-identidade-visual.png"
-                                alt=""
-                                class="icon"
-                            /> -->
                             <div class="text">Identidade Visual</div>
                         </div>
 
                         <div class="divisor"></div>
 
                         <div class="item">
-                            <!-- <img
-                                src="./../assets/icons/icon-identidade-visual.png"
-                                alt=""
-                                class="icon"
-                            /> -->
                             <div class="text">Criação de Logo</div>
                         </div>
 
                         <div class="divisor"></div>
 
                         <div class="item">
-                            <!-- <img
-                                src="./../assets/icons/icon-identidade-visual.png"
-                                alt=""
-                                class="icon"
-                            /> -->
                             <div class="text">Criação de Site</div>
                         </div>
 
@@ -78,8 +63,6 @@
         <div id="menu-mobile">
             <div class="header">
                 <div id="botao-fechar-menu" onclick="toggleMenuMobile()">
-                    <!-- <div class="line" id="line-1"></div>
-                <div class="line" id="line-2"></div> -->
                 </div>
             </div>
         </div>
@@ -96,7 +79,6 @@
                     ][0];
 
                     for (index = 1; index <= 15; index++) {
-                        // Criando Item
                         let item = document.createElement("div");
                         item.classList.add("item", `i${index}`);
 
@@ -108,7 +90,6 @@
 
                         let animationTime = Math.floor(Math.random() * 10 + 5);
 
-                        // Criando Line
                         let line = document.createElement("div");
                         line.classList.add("line");
 
@@ -116,7 +97,6 @@
 
                         line.style.height = `${heightItem / 5}px`;
 
-                        // Criando Circle
                         let circle = document.createElement("div");
                         circle.classList.add("circle");
 
@@ -172,7 +152,7 @@
                         digital
                     </p>
                     <div id="buttons">
-                        <div id="left">
+                        <div id="left" onclick="changeImage(2,-1)">
                             <svg xmlns="http://www.w3.org/2000/svg" width="15" height="34" viewBox="0 0 20 34" fill="none">
                                 <path d="M3 2L16.5394 15.5394C17.3383 16.3383 17.3174 17.64 16.4931 18.4127L2 32" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
@@ -190,14 +170,35 @@
                     <div class="item entrando-direita" id="item-1">
                         <img src="./assets/images/bruna-hosti-lp.webp" alt="A imagem mostra em duas colunas um site criado para uma fotógrafa.">
                         <div class="subtitle">
-                            <p>"Eu amei o site, ficou incrível. Muito <br> obrigada pelo trabalho." - <b>Bruna Hosti</b></p>
+                            <p>1 "Eu amei o site, ficou incrível. Muito <br> obrigada pelo trabalho." - <b>Bruna Hosti</b></p>
                             <img src="./assets/images/bruna-hosti-perfil-img.png" alt="Foto de perfil da fotógrafa Bruna Hosti">
                         </div>
                     </div>
                     <div class="item quase-entrando" id="item-2">
                         <img src="./assets/images/bruna-hosti-lp.webp" alt="A imagem mostra em duas colunas um site criado para uma fotógrafa.">
                         <div class="subtitle">
-                            <p>"Eu amei o site, ficou incrível. Muito <br> obrigada pelo trabalho." - <b>Bruna Hosti</b></p>
+                            <p>2 "Eu amei o site, ficou incrível. Muito <br> obrigada pelo trabalho." - <b>Bruna Hosti</b></p>
+                            <img src="./assets/images/bruna-hosti-perfil-img.png" alt="Foto de perfil da fotógrafa Bruna Hosti">
+                        </div>
+                    </div>
+                    <div class="item" id="item-3">
+                        <img src="./assets/images/bruna-hosti-lp.webp" alt="A imagem mostra em duas colunas um site criado para uma fotógrafa.">
+                        <div class="subtitle">
+                            <p>3 "Eu amei o site, ficou incrível. Muito <br> obrigada pelo trabalho." - <b>Bruna Hosti</b></p>
+                            <img src="./assets/images/bruna-hosti-perfil-img.png" alt="Foto de perfil da fotógrafa Bruna Hosti">
+                        </div>
+                    </div>
+                    <div class="item" id="item-4">
+                        <img src="./assets/images/bruna-hosti-lp.webp" alt="A imagem mostra em duas colunas um site criado para uma fotógrafa.">
+                        <div class="subtitle">
+                            <p>4 "Eu amei o site, ficou incrível. Muito <br> obrigada pelo trabalho." - <b>Bruna Hosti</b></p>
+                            <img src="./assets/images/bruna-hosti-perfil-img.png" alt="Foto de perfil da fotógrafa Bruna Hosti">
+                        </div>
+                    </div>
+                    <div class="item" id="item-5">
+                        <img src="./assets/images/bruna-hosti-lp.webp" alt="A imagem mostra em duas colunas um site criado para uma fotógrafa.">
+                        <div class="subtitle">
+                            <p>5 "Eu amei o site, ficou incrível. Muito <br> obrigada pelo trabalho." - <b>Bruna Hosti</b></p>
                             <img src="./assets/images/bruna-hosti-perfil-img.png" alt="Foto de perfil da fotógrafa Bruna Hosti">
                         </div>
                     </div>

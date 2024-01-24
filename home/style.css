@@ -520,7 +520,12 @@ header
 
 #section2 > .container > .title {
     color: white;
+    font-size: 5rem;
+    font-weight: 700;
+    letter-spacing: 7px;
     position: absolute;
+    text-align: center;
+    width: 100vw;
 }
 
 #section2 > .container > #left-side {
@@ -574,11 +579,9 @@ header
     width: 100%;
 }
 
-#section2 > .container > #left-side > #buttons > div:not(#main-button) {
+#section2 > .container > #left-side > #buttons > div:not(#main-button):not(.hide) {
     align-items: center;
-    border: 2px solid rgba(255, 255, 255, 0);
     border-radius: 50%;
-    color: white;
     cursor: pointer;
     display: flex;
     height: 30px;
@@ -592,9 +595,26 @@ header
     transform: rotate(180deg);
 }
 
-#section2 > .container > #left-side > #buttons > div:not(#main-button):hover {
+#section2
+    > .container
+    > #left-side
+    > #buttons
+    > div:not(#main-button):not(.hide):hover {
     background-color: rgba(255, 255, 255, 0.298);
     /* border: 2px solid white; */
+}
+
+#section2 > .container > #left-side > #buttons > div.hide {
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    padding: 5px 2px 5px 6px;
+    transition: 150ms;
+    width: 30px;
+    cursor: default;
+    opacity: 0.3;
 }
 
 #section2 > .container > #left-side > #buttons > #main-button {
@@ -827,10 +847,10 @@ header
     > .item.entrando-direita
     > .subtitle
     > img {
-        animation: entrando-direita-subtitle-img 1s forwards;
-        animation-delay: 330ms;
-        right: 0;
-        width: 0;
+    animation: entrando-direita-subtitle-img 1s forwards;
+    animation-delay: 330ms;
+    right: 0;
+    width: 0;
 }
 
 @keyframes entrando-direita-subtitle-img {
@@ -838,15 +858,15 @@ header
         right: 0;
         width: 0;
     }
-    33%{
+    33% {
         right: 0;
         width: 0;
     }
-    66%{
+    66% {
         right: 10px;
         width: 45px;
     }
-    100%{
+    100% {
         right: 10px;
         width: 45px;
     }
@@ -857,7 +877,7 @@ header
 }
 
 @keyframes quase-entrando {
-    0%{
+    0% {
         left: 1000px;
     }
     100% {
@@ -874,11 +894,11 @@ header
     display: none;
 }
 
-#section2>.container>#right-side>.item.quase-entrando-esquerda {
+#section2 > .container > #right-side > .item.quase-entrando-esquerda {
     left: -170px;
 }
 
-#section2>.container>#right-side>.item.quase-entrando-esquerda {
+#section2 > .container > #right-side > .item.quase-entrando-esquerda {
     animation: quase-entrando-esquerda 660ms ease-in forwards;
     animation-delay: 760ms;
 }
@@ -894,19 +914,33 @@ header
     }
 }
 
-#section2>.container>#right-side>.item.quase-entrando-esquerda>.subtitle {
+#section2
+    > .container
+    > #right-side
+    > .item.quase-entrando-esquerda
+    > .subtitle {
     animation: saindo-fundo-subtitle 1s ease-out forwards;
 }
 
-#section2 > .container > #right-side > .item.item.quase-entrando-esquerda > .subtitle > p {
+#section2
+    > .container
+    > #right-side
+    > .item.item.quase-entrando-esquerda
+    > .subtitle
+    > p {
     display: none;
 }
 
-#section2>.container>#right-side>.item.quase-entrando-esquerda>.subtitle>img{
+#section2
+    > .container
+    > #right-side
+    > .item.quase-entrando-esquerda
+    > .subtitle
+    > img {
     animation: saindo-fundo-subtitle-img 1s forwards;
 }
 
-#section2>.container>#right-side>.item.saindo-direita {
+#section2 > .container > #right-side > .item.saindo-direita {
     animation: saindo-direita 660ms ease-in forwards;
     opacity: 0.3;
 }
@@ -918,16 +952,16 @@ header
     33% {
         left: 450px;
     }
-    100%{
+    100% {
         left: 1000px;
     }
 }
 
-#section2>.container>#right-side>.item.saindo-direita>.subtitle{
+#section2 > .container > #right-side > .item.saindo-direita > .subtitle {
     display: none;
 }
 
-#section2>.container>#right-side>.item.entrando-fundo {
+#section2 > .container > #right-side > .item.entrando-fundo {
     animation: saindo-fundo 1s forwards reverse;
     animation-delay: 1000ms;
 }

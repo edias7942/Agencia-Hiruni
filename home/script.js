@@ -38,7 +38,6 @@ let carouselItems = {
         lastDirection: 1,
         locationItem: "#section2>.container>#right-side>#item-",
         itemsData: [
-            document.querySelector(`#section2>.container>#right-side>#item-0`),
             document.querySelector(`#section2>.container>#right-side>#item-1`),
             document.querySelector(`#section2>.container>#right-side>#item-2`),
             document.querySelector(`#section2>.container>#right-side>#item-3`),
@@ -68,12 +67,16 @@ let entrandoClass,
     rightItem;
 
 function changeImage(section, direction) {
-    let currentItem = carouselItems[section].currentItem;
+    let currentItem = carouselItems[section].currentItem - 1;
     let itemsList = carouselItems[section].itemsData;
-    let itemsQuantity = itemsList.length - 1;
+    let itemsQuantity = itemsList.length;
     let lastDirection = carouselItems[section].lastDirection;
+    let botoes = [...document.querySelectorAll("#section2 > .container > #left-side > #buttons > div:not(#main-button)")]
+    console.log(botoes)
+    console.log(itemsQuantity)
 
     if (direction === 1) {
+        if (currentItem === 0) botoes[0].classList.remove("hide")
         leftItem = itemsList[currentItem];
         mainItem = itemsList[currentItem + 1];
         rightItem = itemsList[currentItem + 2];

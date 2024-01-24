@@ -43,6 +43,9 @@ let carouselItems = {
             document.querySelector(`#section2>.container>#right-side>#item-3`),
             document.querySelector(`#section2>.container>#right-side>#item-4`),
             document.querySelector(`#section2>.container>#right-side>#item-5`),
+            document.querySelector(
+                `#section2>.container>#right-side>#item-limiter`
+            ),
         ],
     },
     5: {
@@ -57,36 +60,54 @@ let carouselItems = {
     },
 };
 
-let entrandoClass,
-    saindoClass,
-    classRemove,
-    botoes,
-    currentItem,
-    leftItem,
-    mainItem,
-    rightItem;
-
+let leftItem, mainItem, rightItem;
+botoes = [
+    ...document.querySelectorAll(
+        "#section2 > .container > #left-side > #buttons > div:not(#main-button)"
+    ),
+];
+botoes.enabled = [false, true];
 function changeImage(section, direction) {
     let currentItem = carouselItems[section].currentItem - 1;
     let itemsList = carouselItems[section].itemsData;
-    let itemsQuantity = itemsList.length;
+    let itemsQuantity = itemsList.length - 1;
     let lastDirection = carouselItems[section].lastDirection;
-    let botoes = [...document.querySelectorAll("#section2 > .container > #left-side > #buttons > div:not(#main-button)")]
-    console.log(botoes)
-    console.log(itemsQuantity)
+
+    function toggleButton(button, action) {
+        if (action === "active") {
+            botoes[button].classList.remove("hide");
+            botoes.enabled[button] = true;
+        } else if (action === "desactive") {
+            botoes[button].classList.add("hide");
+            botoes.enabled[button] = false;
+        }
+    }
+
+    // Função para ocultar botões enquanto a animação acontece
+    if (direction === 1 && !botoes.enabled[1]) return;
+    if (direction === -1 && !botoes.enabled[0]) return;
+
+    toggleButton(0, "desactive");
+    toggleButton(1, "desactive");
 
     if (direction === 1) {
-        if (currentItem === 0) botoes[0].classList.remove("hide")
+        setTimeout(() => {
+            toggleButton(0, "active");
+            if (!(currentItem === itemsQuantity - 2)) toggleButton(1, "active");
+        }, 1500);
+
         leftItem = itemsList[currentItem];
         mainItem = itemsList[currentItem + 1];
         rightItem = itemsList[currentItem + 2];
     } else {
+        setTimeout(() => {
+            toggleButton(1, "active")
+            if(!(currentItem === 1)) toggleButton(0, 'active')
+        }, 1500);
         leftItem = itemsList[currentItem - 1];
         mainItem = itemsList[currentItem];
         rightItem = itemsList[currentItem + 1];
     }
-
-    console.log(currentItem);
 
     if (direction === 1) {
         leftItem.classList.add("saindo-fundo");
@@ -107,10 +128,9 @@ function changeImage(section, direction) {
                 mainItem.classList.remove("quase-entrando");
             }, 660);
         } else {
-            
             setTimeout(() => {
-                leftItem.classList.remove('entrando-fundo')
-                mainItem.classList.remove('quase-entrando-esquerda')
+                leftItem.classList.remove("entrando-fundo");
+                mainItem.classList.remove("quase-entrando-esquerda");
             }, 660);
         }
     } else {
@@ -119,7 +139,6 @@ function changeImage(section, direction) {
 
         setTimeout(() => {
             rightItem.classList.remove("quase-entrando");
-            rightItem.classList.add("saindo-direita");
         }, 660);
 
         setTimeout(() => {
@@ -129,15 +148,15 @@ function changeImage(section, direction) {
         if (lastDirection === 1) {
             mainItem.classList.remove("entrando-direita");
         } else {
-            mainItem.classList.remove('entrando-fundo')
-            
+            mainItem.classList.remove("entrando-fundo");
+
             setTimeout(() => {
-                rightItem.classList.remove('quase-entrando-esquerda')
+                rightItem.classList.add("saindo-direita");
+                rightItem.classList.remove("quase-entrando-esquerda");
             }, 330);
         }
     }
 
-    console.log(lastDirection);
     carouselItems[2].currentItem += direction;
     carouselItems[2].lastDirection = direction;
 }

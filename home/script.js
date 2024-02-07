@@ -127,7 +127,7 @@ function changeImage(section, direction) {
             setTimeout(() => {
                 mainItem.classList.remove("quase-entrando");
             }, 660);
-        } else {
+        } else { console.alo
             setTimeout(() => {
                 leftItem.classList.remove("entrando-fundo");
                 mainItem.classList.remove("quase-entrando-esquerda");

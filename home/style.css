@@ -80,13 +80,13 @@ header > #hamburguer > .bar:not(#bar-2) {
     align-items: center;
     display: flex;
     height: 100vh;
-    justify-content: end;
+    justify-content: center;
     width: 40vw;
 }
 
 #section-1 > .container#left > .content {
     height: 250px;
-    width: 85%;
+    width: 80%;
 }
 
 #section-1 > .container#left > .content > h1 {
@@ -233,16 +233,134 @@ header > #hamburguer > .bar:not(#bar-2) {
 }
 
 @media (max-width: 1200px) {
-    html{
+    html {
         font-size: 6px;
     }
 
-    #section-1>.container#right>.content{
-    transform: rotate(-20deg) translate(100px, -120px) scale(0.7);
+    #section-1 > .container#right > .content {
+        transform: rotate(-20deg) translate(100px, -120px) scale(0.7);
     }
 
-    #section-1>.container#right>.bg-gradient{
+    #section-1 > .container#right > .bg-gradient {
         height: 100vh;
         width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    #section-1 {
+        align-items: center;
+        justify-content: end;
+        flex-direction: column;
+    }
+
+    #section-1 > .container#left {
+        order: 2;
+        width: 100vw;
+    }
+
+    #section-1 > .container#left > .content {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #section-1 > .container#left > .content > h2 {
+        text-align: center;
+    }
+
+    #section-1 > .container#right {
+        margin: 0 0 0 calc(50vw - 35vw);
+        width: 70vw;
+    }
+
+    #section-1 > .container#right > .content {
+        width: 100%;
+    }
+
+    #section-1 > .container#right > .bg-gradient {
+        height: 100%;
+        width: 100%;
+    }
+
+    #section-1 > .scroll-icon {
+        align-self: inherit;
+        margin: 0 0 20px 0;
+    }
+}
+
+@media (max-width: 500px) {
+
+    header{
+        height: 60px;
+    }
+
+    header>#logo{
+        margin: 0 0 0 20px;
+        width: 50px;
+    }
+
+    header>#hamburguer{
+        gap: 6px;
+        margin: 0 20px 0 0;
+    }
+
+    header>#hamburguer>.bar{
+        height: 1px;
+        width: 25px;
+    }
+
+    header>#hamburguer>.bar:not(#bar-2){
+        width: 17px;
+    }
+    
+    #section-1 > .container#left {
+        position: absolute;
+        z-index: 2;
+    }
+
+    #section-1 > .container#left > .content {
+        background-color: rgb(31, 36, 43, 0.9);
+        border-radius: 20px;
+        padding: 20px 20px;
+        width: 80%;
+    }
+
+    #section-1 > .container#left > .content > h2 {
+        width: 90%;
+    }
+
+    #section-1>.container#left>.content>.rating{
+        gap: 10px;
+        margin: 50px 0 0 0;
+    }
+
+    #section-1>.container#left>.content>.rating>.left{
+        border-right: 1px solid var(--color-2);
+        padding: 0 10px 0 0;
+    }
+
+    #section-1 > .container#right {
+        margin: 0;
+        width: 100vw;
+    }
+
+    #section-1 > .container#right > .content {
+        transform: rotate(-20deg) translate(-20px, -120px) scale(0.7);
+    }
+
+    #section-1 > .container#right > .bg-gradient {
+        background: radial-gradient(
+            var(--color-1-transparent),
+            var(--color-1) 60%
+        );
+        margin: 0 0 0 -25vh;
+        width: 100vh;
+        /* background: none; */
+    }
+
+    #section-1 > .scroll-icon {
+        margin: 0 0 100px 0;
+        z-index: 3;
     }
 }

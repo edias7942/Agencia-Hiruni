@@ -1,126 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ptbr">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Wedenty - Bem Vindo</title>
+        <title>Agência Alvo Duplo</title>
+        <link rel="shortcut icon" href="./assets/icons/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="style.css" />
         <script src="script.js" defer></script>
     </head>
     <body>
-        <div id="body-background-image"></div>
-        <header>
-            <img
-                id="header-icon"
-                src="./assets/icons/light-logo.png"
-                alt="Light Logo"
-            />
-            <div id="header-right">
-                <div id="portfolio" class="item">
-                    <div id="portfolio-text" class="item-text">Portfólio</div>
-                    <div class="item-popup" id="servicos-popup"></div>
-                </div>
-                <div class="divisor"></div>
-                <div id="servicos" class="item last-item">
-                    <div id="servicos-text" class="item-text">Serviços</div>
-                    <div class="item-popup" id="servicos-popup">
-                        <div class="popup-item">
-                            <img
-                                src="./assets/icons/icon-identidade-visual.png"
-                                alt=""
-                                class="popup-icon"
-                            />
-                            <div class="popup-text">Identidade Visual</div>
-                        </div>
-                        <div class="divisor"></div>
-                        <div class="popup-item">
-                            <img
-                                src="./assets/icons/icon-identidade-visual.png"
-                                alt=""
-                                class="popup-icon"
-                            />
-                            <div class="popup-text">Criação de Logo</div>
-                        </div>
-                        <div class="divisor"></div>
-                        <div class="popup-item">
-                            <img
-                                src="./assets/icons/icon-identidade-visual.png"
-                                alt=""
-                                class="popup-icon"
-                            />
-                            <div class="popup-text">Criação de Site</div>
-                        </div>
-                        <div class="botao-ver-mais-container">
-                            <div class="botao-ver-mais">
-                                <img
-                                    class="botao-ver-mais-icon"
-                                    src="./assets/icons/light-logo.png"
-                                    alt="Logo da WeVe Company"
-                                />
-                                <div class="botao-ver-mais-text">
-                                    Ver Mais...
-                                </div>
-                            </div>
-                        </div>
+        <div class="container" id="left">
+            <div class="content">
+                <h1>Agência</h1>
+                <h1 class="title2">Alvo Duplo</h1>
+                <p>Criando Sites e Redes Sociais que te impulsionam</p>
+                <button onclick="window.location='./home'">
+                    <div id="bg-secoundary"></div>
+                    <div id="content">
+                        Conhecer
+                        <img
+                            id="arrow-right"
+                            src="./assets/icons/arrow_right.svg"
+                            alt="Seta para direita (Item Decorativo)"
+                        />
                     </div>
-                </div>
+                </button>
             </div>
-            <div id="hamburguer" onclick="toggleMenuMobile()">
-                <div class="line" id="line-1"></div>
-                <div class="line" id="line-2"></div>
-                <div class="line" id="line-3"></div>
+            <div id="circle-grid-decoration">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
             </div>
-        </header>
-        <div id="menu-mobile">
-            <div class="menu-item" id="menu-item-1">
-                <div id="triangle">
-                    <div class="line" id="line-1"></div>
-                    <div class="line" id="line-2"></div>
-                    <div class="line" id="line-3"></div>
-                </div>
-                Serviços
-            </div>
-            
         </div>
-        <div id="container">
-            <div id="circle-container">
-                <img
-                    id="main-logo"
-                    src="./assets/icons/light-logo.png"
-                    alt=""
-                />
-                <div id="title">
-                    Wedenty
-                </div>
-                <div id="subtitle">
-                    Profissionais cuidando <br />
-                    da sua Imagem
-                </div>
-                    <div id="prosseguir-button" onclick="window.open('./home', '_self')">
-                        Prosseguir
-                        <div id="arrows">
-                            <img
-                                id="arrow-1"
-                                class="first arrow"
-                                src="./assets/icons/arrow.png"
-                                alt="Icon Arrow"
-                            />
-                            <img
-                                id="arrow-2"
-                                class="arrow"
-                                src="./assets/icons/arrow.png"
-                                alt="Icon Arrow"
-                            />
-                            <img
-                                id="arrow-3"
-                                class="last arrow"
-                                src="./assets/icons/arrow.png"
-                                alt="Icon Arrow"
-                            />
-                        </div>
+        <div class="container" id="right">
+            <header>
+                <div class="content">
+                    <div class="text">Entre em Contato</div>
+                    <div class="icons">
+                        <img
+                            src="./assets/icons/whatsapp_icon.svg"
+                            alt="Icone de Whatsapp Clicável"
+                            class="icon"
+                            id=""
+                        />
+                        <img
+                            src="./assets/icons/instagram_icon.svg"
+                            alt="Ícone do Instagram Clicável"
+                            class="icon"
+                            id=""
+                        />
+                        <img
+                            src="./assets/icons/behance_icon.svg"
+                            alt="Ícone do Behance Clicável"
+                            class="icon"
+                            id=""
+                        />
                     </div>
-                <img id="icon-info" src="./assets/icons/icon-info.png" alt="" />
+                </div>
+            </header>
+            <div class="content">
+                <div id="bg-circle"></div>
+                <div id="bg-gradient"></div>
+                <img
+                    src="./assets/images/milerson_executive.webp"
+                    alt="Rapaz de pele clara vestido de terno azul, camiseta branca e gravata azul, usando óculos redondos de grau, cabelo castanho ondulado, de braços cruzados, de costas para uma moça de pele clara com óculos de grau redondos, com um cabelo ondulado, blazer roxo e camiseta azul clara, de braços cruzados olhando para o rapaz."
+                    id="main-image"
+                />
             </div>
+            <img src="./assets/images/post_3.webp" alt="Mockup de rede social mostrando um post do instagram do dia nacional do esporte" id="mockup-post-1" />
+            <img src="./assets/images/post_1.webp" alt="Mockup de rede social mostrando um post do instagram do dia nacional do oceano" id="mockup-post-2" />
+            <img src="./assets/images/post_2.webp" alt="Mockup de rede social mostrando um post do instagram do dia nacional da dança" id="mockup-post-3" />
         </div>
     </body>
 </html>

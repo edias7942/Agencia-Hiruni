@@ -4,53 +4,244 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Agência Alvo Duplo</title>
-        <link rel="shortcut icon" href="./../assets/icons/logo.ico" type="image/x-icon">
+        <link
+            rel="shortcut icon"
+            href="./../assets/icons/logo.ico"
+            type="image/x-icon"
+        />
         <link rel="stylesheet" href="style.css" />
         <script src="script.js" defer></script>
     </head>
-<body>
-    <header>
-        <img id="logo" src="./../assets/images/logo.png" alt="Logo da Agência Alvo Duplo, sendo um 'A' roxo e um 'D' azul.">
-        <div id="hamburguer">
+    <body>
+        <header>
+            <img
+                id="logo"
+                src="./../assets/images/logo.png"
+                alt="Logo da Agência Alvo Duplo, sendo um 'A' roxo e um 'D' azul."
+            />
+            <div id="hamburguer">
                 <div class="bar" id="bar-1"></div>
                 <div class="bar" id="bar-2"></div>
                 <div class="bar" id="bar-3"></div>
-        </div>
-    </header>
-    <section class="page-section" id="section-1">
-        <div class="container" id="left">
-            
-            <div class="content">
-                <h1>Reinvente-se</h1>
-                <h2>Atualize sua <Destaque>Identidade Visual</Destaque> com Profissionais que atendem suas necessidades.</h2>
-                <div class="rating">
-                    <div class="left">
-                        <img src="./assets/icons/star.png" alt="">
-                        <p>9.5/10</p>
-                    </div>
-                    <div class="right">
-                        <img id="client-1" src="./assets/images/client-1.png" alt="">
-                        <img id="client-2" src="./assets/images/client-2.png" alt="">
-                        <img id="client-3" src="./assets/images/client-3.png" alt="">
-                        <img id="client-4" src="./assets/images/client-4.png" alt="">
+            </div>
+        </header>
+        <section class="page-section" id="section-1">
+            <div class="container" id="left">
+                <div class="content">
+                    <h1>Reinvente-se</h1>
+                    <h2>
+                        Atualize sua <Destaque>Identidade Visual</Destaque> com
+                        Profissionais que atendem suas necessidades.
+                    </h2>
+                    <div class="rating">
+                        <div class="left">
+                            <img src="./assets/icons/star.png" alt="" />
+                            <p>9.5/10</p>
+                        </div>
+                        <div class="right">
+                            <img
+                                id="client-1"
+                                src="./assets/images/client-1.png"
+                                alt=""
+                            />
+                            <img
+                                id="client-2"
+                                src="./assets/images/client-2.png"
+                                alt=""
+                            />
+                            <img
+                                id="client-3"
+                                src="./assets/images/client-3.png"
+                                alt=""
+                            />
+                            <img
+                                id="client-4"
+                                src="./assets/images/client-4.png"
+                                alt=""
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="container" id="right">
-            <div class="content">
-                <img id="img-1" src="./assets/images/site-bruna.webp" alt="">
-                <img id="img-2" src="./assets/images/post-danca.webp" alt="">
-                <img id="img-3" src="./assets/images/post-esporte.webp" alt="">
-                <img id="img-4" src="./assets/images/post-oceano.webp" alt="">
-                <img id="img-5" src="./assets/images/post-sao-paulo.webp" alt="">
-                <img id="img-5" src="./assets/images/post-sao-paulo.webp" alt="">
-                <img id="img-2" src="./assets/images/post-danca.webp" alt="">
+            <div class="container" id="right">
+                <div class="content">
+                    <img
+                        id="img-1"
+                        src="./assets/images/site-bruna.webp"
+                        alt=""
+                    />
+                    <img
+                        id="img-2"
+                        src="./assets/images/post-danca.webp"
+                        alt=""
+                    />
+                    <img
+                        id="img-3"
+                        src="./assets/images/post-esporte.webp"
+                        alt=""
+                    />
+                    <img
+                        id="img-4"
+                        src="./assets/images/post-oceano.webp"
+                        alt=""
+                    />
+                    <img
+                        id="img-5"
+                        src="./assets/images/post-sao-paulo.webp"
+                        alt=""
+                    />
+                    <img
+                        id="img-5"
+                        src="./assets/images/post-sao-paulo.webp"
+                        alt=""
+                    />
+                    <img
+                        id="img-2"
+                        src="./assets/images/post-danca.webp"
+                        alt=""
+                    />
+                </div>
+                <div class="bg-gradient"></div>
             </div>
-            <div class="bg-gradient"></div>
-        </div>
-        <div class="scroll-icon" onclick="window.location='#section-2'"><img src="./assets/icons/arrow-down.svg" alt=""></div>
-    </section>
-    <section class="page-section" id="section-2"></section>
-</body>
+            <div class="scroll-icon" onclick="window.location='#section-2'">
+                <img src="./assets/icons/arrow-down.svg" alt="" />
+            </div>
+        </section>
+        <section id="section-2">
+            <div class="container">
+                <div class="title">Melhores Projetos</div>
+                <div id="left">
+                    <h1>Bruna Hosti</h1>
+                    <h2>Landing Page</h2>
+                    <p>
+                        Esse foi um site desenvolvido com o objetivo de mostrar
+                        aos clientes da Bruna todo seu trabalho como fotógrafa,
+                        divulgar seu nome, além de centralizar toda sua imagem
+                        digital
+                    </p>
+                    <div id="buttons">
+                        <div id="left" class="hide" onclick="changeImage(2,-1)">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="15"
+                                height="34"
+                                viewBox="0 0 20 34"
+                                fill="none"
+                            >
+                                <path
+                                    d="M3 2L16.5394 15.5394C17.3383 16.3383 17.3174 17.64 16.4931 18.4127L2 32"
+                                    stroke="white"
+                                    stroke-width="4"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </div>
+                        <div id="main-button">Ver Site</div>
+                        <div id="right" onclick="changeImage(2,1)">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="15"
+                                height="34"
+                                viewBox="0 0 20 34"
+                                fill="none"
+                            >
+                                <path
+                                    d="M3 2L16.5394 15.5394C17.3383 16.3383 17.3174 17.64 16.4931 18.4127L2 32"
+                                    stroke="white"
+                                    stroke-width="4"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div id="right">
+                    <div class="item entrando-direita" id="item-1">
+                        <img
+                            src="./assets/images/bruna-hosti-lp.webp"
+                            alt="A imagem mostra em duas colunas um site criado para uma fotógrafa."
+                        />
+                        <div class="subtitle">
+                            <p>
+                                "Eu amei o site, ficou incrível. Muito <br />
+                                obrigada pelo trabalho." - <b>Bruna Hosti</b>
+                            </p>
+                            <img
+                                src="./assets/images/bruna-hosti-perfil-img.png"
+                                alt="Foto de perfil da fotógrafa Bruna Hosti"
+                            />
+                        </div>
+                    </div>
+                    <div class="item quase-entrando" id="item-2">
+                        <img
+                            src="./assets/images/site-example-1png.webp"
+                            alt="A imagem mostra em duas colunas um site criado para uma fotógrafa."
+                        />
+                        <div class="subtitle">
+                            <p>
+                                "Gosto do estilo Minimalista, e ficou exatamente
+                                como eu pedi!" -
+                                <b>Jackson Ford</b>
+                            </p>
+                            <img
+                                src="./assets/images/site-example-1-profile-photo.png"
+                                alt="Foto de perfil da fotógrafa Bruna Hosti"
+                            />
+                        </div>
+                    </div>
+                    <div class="item" id="item-3">
+                        <img
+                            src="./assets/images/site-example-2.webp"
+                            alt="A imagem mostra em duas colunas um site criado para uma fotógrafa."
+                        />
+                        <div class="subtitle">
+                            <p>
+                                "Com esse site meus clientes aumentaram, muito
+                                bom!" - <b>Wilson Souza</b>
+                            </p>
+                            <img
+                                src="./assets/images/site-example-2-profile-photo.png"
+                                alt="Foto de perfil do Wilson Souza"
+                            />
+                        </div>
+                    </div>
+                    <div class="item" id="item-4">
+                        <img
+                            src="./assets/images/site-example-3.webp"
+                            alt="A imagem mostra em duas colunas um site criado para uma fotógrafa."
+                        />
+                        <div class="subtitle">
+                            <p>
+                                "Ficou maravilhoso meu site, além de ter ficado
+                                super rápido." - <b>Bethany Jones</b>
+                            </p>
+                            <img
+                                src="./assets/images/site-example-3-profile-photo.png"
+                                alt="Foto de perfil da fotógrafa Bethany Jones"
+                            />
+                        </div>
+                    </div>
+                    <div class="item" id="item-5">
+                        <img
+                            src="./assets/images/bruna-hosti-lp.webp"
+                            alt="A imagem mostra em duas colunas um site criado para uma fotógrafa."
+                        />
+                        <div class="subtitle">
+                            <p>
+                                5 "Eu amei o site, ficou incrível. Muito <br />
+                                obrigada pelo trabalho." - <b>Bruna Hosti</b>
+                            </p>
+                            <img
+                                src="./assets/images/bruna-hosti-perfil-img.png"
+                                alt="Foto de perfil da fotógrafa Bruna Hosti"
+                            />
+                        </div>
+                    </div>
+                    <div class="itemLimit" id="item-limiter"></div>
+                </div>
+            </div>
+        </section>
+    </body>
 </html>

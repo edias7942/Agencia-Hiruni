@@ -4,7 +4,8 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Home - Agência Alvo Duplo</title>
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="./css/portfolio-section.css" />
         <script src="script.js" defer></script>
     </head>
     <body>
@@ -94,7 +95,7 @@
                             </svg>
                         </div> -->
                     </div>
-                    <div class="item" id="portfolio">
+                    <div class="item" id="item-portfolio">
                         <div class="text">Portfólio</div>
                         <!-- <div class="toggle-icon">
                             <svg
@@ -137,11 +138,11 @@
                 <h3>Alvo Duplo</h3>
             </div>
             <div class="center">
-                <div class="item focus" id="home">Home</div>
-                <div class="item" id="sobre-nos">Sobre Nós</div>
-                <div class="item" id="servicos">Serviços</div>
-                <div class="item" id="portfolio">Portfólio</div>
-                <div class="item" id="contato">Contato</div>
+                <div class="item focus" id="item-home">Home</div>
+                <div class="item" id="item-sobre-nos">Sobre Nós</div>
+                <div class="item" id="item-servicos">Serviços</div>
+                <div class="item" id="item-portfolio">Portfólio</div>
+                <div class="item" id="item-contato">Contato</div>
             </div>
             <div class="right">
                 <button class="cta primary-color-master filled">
@@ -172,6 +173,8 @@
             <div id="hero" class="section-page">
                 <div class="left">
                     <h1>Reinvente-se</h1>
+                    <h2></h2>
+                    <h3></h3>
                     <h4>
                         Atualize sua <span>Identidade Visual</span> com
                         Profissionais que atendem suas necessidades.
@@ -191,7 +194,7 @@
                         />
                     </picture>
                 </div>
-                <div class="scroll-icon">
+                <div class="scroll-icon" onclick="next()">
                     <svg
                         class="out-svg"
                         width="36"
@@ -222,6 +225,136 @@
                             stroke-linecap="round"
                         />
                     </svg>
+                </div>
+            </div>
+            <div id="portfolio" class="section-page">
+                <h2>Melhores Projetos</h2>
+                <div class="left">
+                    <div class="buttons top">32x220</div>
+                    <h2>Bruna Hosti</h2>
+                    <h3>Landing Page</h3>
+                    <p class="p2">
+                        Esse foi um site desenvolvido com o objetivo de mostrar
+                        aos clientes da Bruna todo seu trabalho como fotógrafa,
+                        divulgar seu nome, além de centralizar toda sua imagem
+                        digital
+                    </p>
+                    <div class="buttons bottom">
+                        <div class="left hide" onclick="changeImage(2,-1)">
+                            <svg
+                                width="14"
+                                height="26"
+                                viewBox="0 0 14 26"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M11.8125 2L2.82447 11.5872C2.08618 12.3747 2.10603 13.606 2.86933 14.3693L12.5 24"
+                                    stroke="#38B6FF"
+                                    stroke-width="3"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M11.8125 2L2.82447 11.5872C2.08618 12.3747 2.10603 13.606 2.86933 14.3693L12.5 24"
+                                    stroke="white"
+                                    stroke-opacity="0.8"
+                                    stroke-width="3"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </div>
+                        <button class="main-button">
+                            <p class="p1">Ver Site</p>
+                        </button>
+                        <div class="right" onclick="changeImage(2,1)">
+                            <svg
+                                width="14"
+                                height="26"
+                                viewBox="0 0 14 26"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M2.1875 2L11.1755 11.5872C11.9138 12.3747 11.894 13.606 11.1307 14.3693L1.5 24"
+                                    stroke="#38B6FF"
+                                    stroke-width="3"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M2.1875 2L11.1755 11.5872C11.9138 12.3747 11.894 13.606 11.1307 14.3693L1.5 24"
+                                    stroke="white"
+                                    stroke-opacity="0.8"
+                                    stroke-width="3"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="buttons top">32x220</div>
+                    <container>
+                        <div class="img-1 focus first">
+                            <img
+                                src="./assets/images/bruna-hosti-lp.webp"
+                                alt="A imagem mostra em duas colunas um site criado para uma fotógrafa."
+                            />
+                        </div>
+                        <div class="img-2">
+                            <img
+                                src="./assets/images/site-example-1png.webp"
+                                alt="A imagem mostra em duas colunas um site criado para uma fotógrafa."
+                            />
+                        </div>
+                        <div class="img-3">
+                            <img
+                                src="./assets/images/site-example-2.webp"
+                                alt="A imagem mostra em duas colunas um site criado para uma fotógrafa."
+                            />
+                        </div>
+                        <div class="img-4">
+                            <img
+                                src="./assets/images/site-example-3.webp"
+                                alt="A imagem mostra em duas colunas um site criado para uma fotógrafa."
+                            />
+                        </div>
+                        <div class="img-5 last">
+                            <img
+                                src="./assets/images/bruna-hosti-lp.webp"
+                                alt="A imagem mostra em duas colunas um site criado para uma fotógrafa."
+                            />
+                        </div>
+                    </container>
+                    <button class="project-description">
+                        <p class="p2">Mais Informações</p>
+                        <svg
+                            width="10"
+                            height="6"
+                            viewBox="0 0 10 6"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M4.29289 5.53056C4.68342 5.92109 5.31658 5.92109 5.70711 5.53056L9.29289 1.94478C9.92286 1.31481 9.47669 0.237671 8.58579 0.237671H1.41421C0.523309 0.237671 0.077142 1.31481 0.707107 1.94478L4.29289 5.53056Z"
+                                fill="white"
+                            />
+                        </svg>
+                    </button>
+                    <div class="subtitle">
+                        <p class="p3">
+                            "Eu amei o site, ficou incrível. Muito obrigada pelo
+                            trabalho." -
+                            <b>Bruna Hosti</b>
+                        </p>
+                        <img
+                            src="./assets/images/bruna-hosti-perfil-img.png"
+                            alt="Foto de perfil da fotógrafa Bruna Hosti"
+                        />
+                    </div>
                 </div>
             </div>
         </div>

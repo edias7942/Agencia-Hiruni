@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+}
+
+section {
+    align-items: center;
+    scroll-snap-type: x mandatory;
+    background-color: black;
+    display: flex;
+    height: 500px;
+    width: 350px;
+    overflow-x: scroll;
+}
+
+.item {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    height: 250px;
+    opacity: 0.5;
+    min-width: 200px;
+    margin: 0 50px;
+    transition: 500ms ease-out;
+}
+
+.item.focus {
+    height: 400px;
+    opacity: 1;
+}
+
+.s1 {
+    margin-left: 20px;
+    background-color: yellow;
+}
+
+.s2 {
+    background-color: green;
+}
+
+.s3 {
+    background-color: blue;
+}
+
+.s4 {
+    background-color: red;
+    margin-right: 200px;
+}

@@ -7,11 +7,11 @@
     --primary-color-bg-light: #e7d4e8;
     --primary-color-bg-dark: #1b081c;
 
-    --second-color-light: #9cdbff;
-    --second-color-master: #38b6ff;
-    --second-color-dark: #1c5b7f;
-    --second-color-bg-light: #d7f0ff;
-    --second-color-bg-dark: #0b2433;
+    --secundary-color-light: #9cdbff;
+    --secundary-color-master: #38b6ff;
+    --secundary-color-dark: #1c5b7f;
+    --secundary-color-bg-light: #d7f0ff;
+    --secundary-color-bg-dark: #0b2433;
 
     --tertiary-color-light: #8f9295;
     --tertiary-color-master: #1f242b;
@@ -61,6 +61,25 @@ body {
     }
 }
 
+
+
+#body-content::-webkit-scrollbar {
+    height: 8px;
+    border-radius: 4px; /* width of the entire scrollbar */
+}
+
+#body-content::-webkit-scrollbar-track {
+    /* color of the tracking area */
+}
+
+#body-content::-webkit-scrollbar-thumb {
+    /* color of the scroll thumb */
+    border-radius: 20px; /* roundness of the scroll thumb */
+    border: 0; /* creates padding around scroll thumb */
+    border-bottom: 0;
+    transform: translateY(10px);
+}
+
 h1 {
     font-size: 6.4rem;
     font-weight: bold;
@@ -73,6 +92,15 @@ h1 {
     
     @media (max-width: 500px) {
         font-size: 4rem;
+    }
+}
+
+h2 {
+    font-size: 4rem;
+    font-weight: bold;
+
+    @media (max-width: 500px) {
+        font-size: 2.8rem;
     }
 }
 
@@ -94,6 +122,21 @@ h4 {
     }
 }
 
+p.p1 {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+}
+
+p.p2 {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+}
+
+p.p3 {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+}
+
 /* Lights of Page */
 .light-of-page {
     border-radius: 50%;
@@ -113,7 +156,7 @@ h4 {
 }
 
 .light-of-page#light-02 {
-    background-color: var(--second-color-master);
+    background-color: var(--secundary-color-master);
 
     right: -150px;
     opacity: 0.3;
@@ -125,34 +168,34 @@ h4 {
     display: none;
     height: 100vh;
     overflow-x: hidden;
-    position: absolute;
+    position: fixed;
     width: 100vw;
     z-index: 9;
 
-    & .background {
+    > .background {
         background-color: #0008;
         height: 100vh;
-        position: absolute;
+        /* position: absolute; */
         width: 100vw;
-        z-index: 1;
+        /* z-index: 1; */
     }
 
-    & .container {
+    > .container {
         background-color: var(--primary-color-bg-dark);
         height: 100vh;
         position: absolute;
+        top: 0;
         width: 240px;
         right: 0;
-        z-index: 2;
 
-        & .top {
+        > .top {
             align-items: center;
             display: flex;
             height: 48px;
             padding: 16px;
             width: 100%;
 
-            & .close-button {
+            > .close-button {
                 align-items: center;
                 display: flex;
                 height: 48px;
@@ -161,28 +204,28 @@ h4 {
             }
         }
 
-        & .content {
+        > .content {
             align-items: center;
             display: flex;
             flex-direction: column;
             font-size: 2rem;
 
-            & .item {
+            > .item {
                 display: flex;
                 color: white;
                 gap: 8px;
                 margin: 8px 0 0 0;
             }
 
-            & .item .text {
+            > .item .text {
                 padding: 8px;
             }
 
-            & .item .toggle-icon {
+            > .item .toggle-icon {
                 transform: translateY(4px);
             }
 
-            & .item.focus .text {
+            > .item.focus .text {
                 border-bottom: 3px solid white;
                 font-weight: bold;
             }
@@ -202,33 +245,33 @@ header {
     width: 1220px;
     z-index: 8;
 
-    & div {
+    > div {
         align-items: center;
         display: flex;
     }
 
-    & .left {
+    > .left {
         gap: 16px;
         padding: 16px;
 
-        & img {
+        > img {
             background-color: gray;
             border-radius: 50%;
             height: 48px;
             width: 48px;
         }
 
-        & h3 {
+        > h3 {
             color: var(--primary-color-dark);
             width: fit-content;
         }
     }
 
-    & .center {
+    > .center {
         display: flex;
         gap: 32px;
 
-        & .item {
+        > .item {
             border-bottom: 3px solid transparent;
             color: var(--primary-color-dark);
             cursor: default;
@@ -237,22 +280,22 @@ header {
             padding: 4px 8px;
         }
 
-        & .item.focus {
+        > .item.focus {
             border-bottom: 3px solid var(--primary-color-master);
             color: var(--primary-color-master);
             font-weight: bold;
         }
 
-        & .item:hover:not(.focus) {
+        > .item:hover:not(.focus) {
             border-bottom: 3px solid var(--primary-color-light);
             color: var(--primary-color-master);
         }
     }
 
-    & .right {
+    > .right {
         padding: 16px;
 
-        & button {
+        > button {
             background-color: transparent;
             border: 3px solid var(--primary-color-master);
             border-radius: 30px;
@@ -266,12 +309,12 @@ header {
             transition: 200ms;
         }
 
-        & button:hover {
+        > button:hover {
             background-color: var(--primary-color-master);
             color: white;
         }
 
-        & .burguer-menu {
+        > .burguer-menu {
             align-items: center;
             display: none;
             height: 48px;
@@ -283,7 +326,7 @@ header {
     @media (max-width: 1300px) {
         width: 1000px;
 
-        & .center {
+        > .center {
             gap: 8px;
         }
     }
@@ -291,14 +334,14 @@ header {
     @media (max-width: 1100px) {
         width: 800px;
 
-        & .left {
-            & h3 {
+        > .left {
+            > h3 {
                 display: none;
             }
         }
 
-        & .right {
-            & button {
+        > .right {
+            > button {
                 padding: 7px 15px;
             }
         }
@@ -310,21 +353,21 @@ header {
     }
 
     @media (max-width: 800px) {
-        & .right button {
+        > .right button {
             display: none;
         }
     }
 
     @media (max-width: 650px) {
-        & .left h3 {
+        > .left h3 {
             display: flex;
         }
 
-        & .center {
+        > .center {
             display: none;
         }
 
-        & .right .burguer-menu {
+        > .right .burguer-menu {
             display: flex;
         }
     }
@@ -335,60 +378,65 @@ header {
 #hero {
     display: flex;
     margin: 100px 0;
+    max-width: 100vw;
     min-height: calc(100vh - 100px);
     position: relative;
     width: 100%;
 
-    & div {
+    > div {
         display: flex;
         flex-direction: column;
         justify-content: center;
         transform: translateY(-50px);
     }
 
-    & .left {
+    > .left {
         display: flex;
         flex-direction: column;
         gap: 24px;
         justify-content: center;
 
-        & h1 {
+        > h1 {
             margin: 0;
             /* Texto Transparente */
             background-image: linear-gradient(
                 to right,
-                var(--second-color-bg-light),
+                var(--secundary-color-bg-light),
                 var(--primary-color-bg-light)
             );
             color: transparent;
             -webkit-background-clip: text;
         }
 
-        & h4 {
+        > h2, h3{
+            display: none;
+        }
+
+        > h4 {
             color: var(--primary-color-bg-light);
 
-            & span {
-                color: var(--primary-color-master);
+            > span {
+                color: var(--primary-color-light);
             }
         }
     }
 
-    & .right img {
+    > .right img {
         border-radius: 50%;
         height: 520px;
         width: 580px;
     }
 
-    & .scroll-icon {
+    > .scroll-icon {
         bottom: 50px;
         left: calc(50% - 16px);
         position: absolute;
 
-        & .out-svg {
+        > .out-svg {
             width: 32px;
         }
 
-        & .inner-svg {
+        > .inner-svg {
             bottom: 20px;
             left: 8px;
             position: absolute;
@@ -397,14 +445,14 @@ header {
     }
 
     @media (max-width: 1300px) {
-        & .right img {
+        > .right img {
             height: 420px;
             width: 480px;
         }
     }
 
     @media (max-width: 1100px) {
-        & .right img {
+        > .right img {
             height: 360px;
             width: 380px;
         }
@@ -416,31 +464,31 @@ header {
         justify-content: center;
         margin: 140px 0 0 0;
 
-        & .left {
+        > .left {
             align-items: center;
             margin: 24px 0 0 0;
             order: 2;
 
-            & h1 {
+            > h1 {
                 text-align: center;
             }
 
-            & h4 {
+            > h4 {
                 text-align: center;
                 width: 500px;
             }
         }
 
-        & .right {
+        > .right {
             order: 1;
         }
 
-        & .right img {
+        > .right img {
             height: 260px;
             width: 280px;
         }
 
-        & .scroll-icon {
+        > .scroll-icon {
             bottom: inherit;
             left: inherit;
             margin: 24px 0 0 0;
@@ -453,8 +501,9 @@ header {
 
         margin: 100px 0 0 0;
         
-        & .left h4 {
-            width: 80%;
+        > .left h4 {
+            width: 400px;
+            max-width: 80vw;
         }
     }
 }

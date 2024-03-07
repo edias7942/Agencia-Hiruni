@@ -32,10 +32,9 @@ function toggleMenuMobile() {
 
 let carouselItems = {
     2: {
-        allowChange: true,
-        currentItem: 1,
-        itensLength: 2,
-        lastDirection: 1,
+        allowChange: true, // Atributo responsável por autorizar a mudança de Imagem (Ele bloqueia por exemplo durante as animações de transição.)
+        currentItem: 1, // Item que atualmente é exibido na tela
+        lastDirection: 1, // Mostra a última direção à qual o carrossel foi movido (1 = Próxima imagem, -1 = Imagem anterior)
         locationItem: "#section-2>.container>#right>#item-",
         itemsData: [
             document.querySelector(`#section-2>.container>#right>#item-1`),
@@ -46,16 +45,15 @@ let carouselItems = {
             document.querySelector(
                 `#section-2>.container>#right>#item-limiter`
             ),
-        ],ItemsLinks:['']
+        ],
+        ItemsLinks: [""],
     },
     5: {
         currentItem: 0,
-        itensLength: 10,
         lastDirection: 1,
     },
     6: {
         currentItem: 0,
-        itensLength: 10,
         lastDirection: 1,
     },
 };
@@ -73,6 +71,11 @@ function changeImage(section, direction) {
     let itemsQuantity = itemsList.length - 1;
     let lastDirection = carouselItems[section].lastDirection;
 
+    /**
+     * Essa função, além de alterar a propriedade de "desactved" do elemento, também altera sua propriedade em botoes.enabled[button]
+     * @param {int} button Seleciona qual dos dois botões irá mostrar/ocultar à depender da action.
+     * @param {"active"|"desactive"} action "active" - Mostrar o botão | "desactive" - Ocultar o botão
+     */
     function toggleButton(button, action) {
         if (action === "active") {
             botoes[button].classList.remove("hide");
@@ -83,16 +86,20 @@ function changeImage(section, direction) {
         }
     }
 
-    // Função para ocultar botões enquanto a animação acontece
+    // Condição para sair da função caso o botão clicado esteja desativado
     if (direction === 1 && !botoes.enabled[1]) return;
     if (direction === -1 && !botoes.enabled[0]) return;
 
+    // Função para ocultar botões enquanto a animação acontece
     toggleButton(0, "desactive");
     toggleButton(1, "desactive");
 
     if (direction === 1) {
         setTimeout(() => {
+            // Depois de 1.5s do clique do botão direito, o botão esquerdo irá reativar
             toggleButton(0, "active");
+
+            // Caso não seja o último item à ser mostrado, o botão direito irá reativar
             if (!(currentItem === itemsQuantity - 2)) toggleButton(1, "active");
         }, 1500);
 
@@ -101,8 +108,10 @@ function changeImage(section, direction) {
         rightItem = itemsList[currentItem + 2];
     } else {
         setTimeout(() => {
-            toggleButton(1, "active")
-            if(!(currentItem === 1)) toggleButton(0, 'active')
+            // Depois de 1.5s do clique do botão esquerdo, o botão direito irá reativar
+            toggleButton(1, "active");
+            // Caso não seja o primeiro item à ser mostrado, o botão esquerdo irá reativar
+            if (!(currentItem === 1)) toggleButton(0, "active");
         }, 1500);
         leftItem = itemsList[currentItem - 1];
         mainItem = itemsList[currentItem];
@@ -127,7 +136,7 @@ function changeImage(section, direction) {
             setTimeout(() => {
                 mainItem.classList.remove("quase-entrando");
             }, 660);
-        } else { console.alo
+        } else {
             setTimeout(() => {
                 leftItem.classList.remove("entrando-fundo");
                 mainItem.classList.remove("quase-entrando-esquerda");

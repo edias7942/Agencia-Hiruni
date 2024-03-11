@@ -240,7 +240,7 @@
                         digital
                     </p>
                     <div class="buttons bottom">
-                        <div class="left hide" onclick="changeImage(2,-1)">
+                        <div class="left hide" onclick="scrollElement('container', -1)">
                             <svg
                                 width="14"
                                 height="26"
@@ -268,7 +268,7 @@
                         <button class="main-button">
                             <p class="p1">Ver Site</p>
                         </button>
-                        <div class="right" onclick="changeImage(2,1)">
+                        <div class="right" onclick="scrollElement('container', 1)">
                             <svg
                                 width="14"
                                 height="26"
@@ -297,7 +297,7 @@
                 </div>
                 <div class="right">
                     <div class="buttons top">32x220</div>
-                    <container>
+                    <container id="container">
                         <div class="img-1 focus first">
                             <img
                                 src="./assets/images/bruna-hosti-lp.webp"

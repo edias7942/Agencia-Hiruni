@@ -2,16 +2,15 @@
 
 let mobileMenuElement = document.querySelector("#mobile-menu");
 let mobileMenuIsOpened = false;
-let bodyContentContainer = document.getElementById("body-content")
+let bodyContentContainer = document.getElementById("body-content");
 function toggleMobileMenu() {
     if (mobileMenuIsOpened === false) {
-        document.body.style.overflowY = "hidden"
-        bodyContentContainer.style.overflowY = "hidden"
+        document.body.style.overflowY = "hidden";
+        bodyContentContainer.style.overflowY = "hidden";
         mobileMenuElement.style.display = "block";
-    }
-    else {
-        document.body.style.overflowY = "scroll"
-        bodyContentContainer.style.overflowY = "scroll"
+    } else {
+        document.body.style.overflowY = "scroll";
+        bodyContentContainer.style.overflowY = "scroll";
         mobileMenuElement.style.display = "none";
     }
     mobileMenuIsOpened = !mobileMenuIsOpened;
@@ -102,15 +101,14 @@ document
                     },
                 ],
             };
-            let halfScreenWidth = window.innerWidth/2
-            
+            let halfScreenWidth = window.innerWidth / 2;
+
             if (
                 scrollLeft >= itemOffsetLeft - halfScreenWidth &&
                 scrollLeft < itemOffsetLeft + itemWidth - halfScreenWidth
             ) {
                 item.classList.add("focus");
-                console.log(`"item" ${i} ${itemOffsetLeft}`);
-                console.log(scrollLeft);
+                console.log(itemWidth);
                 if (currentItem !== i) {
                     currentItem = i;
                     companyElement.innerHTML = itensContent.sites[i].company;
@@ -129,6 +127,19 @@ document
             }
         });
     });
+
+function scrollElement(elementPath, direction) {
+    let itemWidth =
+        document.getElementById(elementPath).children[0].offsetWidth;
+    console.log(itemWidth);
+    currentItem = currentItem + direction;
+    document
+    .getElementById(elementPath)
+    .scrollTo({
+        left: currentItem * itemWidth + itemWidth,
+        behavior: "smooth",
+    });
+}
 
 // Testando ir para View com JS
 

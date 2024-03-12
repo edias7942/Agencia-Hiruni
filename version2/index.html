@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="./css/style.css" />
         <link rel="stylesheet" href="./css/portfolio-section.css" />
         <link rel="stylesheet" href="./css/equipe.css" />
+        <link rel="stylesheet" href="./css/vantagens.css" />
         <script src="script.js" defer></script>
     </head>
     <body>
@@ -170,240 +171,478 @@
                 </div>
             </div>
         </header>
-            <div id="hero" class="section-page">
-                <div class="left">
-                    <h1>Reinvente-se</h1>
-                    <h2></h2>
-                    <h3></h3>
-                    <h4>
-                        Atualize sua <span>Identidade Visual</span> com
-                        Profissionais que atendem suas necessidades.
-                    </h4>
-                </div>
-                <div class="right">
-                    <picture>
-                        <!-- Imagem para desktop -->
-                        <source
-                            media="(min-width: 1100px)"
-                            srcset="./assets/images/hero-image-desktop.webp"
-                        />
-                        <!-- Imagem para celular -->
-                        <img
-                            src="./assets/images/hero-image-mobile.webp"
-                            alt="Imagem Responsiva"
-                        />
-                    </picture>
-                </div>
-                <div class="scroll-icon" onclick="next()">
-                    <svg
-                        class="out-svg"
-                        width="36"
-                        height="84"
-                        viewBox="0 0 36 84"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            d="M2 18C2 9.16344 9.16344 2 18 2C26.8366 2 34 9.16344 34 18V66C34 74.8366 26.8366 82 18 82C9.16344 82 2 74.8366 2 66V18Z"
-                            stroke="#85298A"
-                            stroke-width="2.5"
-                            stroke-linecap="round"
-                        />
-                    </svg>
-                    <svg
-                        class="inner-svg"
-                        width="18"
-                        height="11"
-                        viewBox="0 0 18 11"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            d="M2 1.69232L8.16419 9.27901C8.59516 9.80945 9.40484 9.80945 9.83582 9.27901L16 1.69232"
-                            stroke="#85298A"
-                            stroke-width="2.5"
-                            stroke-linecap="round"
-                        />
-                    </svg>
-                </div>
+        <div id="hero" class="section-page">
+            <div class="left">
+                <h1>Reinvente-se</h1>
+                <h2></h2>
+                <h3></h3>
+                <h4>
+                    Atualize sua <span>Identidade Visual</span> com
+                    Profissionais que atendem suas necessidades.
+                </h4>
             </div>
-            <div id="portfolio" class="section-page">
-                <h2>Melhores Projetos</h2>
-                <div class="left">
-                    <div class="buttons top">32x220</div>
-                    <h2>Bruna Hosti</h2>
-                    <h3>Landing Page</h3>
-                    <p class="p2">
-                        Esse foi um site desenvolvido com o objetivo de mostrar
-                        aos clientes da Bruna todo seu trabalho como fotógrafa,
-                        divulgar seu nome, além de centralizar toda sua imagem
-                        digital
-                    </p>
-                    <div class="buttons bottom">
-                        <div
-                            class="left hide"
-                            onclick="scrollElement('container', -1)"
-                        >
-                            <svg
-                                width="14"
-                                height="26"
-                                viewBox="0 0 14 26"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M11.8125 2L2.82447 11.5872C2.08618 12.3747 2.10603 13.606 2.86933 14.3693L12.5 24"
-                                    stroke="#38B6FF"
-                                    stroke-width="3"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                />
-                                <path
-                                    d="M11.8125 2L2.82447 11.5872C2.08618 12.3747 2.10603 13.606 2.86933 14.3693L12.5 24"
-                                    stroke="white"
-                                    stroke-opacity="0.8"
-                                    stroke-width="3"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                />
-                            </svg>
-                        </div>
-                        <button class="main-button">
-                            <p class="p1">Ver Site</p>
-                        </button>
-                        <div
-                            class="right"
-                            onclick="scrollElement('container', 1)"
-                        >
-                            <svg
-                                width="14"
-                                height="26"
-                                viewBox="0 0 14 26"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M2.1875 2L11.1755 11.5872C11.9138 12.3747 11.894 13.606 11.1307 14.3693L1.5 24"
-                                    stroke="#38B6FF"
-                                    stroke-width="3"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                />
-                                <path
-                                    d="M2.1875 2L11.1755 11.5872C11.9138 12.3747 11.894 13.606 11.1307 14.3693L1.5 24"
-                                    stroke="white"
-                                    stroke-opacity="0.8"
-                                    stroke-width="3"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-                <div class="right">
-                    <div class="buttons top">32x220</div>
-                    <container id="container">
-                        <div class="img-1 focus first">
-                            <img
-                                src="./assets/images/bruna-hosti-lp.webp"
-                                alt="A imagem mostra em duas colunas um site criado para uma fotógrafa."
-                            />
-                        </div>
-                        <div class="img-2">
-                            <img
-                                src="./assets/images/site-example-1png.webp"
-                                alt="A imagem mostra em duas colunas um site criado para uma fotógrafa."
-                            />
-                        </div>
-                        <div class="img-3">
-                            <img
-                                src="./assets/images/site-example-2.webp"
-                                alt="A imagem mostra em duas colunas um site criado para uma fotógrafa."
-                            />
-                        </div>
-                        <div class="img-4">
-                            <img
-                                src="./assets/images/site-example-3.webp"
-                                alt="A imagem mostra em duas colunas um site criado para uma fotógrafa."
-                            />
-                        </div>
-                        <div class="img-5 last">
-                            <img
-                                src="./assets/images/bruna-hosti-lp.webp"
-                                alt="A imagem mostra em duas colunas um site criado para uma fotógrafa."
-                            />
-                        </div>
-                    </container>
-                    <button class="project-description">
-                        <p class="p2">Mais Informações</p>
+            <div class="right">
+                <picture>
+                    <!-- Imagem para desktop -->
+                    <source
+                        media="(min-width: 1100px)"
+                        srcset="./assets/images/hero-image-desktop.webp"
+                    />
+                    <!-- Imagem para celular -->
+                    <img
+                        src="./assets/images/hero-image-mobile.webp"
+                        alt="Imagem Responsiva"
+                    />
+                </picture>
+            </div>
+            <div class="scroll-icon" onclick="next()">
+                <svg
+                    class="out-svg"
+                    width="36"
+                    height="84"
+                    viewBox="0 0 36 84"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M2 18C2 9.16344 9.16344 2 18 2C26.8366 2 34 9.16344 34 18V66C34 74.8366 26.8366 82 18 82C9.16344 82 2 74.8366 2 66V18Z"
+                        stroke="#85298A"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                    />
+                </svg>
+                <svg
+                    class="inner-svg"
+                    width="18"
+                    height="11"
+                    viewBox="0 0 18 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M2 1.69232L8.16419 9.27901C8.59516 9.80945 9.40484 9.80945 9.83582 9.27901L16 1.69232"
+                        stroke="#85298A"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                    />
+                </svg>
+            </div>
+        </div>
+        <div id="portfolio" class="section-page">
+            <h2>Melhores Projetos</h2>
+            <div class="left">
+                <div class="buttons top">32x220</div>
+                <h2>Bruna Hosti</h2>
+                <h3>Landing Page</h3>
+                <p class="p2">
+                    Esse foi um site desenvolvido com o objetivo de mostrar aos
+                    clientes da Bruna todo seu trabalho como fotógrafa, divulgar
+                    seu nome, além de centralizar toda sua imagem digital
+                </p>
+                <div class="buttons bottom">
+                    <div
+                        class="left hide"
+                        onclick="scrollElement('container', -1)"
+                    >
                         <svg
-                            width="10"
-                            height="6"
-                            viewBox="0 0 10 6"
+                            width="14"
+                            height="26"
+                            viewBox="0 0 14 26"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                         >
                             <path
-                                d="M4.29289 5.53056C4.68342 5.92109 5.31658 5.92109 5.70711 5.53056L9.29289 1.94478C9.92286 1.31481 9.47669 0.237671 8.58579 0.237671H1.41421C0.523309 0.237671 0.077142 1.31481 0.707107 1.94478L4.29289 5.53056Z"
+                                d="M11.8125 2L2.82447 11.5872C2.08618 12.3747 2.10603 13.606 2.86933 14.3693L12.5 24"
+                                stroke="#38B6FF"
+                                stroke-width="3"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            <path
+                                d="M11.8125 2L2.82447 11.5872C2.08618 12.3747 2.10603 13.606 2.86933 14.3693L12.5 24"
+                                stroke="white"
+                                stroke-opacity="0.8"
+                                stroke-width="3"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </div>
+                    <button class="main-button">
+                        <p class="p1">Ver Site</p>
+                    </button>
+                    <div class="right" onclick="scrollElement('container', 1)">
+                        <svg
+                            width="14"
+                            height="26"
+                            viewBox="0 0 14 26"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M2.1875 2L11.1755 11.5872C11.9138 12.3747 11.894 13.606 11.1307 14.3693L1.5 24"
+                                stroke="#38B6FF"
+                                stroke-width="3"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            <path
+                                d="M2.1875 2L11.1755 11.5872C11.9138 12.3747 11.894 13.606 11.1307 14.3693L1.5 24"
+                                stroke="white"
+                                stroke-opacity="0.8"
+                                stroke-width="3"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="buttons top">32x220</div>
+                <container id="container">
+                    <div class="img-1 focus first">
+                        <img
+                            src="./assets/images/bruna-hosti-lp.webp"
+                            alt="A imagem mostra em duas colunas um site criado para uma fotógrafa."
+                        />
+                    </div>
+                    <div class="img-2">
+                        <img
+                            src="./assets/images/site-example-1png.webp"
+                            alt="A imagem mostra em duas colunas um site criado para uma fotógrafa."
+                        />
+                    </div>
+                    <div class="img-3">
+                        <img
+                            src="./assets/images/site-example-2.webp"
+                            alt="A imagem mostra em duas colunas um site criado para uma fotógrafa."
+                        />
+                    </div>
+                    <div class="img-4">
+                        <img
+                            src="./assets/images/site-example-3.webp"
+                            alt="A imagem mostra em duas colunas um site criado para uma fotógrafa."
+                        />
+                    </div>
+                    <div class="img-5 last">
+                        <img
+                            src="./assets/images/bruna-hosti-lp.webp"
+                            alt="A imagem mostra em duas colunas um site criado para uma fotógrafa."
+                        />
+                    </div>
+                </container>
+                <button class="project-description">
+                    <p class="p2">Mais Informações</p>
+                    <svg
+                        width="10"
+                        height="6"
+                        viewBox="0 0 10 6"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M4.29289 5.53056C4.68342 5.92109 5.31658 5.92109 5.70711 5.53056L9.29289 1.94478C9.92286 1.31481 9.47669 0.237671 8.58579 0.237671H1.41421C0.523309 0.237671 0.077142 1.31481 0.707107 1.94478L4.29289 5.53056Z"
+                            fill="white"
+                        />
+                    </svg>
+                </button>
+                <div class="subtitle">
+                    <p class="p3">
+                        "Eu amei o site, ficou incrível. Muito obrigada pelo
+                        trabalho." -
+                        <b>Bruna Hosti</b>
+                    </p>
+                    <img
+                        src="./assets/images/bruna-hosti-perfil-img.png"
+                        alt="Foto de perfil da fotógrafa Bruna Hosti"
+                    />
+                </div>
+            </div>
+        </div>
+        <div id="equipe" class="section-page">
+            <h2>Nossa Equipe</h2>
+            <div class="content">
+                <div class="person emerson">
+                    <img src="./assets/images/equipe-emerson.webp" alt="" />
+                    <div class="text">
+                        <h3>Emerson Machado</h3>
+                        <p class="p1">Programador</p>
+                        <p class="p3">
+                            Com grandes objetivos, iniciei meus estudos na área
+                            de TI com 16 anos, tendo a cada dia mais certeza da
+                            minha paixão por programação, trabalhei em projetos
+                            junto com programadores com mais de 10 anos de
+                            experiência, onde aprendi muito. Hoje, depois de
+                            muito estudo, atuo principalmente criando sites,
+                            trabalhando junto com minha digníssima sócia Milena.
+                        </p>
+                        <button>Entre em Contato</button>
+                    </div>
+                </div>
+                <div class="person milena">
+                    <img src="./assets/images/equipe-milena.webp" alt="" />
+                    <div class="text">
+                        <h3>Milena Souza</h3>
+                        <p class="p1">Designer</p>
+                        <p class="p3">
+                            Com grandes objetivos, iniciei meus estudos na área
+                            de TI com 16 anos, tendo a cada dia mais certeza da
+                            minha paixão por programação, trabalhei em projetos
+                            junto com programadores com mais de 10 anos de
+                            experiência, onde aprendi muito. Hoje, depois de
+                            muito estudo, atuo principalmente criando sites,
+                            trabalhando junto com minha digníssima sócia Milena.
+                        </p>
+                        <button>Entre em Contato</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="vantagens" class="section-page">
+            <h2>Vantagens de Fechar Conosco</h2>
+            <p class="p2">
+                Com o intuito de nos diferenciarmos, nos especializamos nas
+                áreas citadas abaixo para atender nossos clientes da melhor
+                maneira possível. <br />
+                <strong
+                    >(Arraste para o Lado
+                    <svg
+                        width="16"
+                        height="8"
+                        viewBox="0 0 16 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M11.916 3.08325H0.90686V4.91658H11.916V7.66658L15.5735 3.99992L11.916 0.333252V3.08325Z"
+                            fill="white"
+                        />
+                    </svg>
+                    )</strong
+                >
+            </p>
+            <div class="container">
+                <div class="card programming" id="card-1">
+                    <div class="text">
+                        <div class="icon">
+                            <svg
+                                width="33"
+                                height="32"
+                                viewBox="0 0 33 32"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M31.4902 16C31.4902 21.357 28.7284 26.0698 24.5478 28.7908L23.4112 26.865L22.2571 24.9096C23.6679 23.9551 24.8396 22.6746 25.6644 21.1756C26.3205 19.9833 25.3402 18.7548 24.1668 18.7548H17.9069C17.7688 18.7548 17.6569 18.6429 17.6569 18.5048V14.2271C17.6569 14.089 17.7688 13.9771 17.9069 13.9771H25.8508H30.32C30.9486 13.9771 31.4185 14.4192 31.4544 14.946C31.4782 15.2942 31.4902 15.6456 31.4902 16ZM20.9591 25.6614L22.1194 27.6275L23.2519 29.5462C21.362 30.5266 19.2408 31.123 16.9902 31.2319V26.7242C18.4054 26.6266 19.7463 26.2548 20.9591 25.6614ZM15.4902 26.7242V31.2319C10.4288 30.9868 6.01417 28.2744 3.4243 24.2688L7.34401 22.0366C9.14543 24.6864 12.1015 26.4907 15.4902 26.7242ZM5.49023 16C5.49023 17.7002 5.88543 19.3097 6.58928 20.7402L2.67278 22.9706C1.59745 20.882 0.990234 18.5129 0.990234 16C0.990234 13.4887 1.59668 11.121 2.67074 9.03337L6.57573 11.2874C5.88035 12.711 5.49023 14.3108 5.49023 16ZM7.32671 9.98894L3.42186 7.73497C6.13849 3.53061 10.865 0.75 16.2402 0.75C20.0949 0.75 23.6139 2.17916 26.2992 4.53758C26.3662 4.59644 26.3944 4.73131 26.2849 4.83822L23.4163 7.63853C23.3306 7.72221 23.1435 7.75645 22.98 7.62472C21.1366 6.13954 18.7913 5.25 16.2402 5.25C12.5289 5.25 9.25765 7.13109 7.32671 9.98894Z"
+                                    stroke="#38B6FF"
+                                    stroke-width="1.5"
+                                />
+                                <path
+                                    d="M31.4902 16C31.4902 21.357 28.7284 26.0698 24.5478 28.7908L23.4112 26.865L22.2571 24.9096C23.6679 23.9551 24.8396 22.6746 25.6644 21.1756C26.3205 19.9833 25.3402 18.7548 24.1668 18.7548H17.9069C17.7688 18.7548 17.6569 18.6429 17.6569 18.5048V14.2271C17.6569 14.089 17.7688 13.9771 17.9069 13.9771H25.8508H30.32C30.9486 13.9771 31.4185 14.4192 31.4544 14.946C31.4782 15.2942 31.4902 15.6456 31.4902 16ZM20.9591 25.6614L22.1194 27.6275L23.2519 29.5462C21.362 30.5266 19.2408 31.123 16.9902 31.2319V26.7242C18.4054 26.6266 19.7463 26.2548 20.9591 25.6614ZM15.4902 26.7242V31.2319C10.4288 30.9868 6.01417 28.2744 3.4243 24.2688L7.34401 22.0366C9.14543 24.6864 12.1015 26.4907 15.4902 26.7242ZM5.49023 16C5.49023 17.7002 5.88543 19.3097 6.58928 20.7402L2.67278 22.9706C1.59745 20.882 0.990234 18.5129 0.990234 16C0.990234 13.4887 1.59668 11.121 2.67074 9.03337L6.57573 11.2874C5.88035 12.711 5.49023 14.3108 5.49023 16ZM7.32671 9.98894L3.42186 7.73497C6.13849 3.53061 10.865 0.75 16.2402 0.75C20.0949 0.75 23.6139 2.17916 26.2992 4.53758C26.3662 4.59644 26.3944 4.73131 26.2849 4.83822L23.4163 7.63853C23.3306 7.72221 23.1435 7.75645 22.98 7.62472C21.1366 6.13954 18.7913 5.25 16.2402 5.25C12.5289 5.25 9.25765 7.13109 7.32671 9.98894Z"
+                                    stroke="white"
+                                    stroke-opacity="0.5"
+                                    stroke-width="1.5"
+                                />
+                            </svg>
+                        </div>
+                        <h3>Google SEO</h3>
+                        <p class="p3">
+                            Google SEO melhora o ranking do seu site, aumentando
+                            a visibilidade e atraindo visitantes qualificados.
+                        </p>
+                    </div>
+                    <button>
+                        <p class="p3">Ver Mais</p>
+                        <svg
+                            width="16"
+                            height="8"
+                            viewBox="0 0 16 8"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M11.4161 3.08325H0.406891V4.91658H11.4161V7.66658L15.0736 3.99992L11.4161 0.333252V3.08325Z"
                                 fill="white"
                             />
                         </svg>
                     </button>
-                    <div class="subtitle">
+                </div>
+                <div class="card programming" id="card-2">
+                    <div class="text">
+                        <div class="icon">
+                            <svg
+                                width="35"
+                                height="18"
+                                viewBox="0 0 35 18"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M14.7635 17L20.717 1M27.0426 1.7619L33.7402 9L27.0426 16.2381M8.4379 1.7619L1.74023 9L8.4379 16.2381"
+                                    stroke="#38B6FF"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M14.7635 17L20.717 1M27.0426 1.7619L33.7402 9L27.0426 16.2381M8.4379 1.7619L1.74023 9L8.4379 16.2381"
+                                    stroke="white"
+                                    stroke-opacity="0.5"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </div>
+                        <h3>Site em Código</h3>
                         <p class="p3">
-                            "Eu amei o site, ficou incrível. Muito obrigada pelo
-                            trabalho." -
-                            <b>Bruna Hosti</b>
+                            Um site escrito em código garante personalização
+                            total, desempenho superior e menor vulnerabilidade a
+                            ataques.
                         </p>
-                        <img
-                            src="./assets/images/bruna-hosti-perfil-img.png"
-                            alt="Foto de perfil da fotógrafa Bruna Hosti"
-                        />
                     </div>
+                    <button>
+                        <p class="p3">Ver Mais</p>
+                        <svg
+                            width="16"
+                            height="8"
+                            viewBox="0 0 16 8"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M11.4161 3.08325H0.406891V4.91658H11.4161V7.66658L15.0736 3.99992L11.4161 0.333252V3.08325Z"
+                                fill="white"
+                            />
+                        </svg>
+                    </button>
+                </div>
+                <div class="card design" id="card-3">
+                    <div class="text">
+                        <div class="icon">
+                            <svg
+                                width="34"
+                                height="34"
+                                viewBox="0 0 34 34"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M17.5 13.848L18.2058 13.5943L17.5074 11.6514L16.7959 13.5896L17.5 13.848ZM1.24023 28.102V27.352C0.826021 27.352 0.490234 27.6878 0.490234 28.102H1.24023ZM1.24023 33H0.490234C0.490234 33.4142 0.826021 33.75 1.24023 33.75L1.24023 33ZM6.08872 33V33.75C6.50293 33.75 6.83872 33.4142 6.83872 33H6.08872ZM6.08872 28.102H6.83872C6.83872 27.6878 6.50293 27.352 6.08872 27.352V28.102ZM1.24023 1V0.25C0.826021 0.25 0.490234 0.585786 0.490234 1L1.24023 1ZM1.24023 5.89796H0.490234C0.490234 6.31217 0.826021 6.64796 1.24023 6.64796L1.24023 5.89796ZM6.08872 5.89796V6.64796C6.50293 6.64796 6.83872 6.31217 6.83872 5.89796H6.08872ZM6.08872 1H6.83872C6.83872 0.585786 6.50293 0.25 6.08872 0.25V1ZM14.816 28.102V27.352C14.4018 27.352 14.066 27.6878 14.066 28.102H14.816ZM14.816 33H14.066C14.066 33.4142 14.4018 33.75 14.816 33.75V33ZM19.6645 33V33.75C20.0787 33.75 20.4145 33.4142 20.4145 33H19.6645ZM19.6645 28.102H20.4145C20.4145 27.6878 20.0787 27.352 19.6645 27.352V28.102ZM14.816 1V0.25C14.4018 0.25 14.066 0.585786 14.066 1L14.816 1ZM14.816 5.89796H14.066C14.066 6.31217 14.4018 6.64796 14.816 6.64796V5.89796ZM19.6645 5.89796V6.64796C20.0787 6.64796 20.4145 6.31217 20.4145 5.89796H19.6645ZM19.6645 1H20.4145C20.4145 0.585786 20.0787 0.25 19.6645 0.25V1ZM28.3918 28.102V27.352C27.9775 27.352 27.6418 27.6878 27.6418 28.102H28.3918ZM28.3918 33H27.6418C27.6418 33.4142 27.9775 33.75 28.3918 33.75V33ZM33.2402 33V33.75C33.6544 33.75 33.9902 33.4142 33.9902 33H33.2402ZM33.2402 28.102H33.9902C33.9902 27.6878 33.6544 27.352 33.2402 27.352V28.102ZM28.3918 1V0.25C27.9775 0.25 27.6418 0.585786 27.6418 1L28.3918 1ZM28.3918 5.89796H27.6418C27.6418 6.31217 27.9775 6.64796 28.3918 6.64796V5.89796ZM33.2402 5.89796V6.64796C33.6544 6.64796 33.9902 6.31217 33.9902 5.89796H33.2402ZM33.2402 1H33.9902C33.9902 0.585786 33.6544 0.25 33.2402 0.25V1ZM7.38165 17L6.73037 16.6281C6.59874 16.8586 6.59874 17.1414 6.73037 17.3719L7.38165 17ZM12.2301 25.4898L11.5789 25.8617C11.7124 26.0955 11.9609 26.2398 12.2301 26.2398V25.4898ZM22.2503 25.4898V26.2398C22.5195 26.2398 22.7681 26.0955 22.9016 25.8617L22.2503 25.4898ZM12.2301 8.5102V7.7602C11.9609 7.7602 11.7124 7.90449 11.5789 8.13826L12.2301 8.5102ZM27.0988 17L27.7501 17.3719C27.8817 17.1414 27.8817 16.8586 27.7501 16.6281L27.0988 17ZM22.2503 8.5102L22.9016 8.13826C22.7681 7.90449 22.5195 7.7602 22.2503 7.7602V8.5102ZM21.3158 22.2463L18.2058 13.5943L16.7942 14.1017L19.9042 22.7537L21.3158 22.2463ZM16.7959 13.5896L13.6199 22.2416L15.0281 22.7584L18.2041 14.1064L16.7959 13.5896ZM19.9828 19.65H15.1973V21.15H19.9828V19.65ZM0.490234 28.102V33H1.99023V28.102H0.490234ZM1.24023 33.75H6.08872V32.25H1.24023V33.75ZM0.490234 1V5.89796H1.99023V1H0.490234ZM6.08872 0.25H1.24023V1.75H6.08872V0.25ZM14.816 33.75H19.6645V32.25H14.816V33.75ZM19.6645 27.352H14.816V28.852H19.6645V27.352ZM14.816 6.64796H19.6645V5.14796H14.816V6.64796ZM19.6645 0.25H14.816V1.75H19.6645V0.25ZM28.3918 33.75H33.2402V32.25H28.3918V33.75ZM33.9902 33V28.102H32.4902V33H33.9902ZM33.9902 5.89796V1H32.4902V5.89796H33.9902ZM33.2402 0.25H28.3918V1.75H33.2402V0.25ZM14.066 28.102V30.551H15.566V28.102H14.066ZM14.066 30.551V33H15.566V30.551H14.066ZM6.83872 33V30.551H5.33872V33H6.83872ZM6.83872 30.551V28.102H5.33872V30.551H6.83872ZM14.816 29.801H6.08872V31.301H14.816V29.801ZM20.4145 33V30.551H18.9145V33H20.4145ZM20.4145 30.551V28.102H18.9145V30.551H20.4145ZM27.6418 28.102V30.551H29.1418V28.102H27.6418ZM27.6418 30.551V33H29.1418V30.551H27.6418ZM19.6645 31.301H28.3918V29.801H19.6645V31.301ZM33.2402 27.352H30.816V28.852H33.2402V27.352ZM30.816 27.352H28.3918V28.852H30.816V27.352ZM28.3918 6.64796H30.816V5.14796H28.3918V6.64796ZM30.816 6.64796H33.2402V5.14796H30.816V6.64796ZM31.566 28.102V5.89796H30.066V28.102H31.566ZM27.6418 1V3.44898H29.1418V1H27.6418ZM27.6418 3.44898V5.89796H29.1418V3.44898H27.6418ZM20.4145 5.89796V3.44898H18.9145V5.89796H20.4145ZM20.4145 3.44898V1H18.9145V3.44898H20.4145ZM28.3918 2.69898H19.6645V4.19898H28.3918V2.69898ZM14.066 1V3.44898H15.566V1H14.066ZM14.066 3.44898V5.89796H15.566V3.44898H14.066ZM6.83872 5.89796V3.44898H5.33872V5.89796H6.83872ZM6.83872 3.44898V1H5.33872V3.44898H6.83872ZM14.816 2.69898H6.08872V4.19898H14.816V2.69898ZM1.24023 6.64796H3.66448V5.14796H1.24023V6.64796ZM3.66448 6.64796H6.08872V5.14796H3.66448V6.64796ZM6.08872 27.352H3.66448V28.852H6.08872V27.352ZM3.66448 27.352H1.24023V28.852H3.66448V27.352ZM2.91448 5.89796V28.102H4.41448V5.89796H2.91448ZM6.73037 17.3719L11.5789 25.8617L12.8814 25.1179L8.03292 16.6281L6.73037 17.3719ZM12.2301 26.2398H22.2503V24.7398H12.2301V26.2398ZM8.03292 17.3719L12.8814 8.88214L11.5789 8.13826L6.73037 16.6281L8.03292 17.3719ZM27.7501 16.6281L22.9016 8.13826L21.5991 8.88214L26.4475 17.3719L27.7501 16.6281ZM22.2503 7.7602H12.2301V9.2602H22.2503V7.7602ZM26.4475 16.6281L21.5991 25.1179L22.9016 25.8617L27.7501 17.3719L26.4475 16.6281Z"
+                                    fill="#85298A"
+                                />
+                                <path
+                                    d="M17.5 13.848L18.2058 13.5943L17.5074 11.6514L16.7959 13.5896L17.5 13.848ZM1.24023 28.102V27.352C0.826021 27.352 0.490234 27.6878 0.490234 28.102H1.24023ZM1.24023 33H0.490234C0.490234 33.4142 0.826021 33.75 1.24023 33.75L1.24023 33ZM6.08872 33V33.75C6.50293 33.75 6.83872 33.4142 6.83872 33H6.08872ZM6.08872 28.102H6.83872C6.83872 27.6878 6.50293 27.352 6.08872 27.352V28.102ZM1.24023 1V0.25C0.826021 0.25 0.490234 0.585786 0.490234 1L1.24023 1ZM1.24023 5.89796H0.490234C0.490234 6.31217 0.826021 6.64796 1.24023 6.64796L1.24023 5.89796ZM6.08872 5.89796V6.64796C6.50293 6.64796 6.83872 6.31217 6.83872 5.89796H6.08872ZM6.08872 1H6.83872C6.83872 0.585786 6.50293 0.25 6.08872 0.25V1ZM14.816 28.102V27.352C14.4018 27.352 14.066 27.6878 14.066 28.102H14.816ZM14.816 33H14.066C14.066 33.4142 14.4018 33.75 14.816 33.75V33ZM19.6645 33V33.75C20.0787 33.75 20.4145 33.4142 20.4145 33H19.6645ZM19.6645 28.102H20.4145C20.4145 27.6878 20.0787 27.352 19.6645 27.352V28.102ZM14.816 1V0.25C14.4018 0.25 14.066 0.585786 14.066 1L14.816 1ZM14.816 5.89796H14.066C14.066 6.31217 14.4018 6.64796 14.816 6.64796V5.89796ZM19.6645 5.89796V6.64796C20.0787 6.64796 20.4145 6.31217 20.4145 5.89796H19.6645ZM19.6645 1H20.4145C20.4145 0.585786 20.0787 0.25 19.6645 0.25V1ZM28.3918 28.102V27.352C27.9775 27.352 27.6418 27.6878 27.6418 28.102H28.3918ZM28.3918 33H27.6418C27.6418 33.4142 27.9775 33.75 28.3918 33.75V33ZM33.2402 33V33.75C33.6544 33.75 33.9902 33.4142 33.9902 33H33.2402ZM33.2402 28.102H33.9902C33.9902 27.6878 33.6544 27.352 33.2402 27.352V28.102ZM28.3918 1V0.25C27.9775 0.25 27.6418 0.585786 27.6418 1L28.3918 1ZM28.3918 5.89796H27.6418C27.6418 6.31217 27.9775 6.64796 28.3918 6.64796V5.89796ZM33.2402 5.89796V6.64796C33.6544 6.64796 33.9902 6.31217 33.9902 5.89796H33.2402ZM33.2402 1H33.9902C33.9902 0.585786 33.6544 0.25 33.2402 0.25V1ZM7.38165 17L6.73037 16.6281C6.59874 16.8586 6.59874 17.1414 6.73037 17.3719L7.38165 17ZM12.2301 25.4898L11.5789 25.8617C11.7124 26.0955 11.9609 26.2398 12.2301 26.2398V25.4898ZM22.2503 25.4898V26.2398C22.5195 26.2398 22.7681 26.0955 22.9016 25.8617L22.2503 25.4898ZM12.2301 8.5102V7.7602C11.9609 7.7602 11.7124 7.90449 11.5789 8.13826L12.2301 8.5102ZM27.0988 17L27.7501 17.3719C27.8817 17.1414 27.8817 16.8586 27.7501 16.6281L27.0988 17ZM22.2503 8.5102L22.9016 8.13826C22.7681 7.90449 22.5195 7.7602 22.2503 7.7602V8.5102ZM21.3158 22.2463L18.2058 13.5943L16.7942 14.1017L19.9042 22.7537L21.3158 22.2463ZM16.7959 13.5896L13.6199 22.2416L15.0281 22.7584L18.2041 14.1064L16.7959 13.5896ZM19.9828 19.65H15.1973V21.15H19.9828V19.65ZM0.490234 28.102V33H1.99023V28.102H0.490234ZM1.24023 33.75H6.08872V32.25H1.24023V33.75ZM0.490234 1V5.89796H1.99023V1H0.490234ZM6.08872 0.25H1.24023V1.75H6.08872V0.25ZM14.816 33.75H19.6645V32.25H14.816V33.75ZM19.6645 27.352H14.816V28.852H19.6645V27.352ZM14.816 6.64796H19.6645V5.14796H14.816V6.64796ZM19.6645 0.25H14.816V1.75H19.6645V0.25ZM28.3918 33.75H33.2402V32.25H28.3918V33.75ZM33.9902 33V28.102H32.4902V33H33.9902ZM33.9902 5.89796V1H32.4902V5.89796H33.9902ZM33.2402 0.25H28.3918V1.75H33.2402V0.25ZM14.066 28.102V30.551H15.566V28.102H14.066ZM14.066 30.551V33H15.566V30.551H14.066ZM6.83872 33V30.551H5.33872V33H6.83872ZM6.83872 30.551V28.102H5.33872V30.551H6.83872ZM14.816 29.801H6.08872V31.301H14.816V29.801ZM20.4145 33V30.551H18.9145V33H20.4145ZM20.4145 30.551V28.102H18.9145V30.551H20.4145ZM27.6418 28.102V30.551H29.1418V28.102H27.6418ZM27.6418 30.551V33H29.1418V30.551H27.6418ZM19.6645 31.301H28.3918V29.801H19.6645V31.301ZM33.2402 27.352H30.816V28.852H33.2402V27.352ZM30.816 27.352H28.3918V28.852H30.816V27.352ZM28.3918 6.64796H30.816V5.14796H28.3918V6.64796ZM30.816 6.64796H33.2402V5.14796H30.816V6.64796ZM31.566 28.102V5.89796H30.066V28.102H31.566ZM27.6418 1V3.44898H29.1418V1H27.6418ZM27.6418 3.44898V5.89796H29.1418V3.44898H27.6418ZM20.4145 5.89796V3.44898H18.9145V5.89796H20.4145ZM20.4145 3.44898V1H18.9145V3.44898H20.4145ZM28.3918 2.69898H19.6645V4.19898H28.3918V2.69898ZM14.066 1V3.44898H15.566V1H14.066ZM14.066 3.44898V5.89796H15.566V3.44898H14.066ZM6.83872 5.89796V3.44898H5.33872V5.89796H6.83872ZM6.83872 3.44898V1H5.33872V3.44898H6.83872ZM14.816 2.69898H6.08872V4.19898H14.816V2.69898ZM1.24023 6.64796H3.66448V5.14796H1.24023V6.64796ZM3.66448 6.64796H6.08872V5.14796H3.66448V6.64796ZM6.08872 27.352H3.66448V28.852H6.08872V27.352ZM3.66448 27.352H1.24023V28.852H3.66448V27.352ZM2.91448 5.89796V28.102H4.41448V5.89796H2.91448ZM6.73037 17.3719L11.5789 25.8617L12.8814 25.1179L8.03292 16.6281L6.73037 17.3719ZM12.2301 26.2398H22.2503V24.7398H12.2301V26.2398ZM8.03292 17.3719L12.8814 8.88214L11.5789 8.13826L6.73037 16.6281L8.03292 17.3719ZM27.7501 16.6281L22.9016 8.13826L21.5991 8.88214L26.4475 17.3719L27.7501 16.6281ZM22.2503 7.7602H12.2301V9.2602H22.2503V7.7602ZM26.4475 16.6281L21.5991 25.1179L22.9016 25.8617L27.7501 17.3719L26.4475 16.6281Z"
+                                    fill="white"
+                                    fill-opacity="0.5"
+                                />
+                            </svg>
+                        </div>
+                        <h3>Logotipos</h3>
+                        <p class="p3">
+                            A logotipo é fundamental para a identidade visual da
+                            sua marca, ajudando a transmitir credibilidade e
+                            diferenciar-se da concorrência.
+                        </p>
+                    </div>
+                    <button>
+                        <p class="p3">Ver Mais</p>
+                        <svg
+                            width="16"
+                            height="8"
+                            viewBox="0 0 16 8"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M11.4161 3.08325H0.406891V4.91658H11.4161V7.66658L15.0736 3.99992L11.4161 0.333252V3.08325Z"
+                                fill="white"
+                            />
+                        </svg>
+                    </button>
+                </div>
+                <div class="card design" id="card-4">
+                    <div class="text">
+                        <div class="icon">
+                            <svg
+                                width="34"
+                                height="18"
+                                viewBox="0 0 34 18"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M16.7402 1C6.6069 1 1.85135 6.33333 0.740234 9C1.85135 11.6667 6.6069 17 16.7402 17C26.8736 17 31.6291 11.6667 32.7402 9C31.6291 6.33333 26.8736 1 16.7402 1Z"
+                                    stroke="#85298A"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M16.7402 1C6.6069 1 1.85135 6.33333 0.740234 9C1.85135 11.6667 6.6069 17 16.7402 17C26.8736 17 31.6291 11.6667 32.7402 9C31.6291 6.33333 26.8736 1 16.7402 1Z"
+                                    stroke="white"
+                                    stroke-opacity="0.5"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <circle
+                                    cx="16.7403"
+                                    cy="8.99992"
+                                    r="3.91667"
+                                    stroke="#85298A"
+                                    stroke-width="1.5"
+                                />
+                                <circle
+                                    cx="16.7403"
+                                    cy="8.99992"
+                                    r="3.91667"
+                                    stroke="white"
+                                    stroke-opacity="0.5"
+                                    stroke-width="1.5"
+                                />
+                            </svg>
+                        </div>
+                        <h3>Identidade Visual</h3>
+                        <p class="p3">
+                            A identidade visual define a personalidade da marca,
+                            aumenta o reconhecimento e fortalece a conexão com o
+                            público-alvo.
+                        </p>
+                    </div>
+                    <button>
+                        <p class="p3">Ver Mais</p>
+                        <svg
+                            width="16"
+                            height="8"
+                            viewBox="0 0 16 8"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M11.4161 3.08325H0.406891V4.91658H11.4161V7.66658L15.0736 3.99992L11.4161 0.333252V3.08325Z"
+                                fill="white"
+                            />
+                        </svg>
+                    </button>
                 </div>
             </div>
-            <div id="equipe" class="section-page">
-                <h2>Nossa Equipe</h2>
-                <div class="content">
-                    <div class="person emerson">
-                        <img src="./assets/images/equipe-emerson.webp" alt="" />
-                        <div class="text">
-                            <h3>Emerson Machado</h3>
-                            <p class="p1">Programador</p>
-                            <p class="p3">
-                                Com grandes objetivos, iniciei meus estudos na
-                                área de TI com 16 anos, tendo a cada dia mais
-                                certeza da minha paixão por programação,
-                                trabalhei em projetos junto com programadores
-                                com mais de 10 anos de experiência, onde aprendi
-                                muito. Hoje, depois de muito estudo, atuo
-                                principalmente criando sites, trabalhando junto
-                                com minha digníssima sócia Milena.
-                            </p>
-                            <button>Entre em Contato</button>
-                        </div>
-                    </div>
-                    <div class="person milena">
-                        <img src="./assets/images/equipe-milena.webp" alt="" />
-                        <div class="text">
-                            <h3>Milena Souza</h3>
-                            <p class="p1">Designer</p>
-                            <p class="p3">
-                                Com grandes objetivos, iniciei meus estudos na
-                                área de TI com 16 anos, tendo a cada dia mais
-                                certeza da minha paixão por programação,
-                                trabalhei em projetos junto com programadores
-                                com mais de 10 anos de experiência, onde aprendi
-                                muito. Hoje, depois de muito estudo, atuo
-                                principalmente criando sites, trabalhando junto
-                                com minha digníssima sócia Milena.
-                            </p>
-                            <button>Entre em Contato</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="vantagens" class="section-page"></div>
+            <button>
+                <p class="p3"><strong>Outras Vantagens</strong></p>
+                <svg
+                    width="16"
+                    height="8"
+                    viewBox="0 0 16 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M11.6661 3.08325H0.656921V4.91658H11.6661V7.66658L15.3236 3.99992L11.6661 0.333252V3.08325Z"
+                        fill="#212529"
+                    />
+                </svg>
+            </button>
+        </div>
     </body>
 </html>

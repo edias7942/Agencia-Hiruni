@@ -102,6 +102,7 @@ p.p3 {
 }
 
 button {
+    cursor: pointer;
     user-select: none;
 }
 
@@ -349,16 +350,26 @@ header {
 .section-page {
     padding: 0px calc((100vw - 1220px) / 2);
     margin: 100px 0;
-    max-width: 1220px;
+    width: 1220px;
 
     @media (max-width: 1300px) {
         padding: 0px calc((100vw - 1000px) / 2);
-        max-width: 1000px;
+        width: 1000px;
     }
 
     @media (max-width: 1100px) {
         padding: 0px calc((100vw - 800px) / 2);
-        max-width: 800px;
+        width: 800px;
+    }
+
+    @media (max-width: 900px) {
+        padding: 0px calc((100vw - 700px) / 2);
+        width: 700px;
+    }
+
+    @media (max-width: 700px) {
+        padding: 0px;
+        width: 100%;
     }
 }
 

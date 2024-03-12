@@ -1,0 +1,126 @@
+:root {
+    --primary-color-light: #c294c5;
+    --primary-color-master: #85298a;
+    --primary-color-dark: #421445;
+    --primary-color-bg-light: #e7d4e8;
+    --primary-color-bg-dark: #1b081c;
+
+    --secundary-color-light: #9cdbff;
+    --secundary-color-master: #38b6ff;
+    --secundary-color-dark: #1c5b7f;
+    --secundary-color-bg-light: #d7f0ff;
+    --secundary-color-bg-dark: #0b2433;
+
+    --tertiary-color-light: #8f9295;
+    --tertiary-color-master: #1f242b;
+    --tertiary-color-bg-light: #d2d3d5;
+    --tertiary-color-bg-dark: #0f1215;
+
+    --font-family-1: "Montserrat", sans-serif;
+}
+
+.section-page#equipe {
+    align-items: center;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 150px;
+    padding-bottom: 150px;
+
+    > .content {
+        display: flex;
+        height: 100%;
+        justify-content: space-between;
+        margin-top: 48px;
+
+        > .person {
+            align-items: center;
+            display: flex;
+            height: 100%;
+            width: 49%;
+
+            > img {
+                border-radius: 10px;
+                box-shadow: 0px 173px 69px rgba(0, 0, 0, 0.01),
+                    0px 97px 58px rgba(0, 0, 0, 0.05),
+                    0px 43px 43px rgba(0, 0, 0, 0.09),
+                    0px 11px 24px rgba(0, 0, 0, 0.1);
+                height: 400px;
+            }
+
+            > .text {
+                margin-left: 24px;
+
+                > h3 {
+                    margin-top: 16px;
+                }
+
+                > .p1 {
+                    font-weight: bold;
+                }
+
+                > .p3 {
+                    font-weight: 500;
+                    margin: 32px 0 0 0;
+                }
+
+                > button {
+                    background-color: transparent;
+                    border: 2px solid var(--secundary-color-master);
+                    border-radius: 24px;
+                    color: var(--secundary-color-master);
+                    font-size: 16px;
+                    font-weight: 600;
+                    margin-top: 24px;
+                    padding: 8px 16px;
+                }
+            }
+        }
+
+        > .person.emerson {
+            > .text > h3 {
+                color: var(--secundary-color-dark);
+            }
+
+            > .text > .p1 {
+                color: var(--secundary-color-master);
+            }
+
+            > .text > .p3 {
+                color: var(--secundary-color-bg-dark);
+            }
+        }
+    }
+
+    @media (max-width: 1300px) {
+        > .content {
+            > .person {
+                > img {
+                    height: 300px;
+                }
+
+                > .text {
+                    > h3 {
+                        margin-top: 0;
+                    }
+
+                    > .p3 {
+                        margin: 16px 0 0 0;
+                    }
+
+                    > button {
+                        margin-top: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width:900px) {
+        >.content {
+            >.person{
+                flex-direction: column;
+            }
+        }
+    }
+}

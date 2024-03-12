@@ -2,15 +2,12 @@
 
 let mobileMenuElement = document.querySelector("#mobile-menu");
 let mobileMenuIsOpened = false;
-let bodyContentContainer = document.getElementById("body-content");
 function toggleMobileMenu() {
     if (mobileMenuIsOpened === false) {
         document.body.style.overflowY = "hidden";
-        bodyContentContainer.style.overflowY = "hidden";
         mobileMenuElement.style.display = "block";
     } else {
         document.body.style.overflowY = "scroll";
-        bodyContentContainer.style.overflowY = "scroll";
         mobileMenuElement.style.display = "none";
     }
     mobileMenuIsOpened = !mobileMenuIsOpened;
@@ -19,6 +16,7 @@ function toggleMobileMenu() {
 // MUDANDO DE IMAGEM
 
 let currentItem = 0;
+let maxItem = 4
 
 document
     .querySelector("#portfolio > .right > container")
@@ -129,8 +127,10 @@ document
     });
 
 function scrollElement(elementPath, direction) {
+    if (direction === 1 && currentItem === 4) return
+    if (direction === -1 && currentItem === 0) return
     let itemWidth =
-        document.getElementById(elementPath).children[0].offsetWidth;
+        document.getElementById(elementPath).children[0].offsetWidth; // Pegando primeiro elemento do container para verificar comprimento.
     console.log(itemWidth);
     currentItem = currentItem + direction;
     document

@@ -6,10 +6,11 @@
         <title>Home - Agência Alvo Duplo</title>
         <link rel="stylesheet" href="./css/style.css" />
         <link rel="stylesheet" href="./css/portfolio-section.css" />
+        <link rel="stylesheet" href="./css/equipe.css" />
         <script src="script.js" defer></script>
     </head>
     <body>
-        <div id="light-01" class="light-of-page"></div>
+        <!-- <div id="light-01" class="light-of-page"></div> -->
         <!-- <div id="light-02" class="light-of-page"></div> -->
 
         <div id="mobile-menu">
@@ -169,7 +170,6 @@
                 </div>
             </div>
         </header>
-        <div id="body-content">
             <div id="hero" class="section-page">
                 <div class="left">
                     <h1>Reinvente-se</h1>
@@ -240,7 +240,10 @@
                         digital
                     </p>
                     <div class="buttons bottom">
-                        <div class="left hide" onclick="scrollElement('container', -1)">
+                        <div
+                            class="left hide"
+                            onclick="scrollElement('container', -1)"
+                        >
                             <svg
                                 width="14"
                                 height="26"
@@ -268,7 +271,10 @@
                         <button class="main-button">
                             <p class="p1">Ver Site</p>
                         </button>
-                        <div class="right" onclick="scrollElement('container', 1)">
+                        <div
+                            class="right"
+                            onclick="scrollElement('container', 1)"
+                        >
                             <svg
                                 width="14"
                                 height="26"
@@ -357,6 +363,47 @@
                     </div>
                 </div>
             </div>
-        </div>
+            <div id="equipe" class="section-page">
+                <h2>Nossa Equipe</h2>
+                <div class="content">
+                    <div class="person emerson">
+                        <img src="./assets/images/equipe-emerson.webp" alt="" />
+                        <div class="text">
+                            <h3>Emerson Machado</h3>
+                            <p class="p1">Programador</p>
+                            <p class="p3">
+                                Com grandes objetivos, iniciei meus estudos na
+                                área de TI com 16 anos, tendo a cada dia mais
+                                certeza da minha paixão por programação,
+                                trabalhei em projetos junto com programadores
+                                com mais de 10 anos de experiência, onde aprendi
+                                muito. Hoje, depois de muito estudo, atuo
+                                principalmente criando sites, trabalhando junto
+                                com minha digníssima sócia Milena.
+                            </p>
+                            <button>Entre em Contato</button>
+                        </div>
+                    </div>
+                    <div class="person milena">
+                        <img src="./assets/images/equipe-milena.webp" alt="" />
+                        <div class="text">
+                            <h3>Milena Souza</h3>
+                            <p class="p1">Designer</p>
+                            <p class="p3">
+                                Com grandes objetivos, iniciei meus estudos na
+                                área de TI com 16 anos, tendo a cada dia mais
+                                certeza da minha paixão por programação,
+                                trabalhei em projetos junto com programadores
+                                com mais de 10 anos de experiência, onde aprendi
+                                muito. Hoje, depois de muito estudo, atuo
+                                principalmente criando sites, trabalhando junto
+                                com minha digníssima sócia Milena.
+                            </p>
+                            <button>Entre em Contato</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="vantagens" class="section-page"></div>
     </body>
 </html>

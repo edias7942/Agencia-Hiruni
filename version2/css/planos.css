@@ -1,0 +1,399 @@
+:root {
+    --primary-color-light: #c294c5;
+    --primary-color-master: #85298a;
+    --primary-color-dark: #421445;
+    --primary-color-bg-light: #e7d4e8;
+    --primary-color-bg-dark: #1b081c;
+
+    --secundary-color-light: #9cdbff;
+    --secundary-color-master: #38b6ff;
+    --secundary-color-dark: #1c5b7f;
+    --secundary-color-bg-light: #d7f0ff;
+    --secundary-color-bg-dark: #0b2433;
+
+    --tertiary-color-light: #8f9295;
+    --tertiary-color-master: #1f242b;
+    --tertiary-color-bg-light: #d2d3d5;
+    --tertiary-color-bg-dark: #0f1215;
+
+    --font-family-1: "Montserrat", sans-serif;
+}
+
+.section-page#planos {
+    background-color: var(--secundary-color-bg-light);
+    padding-top: 150px;
+    padding-bottom: 150px;
+
+    > .header {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+
+        > h2 {
+            color: var(--tertiary-color-master);
+            text-align: center;
+        }
+
+        > p {
+            margin-top: 16px;
+            text-align: center;
+            width: 40ch;
+        }
+
+        > .buttons {
+            margin-top: 24px;
+
+            > button {
+                border: 0;
+                color: white;
+                cursor: default;
+                width: 100px;
+                padding: 8px 0;
+            }
+
+            > button.sites {
+                background-color: var(--secundary-color-dark);
+                border-radius: 24px 0 0 24px;
+            }
+
+            > button.design {
+                background-color: var(--primary-color-master);
+                border-radius: 0 24px 24px 0;
+            }
+
+            > button:disabled {
+                cursor: pointer;
+                opacity: 0.2;
+                transition: 100ms;
+            }
+
+            > button:disabled:hover {
+                cursor: pointer;
+                opacity: 0.5;
+            }
+        }
+    }
+
+    > .content {
+        display: flex;
+        gap: 32px;
+        justify-content: space-between;
+        margin-top: 72px;
+        min-height: 500px;
+        /* width: 1220px; */
+
+        > .plan {
+            border-radius: 10px;
+            height: min-content;
+            padding: 40px;
+            /* max-width: 32%; */
+
+            > .header {
+                > .icon-line {
+                    display: flex;
+                    justify-content: space-between;
+
+                    > .right {
+                        align-items: center;
+                        display: flex;
+                        gap: 8px;
+                        color: white;
+                    }
+                }
+
+                > h3 {
+                    letter-spacing: 3px;
+                    margin-top: 24px;
+                }
+
+                > p {
+                    margin-top: 8px;
+                    line-height: 130%;
+                    width: 31ch;
+                }
+            }
+
+            > .description {
+                border-bottom: 1px solid;
+                margin-top: 32px;
+                padding-bottom: 32px;
+
+                > .items {
+                    margin-top: 16px;
+                    > .item {
+                        display: flex;
+                        gap: 8px;
+
+                        > .icon-item,
+                        .icon-help {
+                            align-items: center;
+                            display: flex;
+                            height: 24px;
+                            justify-content: center;
+                            position: relative;
+                            width: 24px;
+                        }
+
+                        > .icon-help::after {
+                            border-radius: 5px;
+                            bottom: 100%;
+                            display: none;
+                            opacity: 1;
+                            padding: 8px;
+                            position: absolute;
+                            text-align: center;
+                            width: 200px;
+                        }
+
+                        > .icon-help:hover::after {
+                            display: flex;
+                        }
+
+                        > p {
+                            /* line-height: 24px; */
+                            width: auto;
+                        }
+                    }
+
+                    > .item.reuniao > .icon-help::after {
+                        content: "Reunião para entendimento de objetivos com o site.";
+                    }
+
+                    > .item.one-page > .icon-help::after {
+                        content: "Site com uma única página (Landing Page, Institucional, Portfólio etc).";
+                    }
+
+                    > .item.seo-basico > .icon-help::after {
+                        content: "SEO com as melhores ténicas, porém limitado por o site conter apenas uma página.";
+                    }
+
+                    > .item.seo-intermediario > .icon-help::after {
+                        content: "SEO com as melhores ténicas, com uma estrutura bem estabelecida e imponente.";
+                    }
+
+                    > .item.responsividade > .icon-help::after {
+                        content: "Capacidade de se adaptar a diferentes dispositivos e tamanhos de tela, principalmente celulares e tablets.";
+                    }
+
+                    > .item.hospedagem-dominio > .icon-help::after {
+                        content: "Pague por hospedagem e domínio só depois de um ano, no Hostgator, um dos melhores servidores do Brasil.";
+                    }
+
+                    > .item.alteracao-pagina > .icon-help::after {
+                        content: "Alterações que respeitem o escopo inicial do Projeto e sejam edições, não a criação de uma nova página.";
+                    }
+
+                    > .item.landing-page > .icon-help::after {
+                        content: "Página web criada para direcionar visitantes e convertê-los em leads ou clientes potenciais.";
+                    }
+
+                    > .item.website-intermediario > .icon-help::after {
+                        content: "Páginas: Home, Sobre, Serviços/Produtos, Portfólio & Contato (Entre em contato para orçamento com outras/mais páginas)";
+                    }
+
+                    > .item.target-tree > .icon-help::after {
+                        content: "Centralize em uma lista de links todas suas redes sociais, site e o que mais você desejar.";
+                    }
+                }
+            }
+
+            > .buy {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+
+                > h3 {
+                    margin-top: 24px;
+                    text-align: center;
+                }
+
+                > button {
+                    background-color: transparent;
+                    border: 3px solid;
+                    border-radius: 24px;
+                    margin-top: 16px;
+                    padding: 8px 16px;
+
+                    > p {
+                        font-weight: 700;
+                        letter-spacing: 2px;
+                    }
+                }
+            }
+        }
+
+        > #plan-1 {
+            background-color: var(--secundary-color-light);
+
+            > .header {
+                > h3 {
+                    color: var(--secundary-color-dark);
+                }
+
+                > p {
+                    color: var(--secundary-color-bg-dark);
+                }
+            }
+
+            > .description {
+                border-color: var(--secundary-color-dark);
+
+                > p.p2 {
+                    color: var(--secundary-color-dark);
+                }
+
+                > .items {
+                    > .item {
+                        > .icon-help::after {
+                            background: var(--secundary-color-dark);
+                            color: white;
+                        }
+                    }
+                }
+            }
+
+            > .buy {
+                > h3 {
+                    color: var(--secundary-color-bg-dark);
+                }
+
+                > button {
+                    border-color: var(--secundary-color-dark);
+
+                    > p {
+                        color: var(--secundary-color-dark);
+                    }
+                }
+
+                > button:hover {
+                    background-color: var(--secundary-color-dark);
+
+                    > p {
+                        color: white;
+                    }
+                }
+            }
+        }
+        > #plan-2 {
+            background-color: var(--secundary-color-dark);
+
+            > .header {
+                > h3 {
+                    color: var(--secundary-color-bg-light);
+                }
+
+                > p {
+                    color: var(--secundary-color-bg-light);
+                }
+            }
+
+            > .description {
+                border-color: var(--secundary-color-bg-light);
+                color: white;
+
+                > p.p2 {
+                    color: var(--secundary-color-bg-light);
+                }
+
+                > .items {
+                    > .item {
+                        > .icon-help::after {
+                            background: var(--secundary-color-bg-light);
+                            border: 1px solid var(--secundary-color-bg-dark);
+                            color: var(--secundary-color-bg-dark);
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+
+            > .buy {
+                > h3 {
+                    color: var(--secundary-color-bg-light);
+                }
+
+                > button {
+                    border-color: var(--secundary-color-bg-light);
+
+                    > p {
+                        color: var(--secundary-color-bg-light);
+                    }
+                }
+
+                > button:hover {
+                    background-color: var(--secundary-color-bg-light);
+
+                    > p {
+                        color: var(--secundary-color-dark);
+                    }
+                }
+            }
+        }
+        > #plan-3 {
+            background-color: var(--secundary-color-master);
+            
+            > .header {
+                > h3 {
+                    color: var(--secundary-color-bg-light);
+                }
+
+                > p {
+                    color: var(--secundary-color-bg-light);
+                }
+            }
+
+            > .description {
+                border-color: var(--secundary-color-bg-light);
+                color: white;
+
+                > p.p2 {
+                    color: var(--secundary-color-bg-light);
+                }
+
+                > .items {
+                    > .item {
+                        > .icon-help::after {
+                            background: var(--secundary-color-bg-light);
+                            border: 1px solid var(--secundary-color-bg-dark);
+                            color: var(--secundary-color-bg-dark);
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+
+            > .buy {
+                > h3 {
+                    color: var(--secundary-color-bg-light);
+                }
+
+                > button {
+                    border-color: var(--secundary-color-bg-light);
+
+                    > p {
+                        color: var(--secundary-color-bg-light);
+                    }
+                }
+
+                > button:hover {
+                    background-color: var(--secundary-color-bg-light);
+
+                    > p {
+                        color: var(--secundary-color-dark);
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        > .header {
+            > h2 {
+                width: 13ch;
+            }
+            > p {
+                width: 30ch;
+            }
+        }
+    }
+}

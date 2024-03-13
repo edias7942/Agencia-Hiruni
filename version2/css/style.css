@@ -44,6 +44,10 @@ body {
     width: 100vw;
 }
 
+a {
+    color: white;
+}
+
 h1 {
     font-size: 6.4rem;
     font-weight: bold;

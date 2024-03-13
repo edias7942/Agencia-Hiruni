@@ -1,0 +1,99 @@
+:root {
+    --primary-color-light: #c294c5;
+    --primary-color-master: #85298a;
+    --primary-color-dark: #421445;
+    --primary-color-bg-light: #e7d4e8;
+    --primary-color-bg-dark: #1b081c;
+
+    --secundary-color-light: #9cdbff;
+    --secundary-color-master: #38b6ff;
+    --secundary-color-dark: #1c5b7f;
+    --secundary-color-bg-light: #d7f0ff;
+    --secundary-color-bg-dark: #0b2433;
+
+    --tertiary-color-light: #8f9295;
+    --tertiary-color-master: #1f242b;
+    --tertiary-color-bg-light: #d2d3d5;
+    --tertiary-color-bg-dark: #0f1215;
+
+    --font-family-1: "Montserrat", sans-serif;
+}
+
+footer.section-page {
+    align-items: center;
+    background-color: var(--primary-color-bg-dark);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    > .voltar-para-topo {
+        cursor: pointer;
+        display: flex;
+        gap: 16px;
+        width: fit-content;
+    }
+
+    > .content {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        > .final {
+            text-align: center;
+            display: flex;
+            gap: 24px;
+            flex-direction: column;
+            width: 380px;
+
+            > .top {
+                align-items: center;
+                display: flex;
+                gap: 32px;
+                height: 72px;
+                justify-content: center;
+
+                > .logo {
+                    background-color: white;
+                    border-radius: 10px;
+                    height: 72px;
+                    width: 72px;
+                }
+            }
+        }
+
+        >.links{
+            display: flex;
+            gap: 32px;
+
+            >ul{
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+
+                >p:not(.title)>a{
+                    color: var(--primary-color-light);
+                }
+
+                >p:not(.title)>a:hover{
+                    color: var(--primary-color-master);
+                }
+            }
+        }
+    }
+
+    @media (max-width:1100px) {
+        >.content{
+            flex-direction: column-reverse;
+
+            >.final{
+                margin-top: 64px;
+            }
+
+            >.links{
+                margin-top: 32px;
+            }
+        }        
+    }
+}

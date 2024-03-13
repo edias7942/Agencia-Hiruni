@@ -183,9 +183,8 @@ scrollElement("planosContainer", 1, "planos")
 
 // Testando ir para View com JS
 
-function next() {
-    console.log("next");
-    let section = document.getElementById("portfolio");
+function scrollToElement(elementId) {
+    let section = document.getElementById(elementId);
     section.scrollIntoView({ behavior: "smooth" });
 }
 

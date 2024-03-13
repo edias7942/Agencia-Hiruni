@@ -23,6 +23,7 @@
     background-color: var(--secundary-color-bg-light);
     padding-top: 150px;
     padding-bottom: 150px;
+    transition: 200ms;
 
     > .header {
         align-items: center;
@@ -59,15 +60,12 @@
             > button.design {
                 background-color: var(--primary-color-master);
                 border-radius: 0 24px 24px 0;
-            }
-
-            > button:disabled {
                 cursor: pointer;
                 opacity: 0.2;
                 transition: 100ms;
             }
 
-            > button:disabled:hover {
+            > button.design:hover {
                 cursor: pointer;
                 opacity: 0.5;
             }
@@ -80,8 +78,7 @@
         justify-content: space-between;
         margin-top: 72px;
         min-height: 500px;
-        /* width: 1220px; */
-
+        padding-bottom: 50px;
         > .plan {
             border-radius: 10px;
             height: min-content;
@@ -141,6 +138,7 @@
                             opacity: 1;
                             padding: 8px;
                             position: absolute;
+                            right: -25px;
                             text-align: center;
                             width: 200px;
                         }
@@ -171,12 +169,16 @@
                         content: "SEO com as melhores ténicas, com uma estrutura bem estabelecida e imponente.";
                     }
 
+                    > .item.seo-avancado > .icon-help::after {
+                        content: "O melhor do SEO para seu site, com uma excelente estrutura e as melhores copys.";
+                    }
+
                     > .item.responsividade > .icon-help::after {
                         content: "Capacidade de se adaptar a diferentes dispositivos e tamanhos de tela, principalmente celulares e tablets.";
                     }
 
                     > .item.hospedagem-dominio > .icon-help::after {
-                        content: "Pague por hospedagem e domínio só depois de um ano, no Hostgator, um dos melhores servidores do Brasil.";
+                        content: "Pague por hospedagem e domínio só depois de um ano. Hospedamos seu site no Hostgator, um dos melhores servidores do Brasil.";
                     }
 
                     > .item.alteracao-pagina > .icon-help::after {
@@ -189,6 +191,10 @@
 
                     > .item.website-intermediario > .icon-help::after {
                         content: "Páginas: Home, Sobre, Serviços/Produtos, Portfólio & Contato (Entre em contato para orçamento com outras/mais páginas)";
+                    }
+
+                    > .item.website-avancado > .icon-help::after {
+                        content: "Além das Páginas do Plano Essencial, criamos Páginas Blog ou Páginas para Produtos e Serviços (Entre em contato para orçamento com outras/mais páginas)";
                     }
 
                     > .item.target-tree > .icon-help::after {
@@ -222,7 +228,7 @@
             }
         }
 
-        > #plan-1 {
+        > #plan-1.programming {
             background-color: var(--secundary-color-light);
 
             > .header {
@@ -274,7 +280,7 @@
                 }
             }
         }
-        > #plan-2 {
+        > #plan-2.programming {
             background-color: var(--secundary-color-dark);
 
             > .header {
@@ -329,49 +335,44 @@
                 }
             }
         }
-        > #plan-3 {
+        > #plan-3.programming {
             background-color: var(--secundary-color-master);
-            
+
             > .header {
                 > h3 {
-                    color: var(--secundary-color-bg-light);
+                    color: var(--secundary-color-bg-dark);
                 }
 
                 > p {
-                    color: var(--secundary-color-bg-light);
+                    color: var(--secundary-color-bg-dark);
                 }
             }
 
             > .description {
-                border-color: var(--secundary-color-bg-light);
-                color: white;
+                border-color: var(--secundary-color-bg-dark);
+                color: var(--secundary-color-bg-dark);
 
                 > p.p2 {
-                    color: var(--secundary-color-bg-light);
+                    color: var(--secundary-color-bg-dark);
                 }
 
-                > .items {
-                    > .item {
-                        > .icon-help::after {
-                            background: var(--secundary-color-bg-light);
-                            border: 1px solid var(--secundary-color-bg-dark);
-                            color: var(--secundary-color-bg-dark);
-                            font-weight: 600;
-                        }
-                    }
+                > .items > .item > .icon-help::after {
+                    background-color: var(--secundary-color-dark);
+                    color: var(--secundary-color-bg-light);
+                    font-weight: 600;
                 }
             }
 
             > .buy {
                 > h3 {
-                    color: var(--secundary-color-bg-light);
+                    color: var(--secundary-color-bg-dark);
                 }
 
                 > button {
-                    border-color: var(--secundary-color-bg-light);
+                    border-color: var(--secundary-color-bg-dark);
 
                     > p {
-                        color: var(--secundary-color-bg-light);
+                        color: var(--secundary-color-bg-dark);
                     }
                 }
 
@@ -382,6 +383,100 @@
                         color: var(--secundary-color-dark);
                     }
                 }
+            }
+        }
+
+        >.design{
+            display: none;
+        }
+    }
+
+    @media (max-width:1300px) {
+        >.content{
+            scroll-snap-type: x mandatory;
+            overflow-x: scroll;
+            
+            >.plan {
+                scroll-snap-align: start;
+                scroll-snap-stop: always;
+                scroll-margin-left: 300px;
+            }
+
+            >#plan-1{
+                margin-left: 500px;
+            }
+
+            >#plan-3{
+                margin-right: 500px;
+            }
+        }
+
+        
+        > .content::-webkit-scrollbar {
+            height: 8px;
+            border-radius: 4px; /* width of the entire scrollbar */
+        }
+
+        > .content::-webkit-scrollbar-track {
+            /* color of the tracking area */
+        }
+
+        > .content::-webkit-scrollbar-thumb {
+            /* color of the scroll thumb */
+            border-radius: 20px; /* roundness of the scroll thumb */
+            border: 2px solid #fff; /* creates padding around scroll thumb */
+            border-bottom: 0;
+            transform: translateY(10px);
+        }
+    }
+
+    @media (max-width:1100px) {
+        >.content{
+            
+            >.plan {
+                scroll-margin-left: 200px;
+            }
+
+            >#plan-1{
+                margin-left: 300px;
+            }
+
+            >#plan-3{
+                margin-right: 300px;
+            }
+        }
+    }
+
+    @media (max-width:900px) {
+        >.content{
+            
+            >.plan {
+                scroll-margin-left: 160px;
+            }
+
+            >#plan-1{
+                margin-left: 300px;
+            }
+
+            >#plan-3{
+                margin-right: 300px;
+            }
+        }
+    }
+
+    @media (max-width:700px) {
+        >.content{
+            
+            >.plan {
+                scroll-margin-left: calc(50vw - 180px);
+            }
+
+            >#plan-1{
+                margin-left: 300px;
+            }
+
+            >#plan-3{
+                margin-right: 300px;
             }
         }
     }
@@ -395,5 +490,204 @@
                 width: 30ch;
             }
         }
+
+        >.content{
+            gap: 16px;
+            >.plan{
+                padding: 20px;
+                scroll-margin-left: 10vw;
+            }
+        }
     }
 }
+
+.section-page#planos.design{
+    background-color: var(--primary-color-bg-light);
+
+    >.header{
+        >.buttons{
+            >button.sites{
+                opacity: 0.2;
+            }
+
+            >button.sites:hover{
+                cursor: pointer;
+                opacity: 0.7;
+            }
+            
+            >button.design{
+                cursor: default;
+                opacity: 1;
+            }
+        }
+    }
+
+    >.content {
+
+        > #plan-1.design {
+            background-color: var(--primary-color-light);
+
+            > .header {
+                > h3 {
+                    color: var(--primary-color-dark);
+                }
+
+                > p {
+                    color: var(--primary-color-bg-dark);
+                }
+            }
+
+            > .description {
+                border-color: var(--primary-color-dark);
+
+                > p.p2 {
+                    color: var(--primary-color-dark);
+                }
+
+                > .items {
+                    > .item {
+                        > .icon-help::after {
+                            background: var(--primary-color-dark);
+                            color: white;
+                        }
+                    }
+                }
+            }
+
+            > .buy {
+                > h3 {
+                    color: var(--primary-color-bg-dark);
+                }
+
+                > button {
+                    border-color: var(--primary-color-dark);
+
+                    > p {
+                        color: var(--primary-color-dark);
+                    }
+                }
+
+                > button:hover {
+                    background-color: var(--primary-color-dark);
+
+                    > p {
+                        color: white;
+                    }
+                }
+            }
+        }
+        > #plan-2.design {
+            background-color: var(--primary-color-dark);
+
+            > .header {
+                > h3 {
+                    color: var(--primary-color-bg-light);
+                }
+
+                > p {
+                    color: var(--primary-color-bg-light);
+                }
+            }
+
+            > .description {
+                border-color: var(--primary-color-bg-light);
+                color: white;
+
+                > p.p2 {
+                    color: var(--primary-color-bg-light);
+                }
+
+                > .items {
+                    > .item {
+                        > .icon-help::after {
+                            background: var(--primary-color-bg-light);
+                            border: 1px solid var(--primary-color-bg-dark);
+                            color: var(--primary-color-bg-dark);
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+
+            > .buy {
+                > h3 {
+                    color: var(--primary-color-bg-light);
+                }
+
+                > button {
+                    border-color: var(--primary-color-bg-light);
+
+                    > p {
+                        color: var(--primary-color-bg-light);
+                    }
+                }
+
+                > button:hover {
+                    background-color: var(--primary-color-bg-light);
+
+                    > p {
+                        color: var(--primary-color-dark);
+                    }
+                }
+            }
+        }
+        > #plan-3.design {
+            background-color: var(--primary-color-master);
+
+            > .header {
+                > h3 {
+                    color: var(--primary-color-bg-dark);
+                }
+
+                > p {
+                    color: var(--primary-color-bg-dark);
+                }
+            }
+
+            > .description {
+                border-color: var(--primary-color-bg-dark);
+                color: var(--primary-color-bg-dark);
+
+                > p.p2 {
+                    color: var(--primary-color-bg-dark);
+                }
+
+                > .items > .item > .icon-help::after {
+                    background-color: var(--primary-color-dark);
+                    color: var(--primary-color-bg-light);
+                    font-weight: 600;
+                }
+            }
+
+            > .buy {
+                > h3 {
+                    color: var(--primary-color-bg-dark);
+                }
+
+                > button {
+                    border-color: var(--primary-color-bg-dark);
+
+                    > p {
+                        color: var(--primary-color-bg-dark);
+                    }
+                }
+
+                > button:hover {
+                    background-color: var(--primary-color-bg-light);
+
+                    > p {
+                        color: var(--primary-color-dark);
+                    }
+                }
+            }
+        }
+        >.programming{
+            display: none;
+        }
+
+        >.design{
+            display: block;
+        }
+    }
+}
+

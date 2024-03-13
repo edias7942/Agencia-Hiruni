@@ -15,8 +15,11 @@ function toggleMobileMenu() {
 
 // MUDANDO DE IMAGEM
 
-let currentItem = 0;
-let maxItem = 4
+let currentItem = {
+    portfolio: 0,
+    planos: 0,
+};
+let maxItem = 4;
 
 document
     .querySelector("#portfolio > .right > container")
@@ -107,8 +110,8 @@ document
             ) {
                 item.classList.add("focus");
                 console.log(itemWidth);
-                if (currentItem !== i) {
-                    currentItem = i;
+                if (currentItem.portfolio !== i) {
+                    currentItem.portfolio = i;
                     companyElement.innerHTML = itensContent.sites[i].company;
                     websiteTypeElement.innerHTML =
                         itensContent.sites[i].websiteType;
@@ -126,20 +129,57 @@ document
         });
     });
 
-function scrollElement(elementPath, direction) {
-    if (direction === 1 && currentItem === 4) return
-    if (direction === -1 && currentItem === 0) return
-    let itemWidth =
-        document.getElementById(elementPath).children[0].offsetWidth; // Pegando primeiro elemento do container para verificar comprimento.
-    console.log(itemWidth);
-    currentItem = currentItem + direction;
-    document
-    .getElementById(elementPath)
-    .scrollTo({
-        left: currentItem * itemWidth + itemWidth,
-        behavior: "smooth",
+document
+    .querySelector("#planos > .content")
+    .addEventListener("scroll", function () {
+        let section = this;
+        let scrollLeft = section.scrollLeft;
+        let items = section.querySelectorAll("#planos > .content > div");
+
+        items.forEach(function (item, i) {
+            let itemOffsetLeft = item.offsetLeft;
+            let itemWidth = item.offsetWidth;
+            let halfScreenWidth = window.innerWidth / 2;
+
+            if (
+                scrollLeft >= itemOffsetLeft - halfScreenWidth &&
+                scrollLeft < itemOffsetLeft + itemWidth - halfScreenWidth
+            ) {
+                item.classList.add("focus");
+                console.log(i);
+                if (currentItem.planos !== i) {
+                    currentItem.planos = i;
+                }
+            } else {
+                item.classList.remove("focus");
+            }
+        });
     });
+
+function scrollElement(elementPath, direction, section) {
+    let containerElement = document.getElementById(elementPath);
+    let elementsLength = containerElement.children.length;
+    console.log(elementsLength);
+    if (direction === 1 && currentItem[section] + 1 === elementsLength) return;
+    if (direction === -1 && currentItem[section] === 0) return;
+
+    let itemWidth = containerElement.children[0].offsetWidth; // Pegando primeiro elemento do container para verificar comprimento.
+    currentItem[section] = currentItem[section] + direction;
+
+    if (direction === -1 && currentItem[section] === 0) {
+        document.getElementById(elementPath).scrollTo({
+            left: 0,
+            behavior: "smooth",
+        });
+    } else {
+        document.getElementById(elementPath).scrollTo({
+            left: currentItem[section] * itemWidth + itemWidth,
+            behavior: "smooth",
+        });
+    }
 }
+
+scrollElement("planosContainer", 1, "planos")
 
 // Testando ir para View com JS
 
@@ -147,4 +187,16 @@ function next() {
     console.log("next");
     let section = document.getElementById("portfolio");
     section.scrollIntoView({ behavior: "smooth" });
+}
+
+/**
+ * 
+ * @param {string} elementId Html Element Id para a mudança de Classe
+ * @param {string} classRemove 
+ * @param {string} classAdd 
+ */
+function changeClass(elementId, classRemove, classAdd){
+    let element = document.getElementById(elementId)
+    if (classRemove) element.classList.remove(classRemove)
+    if (classAdd) element.classList.add(classAdd)
 }

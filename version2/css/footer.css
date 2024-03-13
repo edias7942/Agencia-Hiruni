@@ -96,4 +96,21 @@ footer.section-page {
             }
         }        
     }
+
+    @media(max-width:650px){
+        >.content{
+
+            >.final{
+                width: 280px;
+            }
+            
+            >.links{
+                flex-direction: column;
+
+                >ul>p{
+                    text-align: center;
+                }
+            }
+        }
+    }
 }

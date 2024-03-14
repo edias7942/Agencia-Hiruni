@@ -1,22 +1,22 @@
 :root {
---primary-color-light: #c294c5;
---primary-color-master: #85298a;
---primary-color-dark: #421445;
---primary-color-bg-light: #e7d4e8;
---primary-color-bg-dark: #1b081c;
+    --primary-color-light: #c294c5;
+    --primary-color-master: #85298a;
+    --primary-color-dark: #421445;
+    --primary-color-bg-light: #e7d4e8;
+    --primary-color-bg-dark: #1b081c;
 
---secundary-color-light: #9cdbff;
---secundary-color-master: #38b6ff;
---secundary-color-dark: #1c5b7f;
---secundary-color-bg-light: #d7f0ff;
---secundary-color-bg-dark: #0b2433;
+    --secundary-color-light: #9cdbff;
+    --secundary-color-master: #38b6ff;
+    --secundary-color-dark: #1c5b7f;
+    --secundary-color-bg-light: #d7f0ff;
+    --secundary-color-bg-dark: #0b2433;
 
---tertiary-color-light: #8f9295;
---tertiary-color-master: #1f242b;
---tertiary-color-bg-light: #d2d3d5;
---tertiary-color-bg-dark: #0f1215;
+    --tertiary-color-light: #8f9295;
+    --tertiary-color-master: #1f242b;
+    --tertiary-color-bg-light: #d2d3d5;
+    --tertiary-color-bg-dark: #0f1215;
 
---font-family-1: 'Montserrat', sans-serif;
+    --font-family-1: "Montserrat", sans-serif;
 }
 
 #portfolio.section-page {
@@ -50,22 +50,55 @@
         justify-content: center;
         transition: 750ms ease-out;
 
-        > h2.hidden, h3.hidden, .p2.hidden {
+        >.buttons.top{
+            background-color: transparent;
+            gap: 16px;
+            >button{
+                border: 3px solid;
+                border-radius: 24px;
+                font-size: 18px;
+                font-weight: 600;
+                padding: 8px 16px;
+            }
+            >button.sites{
+                background-color: var(--secundary-color-master);
+                border-color: var(--secundary-color-master);
+                color: var(--secundary-color-bg-dark);
+                cursor: default;
+            }
+
+            >button.design{
+                background-color: transparent;
+                border-color: var(--primary-color-master);
+                color: var(--primary-color-master);
+                opacity: 0.6;
+            }
+
+            >button.design:hover{
+opacity: 1;
+            }
+        }
+
+        > h2.hidden,
+        h3.hidden,
+        .p2.hidden {
             transform: translateX(-50%);
             margin-bottom: 8px;
         }
 
-        >h2.show, h3.show, .p2.show{
+        > h2.show,
+        h3.show,
+        .p2.show {
             transform: translateX(0);
             transition: 1000ms ease-out;
         }
-        
-        >h3.show{
+
+        > h3.show {
             transition-delay: 300ms;
         }
 
-        >.p2.show{
-         transition-delay: 600ms;   
+        > .p2.show {
+            transition-delay: 600ms;
         }
 
         > h2,
@@ -85,7 +118,7 @@
             display: flex;
             gap: 24px;
             margin-top: 32px;
-            
+
             > div:not(.main-button) {
                 align-items: center;
                 background-color: transparent;
@@ -112,14 +145,14 @@
             }
 
             > .main-button {
-                background-color: var(--secundary-color-master);
+                background-color: transparent;
                 border: 3px solid var(--secundary-color-master);
                 border-radius: 20px;
                 padding: 8px 24px;
                 transition: 300ms;
 
                 > p.p1 {
-                    color: var(--secundary-color-bg-dark);
+                    color: var(--secundary-color-master);
                     font-weight: 800;
                     letter-spacing: 2px;
                     transition: 150ms;
@@ -127,25 +160,24 @@
             }
 
             > .main-button:hover {
-                background-color: var(--secundary-color-bg-dark);
+                background-color: var(--secundary-color-master);
                 cursor: pointer;
 
                 > p.p1 {
-                    color: var(--secundary-color-master);
+                    color: var(--secundary-color-bg-dark);
                 }
             }
         }
 
-        >.buttons.bottom.hidden{
+        > .buttons.bottom.hidden {
             transform: translateY(100%);
         }
 
-        >.buttons.bottom.show{
+        > .buttons.bottom.show {
             transform: translateY(0);
             transition: 2000ms;
             transition-delay: 300ms;
         }
-
     }
 
     > .right {
@@ -200,12 +232,8 @@
             border-radius: 4px; /* width of the entire scrollbar */
         }
 
-        > container.show{
+        > container.show {
             transition: 2000ms;
-        }
-
-        > container::-webkit-scrollbar-track {
-            /* color of the tracking area */
         }
 
         > container::-webkit-scrollbar-thumb {
@@ -250,11 +278,11 @@
             }
         }
 
-        >.subtitle.hidden{
-            transform: translateX(50%);
+        > .subtitle.hidden {
+            transform: translateX(25%);
         }
 
-        >.subtitle.show{
+        > .subtitle.show {
             transform: translateX(0);
             transition: 1000ms ease-out;
         }
@@ -317,9 +345,6 @@
                 display: none;
             }
 
-            > h2 {
-            }
-
             > p {
                 display: none;
             }
@@ -334,7 +359,7 @@
             margin: 100px 0 0 0;
             width: 450px;
 
-            > .buttons.top{
+            > .buttons.top {
                 display: flex;
             }
 
@@ -358,10 +383,6 @@
                 border-radius: 4px; /* width of the entire scrollbar */
             }
 
-            > container::-webkit-scrollbar-track {
-                /* color of the tracking area */
-            }
-
             > container::-webkit-scrollbar-thumb {
                 /* color of the scroll thumb */
                 border-radius: 20px; /* roundness of the scroll thumb */
@@ -380,7 +401,7 @@
         > .left {
             max-width: 80vw;
 
-            >.buttons.bottom.show{
+            > .buttons.bottom.show {
                 transition-delay: 0ms;
             }
         }
@@ -402,8 +423,31 @@
                 }
             }
 
-            >button.project-description {
+            > button.project-description {
                 display: flex;
+            }
+        }
+    }
+}
+
+
+#portfolio.section-page.design{
+    >.left{
+        >.buttons.top{
+            >button.sites{
+                background-color: transparent;
+                color: var(--secundary-color-master);
+                cursor: pointer;
+                opacity: 0.6;
+            }
+            >button.sites:hover{
+                opacity: 1;
+            }
+            >button.design{
+                background-color: var(--primary-color-master);
+                color: var(--primary-color-bg-dark);
+                cursor: default;
+                opacity: 1;
             }
         }
     }

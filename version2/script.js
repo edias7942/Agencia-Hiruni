@@ -215,3 +215,15 @@ const observer = new IntersectionObserver((entries) => {
 
 const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
+
+
+// Criadno função para clicar e abrir o item atual do carrossel
+
+let carouselItemLinks = {
+    portfolio:["https://www.emstech.com.br/projects/brunahosti", "https://www.example.com"]
+}
+
+function carouselItemLink(carouselSection){
+    window.open(carouselItemLinks[carouselSection][currentItem[carouselSection]], '_blank')
+    console.log('abadabadu')
+}

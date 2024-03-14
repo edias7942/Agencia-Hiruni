@@ -270,10 +270,13 @@
                 }
             }
 
+            > #card-2.show:not(:hover),#card-3.show:not(:hover),#card-4.show:not(:hover) {
+                transition-delay: inherit;
+            }
             
-        > #card-2.show,#card-3.show,#card-4.show {
-            transition-delay: 0ms;
-        }
+            >#card-1, #card-2, #card-3, #card-4{
+                opacity: 1;
+            }
         }
     }
 
@@ -317,10 +320,6 @@
         > .container::-webkit-scrollbar {
             height: 8px;
             border-radius: 4px; /* width of the entire scrollbar */
-        }
-
-        > .container::-webkit-scrollbar-track {
-            /* color of the tracking area */
         }
 
         > .container::-webkit-scrollbar-thumb {

@@ -247,6 +247,15 @@
             }
         }
 
+        >.plan.hidden{
+            transform: translateY(50px);
+        }
+
+        >.plan.show{
+            transform: translateY(0);
+            transition: 1000ms ease-out;
+        }
+
         > #plan-1.programming {
             background-color: var(--secundary-color-light);
 
@@ -437,10 +446,6 @@
         > .content::-webkit-scrollbar {
             height: 8px;
             border-radius: 4px; /* width of the entire scrollbar */
-        }
-
-        > .content::-webkit-scrollbar-track {
-            /* color of the tracking area */
         }
 
         > .content::-webkit-scrollbar-thumb {

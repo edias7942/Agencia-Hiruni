@@ -211,6 +211,17 @@ img {
     }
 }
 
+/* Hidden and Show Elements */
+.hidden{
+    display: hidden;
+    opacity: 0;
+    transition: none;
+}
+
+.show{
+    opacity: 1;
+}
+
 /* Header */
 header {
     animation: top-bottom 1500ms ;

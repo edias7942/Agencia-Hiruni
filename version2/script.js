@@ -179,7 +179,7 @@ function scrollElement(elementPath, direction, section) {
     }
 }
 
-scrollElement("planosContainer", 1, "planos")
+scrollElement("planosContainer", 1, "planos");
 
 // Testando ir para View com JS
 
@@ -189,13 +189,29 @@ function scrollToElement(elementId) {
 }
 
 /**
- * 
+ *
  * @param {string} elementId Html Element Id para a mudança de Classe
- * @param {string} classRemove 
- * @param {string} classAdd 
+ * @param {string} classRemove
+ * @param {string} classAdd
  */
-function changeClass(elementId, classRemove, classAdd){
-    let element = document.getElementById(elementId)
-    if (classRemove) element.classList.remove(classRemove)
-    if (classAdd) element.classList.add(classAdd)
+function changeClass(elementId, classRemove, classAdd) {
+    let element = document.getElementById(elementId);
+    if (classRemove) element.classList.remove(classRemove);
+    if (classAdd) element.classList.add(classAdd);
 }
+
+// CRIANDO ANIMAÇÕES COM O SCROLL
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry);
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        } else {
+            // entry.target.classList.remove("show");
+        }
+    });
+});
+
+const hiddenElements = document.querySelectorAll(".hidden");
+hiddenElements.forEach((el) => observer.observe(el));

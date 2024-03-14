@@ -30,6 +30,15 @@
         display: flex;
         flex-direction: column;
 
+        >h2.hidden, p.hidden{
+            transform: translateX(-50%);
+        }
+
+        >h2.show, p.show{
+            transform: translateX(0);
+            transition: 1000ms ease-out;
+        }
+
         > h2 {
             color: var(--tertiary-color-master);
             text-align: center;
@@ -39,6 +48,7 @@
             margin-top: 16px;
             text-align: center;
             width: 40ch;
+            transition-delay: 500ms;
         }
 
         > .buttons {
@@ -69,6 +79,15 @@
                 cursor: pointer;
                 opacity: 0.5;
             }
+        }
+
+        >.buttons.hidden{
+            transform: translateY(100%);
+        }
+
+        >.buttons.show{
+            transform: translateY(0);
+            transition: 1000ms ease-out;
         }
     }
 
@@ -393,6 +412,9 @@
 
     @media (max-width:1300px) {
         >.content{
+            border-left: 4px solid;
+            border-right: 4px solid;
+            border-color: var(--secundary-color-dark);
             scroll-snap-type: x mandatory;
             overflow-x: scroll;
             
@@ -466,7 +488,7 @@
 
     @media (max-width:700px) {
         >.content{
-            
+            border: none;
             >.plan {
                 scroll-margin-left: calc(50vw - 180px);
             }

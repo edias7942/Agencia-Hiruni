@@ -28,6 +28,15 @@
     padding-top: 150px;
     padding-bottom: 150px;
 
+    >h2.hidden{
+        transform: translateX(-25%);
+    }
+
+    >h2.show{
+        transform: translateX(0);
+        transition: 1000ms ease-out;
+    }
+
     > .content {
         display: flex;
         gap: 40px;
@@ -51,6 +60,15 @@
                 height: 400px;
             }
 
+            >img.hidden{
+                transform: translateY(25%);
+            }
+
+            >img.show{
+                transform: translateY(0);
+                transition: 1000ms ease-out;
+            }
+
             > .text {
                 display: flex;
                 flex-direction: column;
@@ -68,6 +86,10 @@
                     margin: 16px 0 0 0;
                 }
 
+                > h3.hidden, p.hidden, button.hidden{
+                    transform: translateY(40px);
+                }
+
                 > button {
                     background-color: transparent;
                     border: 2px solid;
@@ -77,6 +99,11 @@
                     margin-top: 24px;
                     padding: 8px 16px;
                     width: fit-content;
+                }
+
+                >h3.show,p.show, button.show{
+                    transform: translateY(0);
+                    transition: 1000ms;
                 }
             }
         }

@@ -48,9 +48,24 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        transition: 750ms ease-out;
 
-        > h2 {
+        > h2.hidden, h3.hidden, .p2.hidden {
+            transform: translateX(-50%);
             margin-bottom: 8px;
+        }
+
+        >h2.show, h3.show, .p2.show{
+            transform: translateX(0);
+            transition: 1000ms ease-out;
+        }
+        
+        >h3.show{
+            transition-delay: 300ms;
+        }
+
+        >.p2.show{
+         transition-delay: 600ms;   
         }
 
         > h2,
@@ -69,7 +84,8 @@
         > .buttons.bottom {
             display: flex;
             gap: 24px;
-
+            margin-top: 32px;
+            
             > div:not(.main-button) {
                 align-items: center;
                 background-color: transparent;
@@ -119,6 +135,17 @@
                 }
             }
         }
+
+        >.buttons.bottom.hidden{
+            transform: translateY(100%);
+        }
+
+        >.buttons.bottom.show{
+            transform: translateY(0);
+            transition: 2000ms;
+            transition-delay: 300ms;
+        }
+
     }
 
     > .right {
@@ -168,10 +195,13 @@
                 opacity: 1;
             }
         }
-
         > container::-webkit-scrollbar {
             height: 8px;
             border-radius: 4px; /* width of the entire scrollbar */
+        }
+
+        > container.show{
+            transition: 2000ms;
         }
 
         > container::-webkit-scrollbar-track {
@@ -218,6 +248,15 @@
                 height: 56px;
                 width: 56px;
             }
+        }
+
+        >.subtitle.hidden{
+            transform: translateX(50%);
+        }
+
+        >.subtitle.show{
+            transform: translateX(0);
+            transition: 1000ms ease-out;
         }
     }
 
@@ -340,6 +379,10 @@
 
         > .left {
             max-width: 80vw;
+
+            >.buttons.bottom.show{
+                transition-delay: 0ms;
+            }
         }
 
         .right {

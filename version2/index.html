@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Home - Agência Alvo Duplo</title>
-        <link rel="stylesheet" href="./css/animations.css">
+        <link rel="stylesheet" href="./css/animations.css" />
         <link rel="stylesheet" href="./css/style.css" />
         <link rel="stylesheet" href="./css/portfolio-section.css" />
         <link rel="stylesheet" href="./css/equipe.css" />
@@ -139,7 +139,34 @@
         </div>
         <header>
             <div class="left">
-                <img src="" alt="" id="logo" />
+                <svg
+                    width="48"
+                    height="48"
+                    viewBox="0 0 48 48"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <circle
+                        opacity="0.2"
+                        cx="24"
+                        cy="24"
+                        r="24"
+                        fill="#800080"
+                    />
+                    <path
+                        d="M13.3618 28.2448C13.1472 28.9014 12.5347 29.3455 11.844 29.3455V29.3455C10.7459 29.3455 9.97548 28.2629 10.3353 27.2254L14.2007 16.0808C14.5497 15.0747 15.4977 14.4 16.5627 14.4H17.0951C18.1604 14.4 19.1088 15.0752 19.4574 16.0818L23.3172 27.2259C23.6765 28.2633 22.906 29.3455 21.8081 29.3455V29.3455C21.117 29.3455 20.5042 28.9009 20.2899 28.2438L16.9062 17.8711C16.8953 17.8378 16.8643 17.8153 16.8293 17.8153V17.8153C16.7943 17.8153 16.7633 17.8378 16.7524 17.871L13.3618 28.2448ZM12.7894 23.4709L19.5348 24.7553V25.2953L12.7894 25.9375V23.4709Z"
+                        fill="#800080"
+                    />
+                    <path
+                        d="M27.4167 29.3455H22.0937V18.775C22.0937 16.3588 24.0524 14.4 26.4687 14.4H27.4607C28.9711 14.4 30.2713 14.6992 31.3613 15.2976C32.4513 15.8912 33.2896 16.745 33.8761 17.8591C34.4676 18.9732 34.7633 20.3062 34.7633 21.8582C34.7633 23.415 34.4676 24.7529 33.8761 25.8719C33.2896 26.9908 32.4464 27.8495 31.3466 28.4479C30.2517 29.0463 28.9417 29.3455 27.4167 29.3455ZM25.2684 26.6381H27.2847C28.2232 26.6381 29.0126 26.4727 29.6529 26.1419C30.2981 25.8062 30.7821 25.2881 31.1047 24.5875C31.4322 23.882 31.5959 22.9723 31.5959 21.8582C31.5959 20.7538 31.4322 19.8513 31.1047 19.1508C30.7821 18.4502 30.3006 17.9345 29.6603 17.6037C29.0199 17.2728 28.2305 17.1074 27.292 17.1074H27.1434C26.1079 17.1074 25.2684 17.9469 25.2684 18.9824V26.6381Z"
+                        fill="#800080"
+                    />
+                    <path
+                        d="M31.0533 33.6H25.7303V23.0295C25.7303 20.6133 27.6891 18.6545 30.1053 18.6545H31.0973C32.6077 18.6545 33.9079 18.9537 34.9979 19.5521C36.088 20.1457 36.9262 20.9995 37.5128 22.1136C38.1043 23.2277 38.4 24.5607 38.4 26.1127C38.4 27.6695 38.1043 29.0074 37.5128 30.1264C36.9262 31.2453 36.0831 32.104 34.9833 32.7024C33.8884 33.3008 32.5784 33.6 31.0533 33.6ZM28.9051 30.8926H30.9214C31.8599 30.8926 32.6493 30.7272 33.2896 30.3964C33.9348 30.0607 34.4187 29.5426 34.7413 28.842C35.0688 28.1365 35.2326 27.2268 35.2326 26.1127C35.2326 25.0083 35.0688 24.1058 34.7413 23.4053C34.4187 22.7047 33.9372 22.189 33.2969 21.8582C32.6566 21.5274 31.8672 21.3619 30.9287 21.3619H30.7801C29.7445 21.3619 28.9051 22.2014 28.9051 23.2369V30.8926Z"
+                        fill="#800080"
+                    />
+                </svg>
+
                 <h3>Alvo Duplo</h3>
             </div>
             <div class="center">
@@ -174,7 +201,7 @@
                 </div>
             </div>
         </header>
-        <div id="hero" class="section-page">
+        <div id="hero" class="section-page hidden">
             <div class="left">
                 <h1>Reinvente-se</h1>
                 <h2></h2>
@@ -235,14 +262,14 @@
             <h2>Melhores Projetos</h2>
             <div class="left">
                 <div class="buttons top">32x220</div>
-                <h2>Bruna Hosti</h2>
-                <h3>Landing Page</h3>
-                <p class="p2">
+                <h2 class="hidden">Bruna Hosti</h2>
+                <h3 class="hidden">Landing Page</h3>
+                <p class="p2 hidden">
                     Esse foi um site desenvolvido com o objetivo de mostrar aos
                     clientes da Bruna todo seu trabalho como fotógrafa, divulgar
                     seu nome, além de centralizar toda sua imagem digital
                 </p>
-                <div class="buttons bottom">
+                <div class="buttons bottom hidden">
                     <div
                         class="left hide"
                         onclick="scrollElement('portfolioContainer', -1, 'portfolio')"
@@ -306,7 +333,7 @@
             </div>
             <div class="right">
                 <div class="buttons top">32x220</div>
-                <container id="portfolioContainer">
+                <container id="portfolioContainer" class="hidden">
                     <div class="img-1 focus first">
                         <img
                             src="./assets/images/bruna-hosti-lp.webp"
@@ -353,7 +380,7 @@
                         />
                     </svg>
                 </button>
-                <div class="subtitle">
+                <div class="subtitle hidden">
                     <p class="p3">
                         "Eu amei o site, ficou incrível. Muito obrigada pelo
                         trabalho." -
@@ -367,14 +394,18 @@
             </div>
         </div>
         <div id="equipe" class="section-page">
-            <h2>Nossa Equipe</h2>
+            <h2 class="hidden">Nossa Equipe</h2>
             <div class="content">
                 <div class="person emerson">
-                    <img src="./assets/images/equipe-emerson.webp" alt="" />
+                    <img
+                        src="./assets/images/equipe-emerson.webp"
+                        class="hidden"
+                        alt=""
+                    />
                     <div class="text">
-                        <h3>Emerson Machado</h3>
-                        <p class="p1">Programador</p>
-                        <p class="p3">
+                        <h3 class="hidden">Emerson Machado</h3>
+                        <p class="p1 hidden">Programador</p>
+                        <p class="p3 hidden">
                             Com grandes objetivos, iniciei meus estudos na área
                             de TI com 16 anos, tendo a cada dia mais certeza da
                             minha paixão por programação, trabalhei em projetos
@@ -383,15 +414,19 @@
                             muito estudo, atuo principalmente criando sites,
                             trabalhando junto com minha digníssima sócia Milena.
                         </p>
-                        <button>Entre em Contato</button>
+                        <button class="hidden">Entre em Contato</button>
                     </div>
                 </div>
                 <div class="person milena">
-                    <img src="./assets/images/equipe-milena.webp" alt="" />
+                    <img
+                        src="./assets/images/equipe-milena.webp"
+                        class="hidden"
+                        alt=""
+                    />
                     <div class="text">
-                        <h3>Milena Souza</h3>
-                        <p class="p1">Designer</p>
-                        <p class="p3">
+                        <h3 class="hidden">Milena Souza</h3>
+                        <p class="p1 hidden">Designer</p>
+                        <p class="p3 hidden">
                             Com grandes objetivos, iniciei meus estudos na área
                             de TI com 16 anos, tendo a cada dia mais certeza da
                             minha paixão por programação, trabalhei em projetos
@@ -400,14 +435,14 @@
                             muito estudo, atuo principalmente criando sites,
                             trabalhando junto com minha digníssima sócia Milena.
                         </p>
-                        <button>Entre em Contato</button>
+                        <button class="hidden">Entre em Contato</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="vantagens" class="section-page">
-            <h2>Vantagens de Fechar Conosco</h2>
-            <p class="p2">
+        <div id="vantagens" class="section-page hidden">
+            <h2 class="hidden">Vantagens de Fechar Conosco</h2>
+            <p class="p2 hidden">
                 Com o intuito de nos diferenciarmos, nos especializamos nas
                 áreas citadas abaixo para atender nossos clientes da melhor
                 maneira possível. <br />
@@ -429,7 +464,7 @@
                 >
             </p>
             <div class="container">
-                <div class="card programming" id="card-1">
+                <div class="card programming hidden" id="card-1">
                     <div class="text">
                         <div class="icon">
                             <svg
@@ -474,7 +509,7 @@
                         </svg>
                     </button>
                 </div>
-                <div class="card programming" id="card-2">
+                <div class="card programming hidden" id="card-2">
                     <div class="text">
                         <div class="icon">
                             <svg
@@ -524,7 +559,7 @@
                         </svg>
                     </button>
                 </div>
-                <div class="card design" id="card-3">
+                <div class="card design hidden" id="card-3">
                     <div class="text">
                         <div class="icon">
                             <svg
@@ -568,7 +603,7 @@
                         </svg>
                     </button>
                 </div>
-                <div class="card design" id="card-4">
+                <div class="card design hidden" id="card-4">
                     <div class="text">
                         <div class="icon">
                             <svg
@@ -650,15 +685,15 @@
                 </svg>
             </button>
         </div>
-        <div id="planos" class="section-page design">
-            <div class="header">
-                <h2>Conheça nossos Planos</h2>
-                <p class="p2">
+        <div id="planos" class="section-page">
+            <div class="header hidden">
+                <h2 class="hidden">Conheça nossos Planos</h2>
+                <p class="p2 hidden">
                     Nossos planos oferecem serviços de alta qualidade a preços
                     acessíveis, valorizando sua empresa e garantindo satisfação
                     total.
                 </p>
-                <div class="buttons">
+                <div class="buttons hidden">
                     <button
                         class="sites"
                         onclick="changeClass('planos','design','programming')"
@@ -677,7 +712,7 @@
                     <div class="right"></div>
                 </div>
             </div>
-            <div id="planosContainer" class="content">
+            <div id="planosContainer" class="content hidden">
                 <div class="plan programming" id="plan-1">
                     <div class="header">
                         <div class="icon-line">
@@ -3669,9 +3704,9 @@
                     </div>
                 </div>
             </div>
-            <div class="footer"></div>
+            <div class="footer hidden"></div>
         </div>
-        <footer class="section-page">
+        <footer class="section-page hidden">
             <div
                 class="voltar-para-topo"
                 onclick="window.scrollTo({top:0, behavior:'smooth'})"
@@ -3693,7 +3728,13 @@
             <div class="content">
                 <div class="final">
                     <div class="top">
-                        <div class="logo"></div>
+                        <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="72" height="72" rx="36" fill="#E6CCE6"/>
+                            <path d="M20.0427 42.3672C19.7208 43.3521 18.8021 44.0183 17.766 44.0183V44.0183C16.1189 44.0183 14.9633 42.3944 15.503 40.8382L21.5926 23.2809C21.9416 22.2747 22.8896 21.6001 23.9546 21.6001H26.5326C27.5979 21.6001 28.5463 22.2752 28.8949 23.2819L34.9758 40.8389C35.5147 42.395 34.359 44.0183 32.7122 44.0183V44.0183C31.6755 44.0183 30.7564 43.3514 30.4348 42.3658L25.3593 26.8067C25.343 26.7568 25.2965 26.723 25.244 26.723V26.723C25.1915 26.723 25.145 26.7568 25.1287 26.8066L20.0427 42.3672ZM19.1841 35.2065L29.3022 37.1331V37.9431L19.1841 38.9064V35.2065Z" fill="#800080"/>
+                            <path d="M41.125 44.0183H33.1405V25.9751C33.1405 23.5588 35.0993 21.6001 37.5155 21.6001H41.191C43.4566 21.6001 45.4069 22.0489 47.0419 22.9465C48.677 23.8368 49.9344 25.1175 50.8142 26.7887C51.7014 28.4598 52.145 30.4594 52.145 32.7873C52.145 35.1226 51.7014 37.1294 50.8142 38.8079C49.9344 40.4863 48.6696 41.7743 47.02 42.6719C45.3776 43.5695 43.4126 44.0183 41.125 44.0183ZM37.9026 39.9572H40.9271C42.3348 39.9572 43.5189 39.7091 44.4794 39.2129C45.4472 38.7093 46.1731 37.9321 46.657 36.8813C47.1483 35.8231 47.3939 34.4585 47.3939 32.7873C47.3939 31.1308 47.1483 29.7771 46.657 28.7262C46.1731 27.6754 45.4509 26.9018 44.4904 26.4056C43.5299 25.9093 42.3458 25.6612 40.9381 25.6612H39.7776C38.7421 25.6612 37.9026 26.5007 37.9026 27.5362V39.9572Z" fill="#800080"/>
+                            <path d="M46.58 50.4001H38.5955V32.3569C38.5955 29.9406 40.5543 27.9819 42.9705 27.9819H46.646C48.9116 27.9819 50.8619 28.4307 52.4969 29.3283C54.132 30.2186 55.3894 31.4993 56.2692 33.1705C57.1564 34.8416 57.6 36.8411 57.6 39.1691C57.6 41.5043 57.1564 43.5112 56.2692 45.1896C55.3894 46.8681 54.1246 48.1561 52.4749 49.0537C50.8326 49.9513 48.8676 50.4001 46.58 50.4001ZM43.3576 46.339H46.3821C47.7898 46.339 48.9739 46.0909 49.9344 45.5946C50.9022 45.0911 51.6281 44.3139 52.112 43.263C52.6033 42.2049 52.8489 40.8402 52.8489 39.1691C52.8489 37.5125 52.6033 36.1588 52.112 35.108C51.6281 34.0571 50.9059 33.2836 49.9454 32.7873C48.9849 32.2911 47.8008 32.043 46.3931 32.043H45.2326C44.1971 32.043 43.3576 32.8824 43.3576 33.918V46.339Z" fill="#800080"/>
+                            </svg>
+                            
                         <h3>
                             Agência <br />
                             Alvo Duplo

@@ -1,0 +1,27 @@
+@keyframes left-right {
+    from{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes right-left {
+    from{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+@keyframes bottom-top {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+}
+
+@keyframes top-bottom {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}

@@ -213,6 +213,7 @@ img {
 
 /* Header */
 header {
+    animation: top-bottom 1500ms ;
     background-color: white;
     border-radius: 0 0 40px 40px;
     display: flex;
@@ -398,7 +399,9 @@ header {
         justify-content: center;
 
         > h1 {
+            animation: left-right 1000ms ;
             margin: 0;
+
             /* Texto Transparente */
             background-image: linear-gradient(
                 to right,
@@ -415,6 +418,7 @@ header {
         }
 
         > h4 {
+            animation: left-right 1500ms;
             color: var(--primary-color-bg-light);
 
             > span {
@@ -424,26 +428,34 @@ header {
     }
 
     > .right img {
+        animation: right-left 1500ms;
         border-radius: 50%;
         height: 520px;
         width: 580px;
     }
 
     > .scroll-icon {
-        bottom: 50px;
+        bottom: 0px;
+        cursor: pointer;
         left: calc(50% - 16px);
         position: absolute;
+            transition: 200ms;
 
         > .out-svg {
             width: 32px;
         }
 
         > .inner-svg {
+            animation: scroll-icon-inner 1500ms reverse infinite;
             bottom: 20px;
             left: 8px;
             position: absolute;
             width: 16px;
         }
+    }
+
+    >.scroll-icon:hover{
+        filter: drop-shadow(0 3px 5px rgb(162, 32, 162));
     }
 
     @media (max-width: 1300px) {
@@ -503,5 +515,15 @@ header {
             width: 400px;
             max-width: 80vw;
         }
+    }
+}
+
+@keyframes scroll-icon-inner {
+    0%{
+        bottom: 20px;
+    }
+
+    20%{
+        bottom: 50px;
     }
 }

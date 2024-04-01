@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ptbr">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="./css/processo-higienizacao.css" />
         <link rel="stylesheet" href="./css/servicos.css" />
         <link rel="stylesheet" href="./css/blog.css" />
+        <link rel="stylesheet" href="./css/footer.css" />
         <script src="script.js" defer></script>
     </head>
     <body>
@@ -145,7 +146,7 @@
             <div class="menu">
                 <div class="home focus">Home</div>
                 <div class="sobre-nos">Sobre Nós</div>
-                <div class="servicos">Serviços</div>
+                <div class="servicos" onclick="window.open('./servicos/index.html')">Serviços</div>
                 <div class="blog">Blog</div>
             </div>
             <div class="hamburguer-menu" onclick="toggleMobileMenu()">
@@ -229,7 +230,9 @@
                     </p>
                     <div class="avaliacoes-container">
                         <p class="p3">
-                            <a href="https://www.instagram.com/souzasclean/">Visitar Instagram</a>
+                            <a href="https://www.instagram.com/souzasclean/"
+                                >Visitar Instagram</a
+                            >
                         </p>
                         <div class="avaliacoes">
                             <div class="estrelas">
@@ -532,7 +535,7 @@
                         src="./assets/images/wine-in-sofa.png"
                         alt="A foto mostra uma taça de vinho sendo derrada em um sofá protegido pela Impermeabilização que repele o líquido"
                     />
-                    <button>Saber Mais</button>
+                    <button onclick="window.open('https://api.whatsapp.com/send?phone=5511971687773&text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20as%20Impermeabilização%20de%20Estofados!')">Saber Mais</button>
                 </div>
                 <div class="item estofados">
                     <h3>Higienização <br />de Estofados</h3>
@@ -544,7 +547,7 @@
                         src="./assets/images/orange-sofa.png"
                         alt="A foto mostra uma taça de vinho sendo derrada em um sofá protegido pela Impermeabilização que repele o líquido"
                     />
-                    <button>Saber Mais</button>
+                    <button onclick="window.open('https://api.whatsapp.com/send?phone=5511971687773&text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20as%20Higienizações%20de%20Estofados!')">Saber Mais</button>
                 </div>
                 <div class="item veiculos">
                     <h3>Higienização <br />de Veículos</h3>
@@ -556,7 +559,7 @@
                         src="./assets/images/car-chairs.png"
                         alt="A foto mostra uma taça de vinho sendo derrada em um sofá protegido pela Impermeabilização que repele o líquido"
                     />
-                    <button>Saber Mais</button>
+                    <button onclick="window.open('https://api.whatsapp.com/send?phone=5511971687773&text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20as%20Higienizações%20de%20Veículos!')">Saber Mais</button>
                 </div>
                 <div class="item camas">
                     <h3>Higienização <br />de Camas</h3>
@@ -568,7 +571,7 @@
                         src="./assets/images/pink-bed.png"
                         alt="A foto mostra uma cama com cabeceira e base rosa."
                     />
-                    <button>Saber Mais</button>
+                    <button onclick="window.open('https://api.whatsapp.com/send?phone=5511971687773&text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20as%20Higienizações%20de%20Camas!')">Saber Mais</button>
                 </div>
             </div>
         </div>
@@ -630,5 +633,116 @@
             </div>
             <div class="categorias"></div>
         </div>
+        <footer class="section-page hidden">
+            <div
+                class="voltar-para-topo"
+                onclick="window.scrollTo({top:0, behavior:'smooth'})"
+            >
+                <h3>Voltar Para o Topo</h3>
+                <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M14.4 15.68V20.8C14.4 21.2533 14.5536 21.6336 14.8608 21.9408C15.168 22.248 15.5477 22.4011 16 22.4C16.4533 22.4 16.8336 22.2464 17.1408 21.9392C17.448 21.632 17.6011 21.2523 17.6 20.8V15.68L19.04 17.12C19.3333 17.4133 19.7067 17.56 20.16 17.56C20.6133 17.56 20.9867 17.4133 21.28 17.12C21.5733 16.8267 21.72 16.4533 21.72 16C21.72 15.5467 21.5733 15.1733 21.28 14.88L17.12 10.72C16.8 10.4 16.4267 10.24 16 10.24C15.5733 10.24 15.2 10.4 14.88 10.72L10.72 14.88C10.4267 15.1733 10.28 15.5467 10.28 16C10.28 16.4533 10.4267 16.8267 10.72 17.12C11.0133 17.4133 11.3867 17.56 11.84 17.56C12.2933 17.56 12.6667 17.4133 12.96 17.12L14.4 15.68ZM16 32C13.7867 32 11.7067 31.5797 9.76 30.7392C7.81333 29.8987 6.12 28.7589 4.68 27.32C3.24 25.88 2.10027 24.1867 1.2608 22.24C0.421333 20.2933 0.00106667 18.2133 0 16C0 13.7867 0.420267 11.7067 1.2608 9.76C2.10133 7.81333 3.24107 6.12 4.68 4.68C6.12 3.24 7.81333 2.10027 9.76 1.2608C11.7067 0.421333 13.7867 0.00106667 16 0C18.2133 0 20.2933 0.420267 22.24 1.2608C24.1867 2.10133 25.88 3.24107 27.32 4.68C28.76 6.12 29.9003 7.81333 30.7408 9.76C31.5813 11.7067 32.0011 13.7867 32 16C32 18.2133 31.5797 20.2933 30.7392 22.24C29.8987 24.1867 28.7589 25.88 27.32 27.32C25.88 28.76 24.1867 29.9003 22.24 30.7408C20.2933 31.5813 18.2133 32.0011 16 32ZM16 28.8C19.5733 28.8 22.6 27.56 25.08 25.08C27.56 22.6 28.8 19.5733 28.8 16C28.8 12.4267 27.56 9.4 25.08 6.92C22.6 4.44 19.5733 3.2 16 3.2C12.4267 3.2 9.4 4.44 6.92 6.92C4.44 9.4 3.2 12.4267 3.2 16C3.2 19.5733 4.44 22.6 6.92 25.08C9.4 27.56 12.4267 28.8 16 28.8Z"
+                        fill="white"
+                    />
+                </svg>
+            </div>
+            <div class="content">
+                <div class="final">
+                    <div class="top">
+                        <img
+                            src="./assets/icons/logo-souzas-clean.svg"
+                            alt="Logo Souzasclean"
+                        />
+
+                        <h3>
+                            Higienizações <br />
+                            Souza's Clean
+                        </h3>
+                    </div>
+                    <p class="p1">
+                        Na Souza's Clean, prestamos nossos serviços com foco em
+                        qualidade. Transformamos seus estofados, com um
+                        excelente atendimento e os melhores produtos.
+                    </p>
+                </div>
+                <div class="links">
+                    <ul class="servicos">
+                        <p class="p1 title"><strong>Serviços</strong></p>
+                        <p class="p1">
+                            <a class="item-list sites" href="#">Estofados
+                            </a>
+                        </p>
+                        <p class="p1">
+                            <a class="item-list seo-para-seu-site" href="#"
+                                >Camas</a
+                            >
+                        </p>
+                        <p class="p1">
+                            <a class="item-list identidade-visual" href="#"
+                                >Tapetes</a
+                            >
+                        </p>
+                        <p class="p1">
+                            <a class="item-list logos" href="#">Veículos</a>
+                        </p>
+                        <p class="p1">
+                            <a class="item-list logos" href="#">Impermeabilizações</a>
+                        </p>
+                    </ul>
+                    <ul class="sobre">
+                        <p class="p1 title"><strong>Sobre</strong></p>
+                        <p class="p1">
+                            <a class="item-list sobre-nos" href="#"
+                                >Sobre Nós</a
+                            >
+                        </p>
+                        <p class="p1">
+                            <a class="item-list missao-visao-valores" href="#"
+                                >Missão, Visão, Valores</a
+                            >
+                        </p>
+                        <p class="p1">
+                            <a class="item-list nossa-identidade" href="#"
+                                >Nossa Identidade</a
+                            >
+                        </p>
+                        <p class="p1">
+                            <a class="item-list nossos-clientes" href="#"
+                                >Nossos Clientes</a
+                            >
+                        </p>
+                    </ul>
+                    <ul class="follow-us">
+                        <p class="p1 title"><strong>Follow Us</strong></p>
+                        <p class="p1">
+                            <a class="item-list sobre-nos" href="https://www.instagram.com/souzasclean/"
+                                >Instagram</a
+                            >
+                        </p>
+                        <p class="p1">
+                            <a class="item-list missao-visao-valores" href="#"
+                                >Facebook</a
+                            >
+                        </p>
+                        <p class="p1">
+                            <a class="item-list nossa-identidade" href="#"
+                                >Linkedin</a
+                            >
+                        </p>
+                        <p class="p1">
+                            <a class="item-list nossos-clientes" href="#"
+                                >Youtube</a
+                            >
+                        </p>
+                    </ul>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>

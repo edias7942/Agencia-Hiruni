@@ -268,7 +268,7 @@ header {
 
 /* Mobile Menu */
 #mobile-menu {
-    display: flex;
+    display: none;
     height: 100vh;
     overflow-x: hidden;
     position: fixed;

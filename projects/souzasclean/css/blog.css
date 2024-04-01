@@ -16,7 +16,7 @@
 }
 
 #blog.section-page {
-    height: 500px;
+    min-height: 500px;
 
     > h2 {
         text-align: center;
@@ -148,7 +148,7 @@
     }
 
     @media (max-width: 750px) {
-        margin-bottom: 200px;
+        height: 1000px;
         > .content {
             align-items: center;
             flex-direction: column;
@@ -169,16 +169,17 @@
         }
     }
 
-    @media (max-width:500px) {
-
-
-        >.content>.main-post{
+    @media (max-width: 500px) {
+        > .content > .main-post {
             height: 250px;
         }
-        
-        >.content>.secundary-posts{
+
+        > .content > .secundary-posts {
             flex-direction: column;
             min-height: 500px;
         }
     }
 }
+
+
+

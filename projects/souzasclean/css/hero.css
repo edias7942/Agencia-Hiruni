@@ -1,0 +1,134 @@
+:root {
+    --primary-color-light-1: #c7fff2;
+    --primary-color-light-2: #80f3d7;
+    --primary-color-master: #00e6af;
+    --primary-color-dark: #007357;
+    --primary-color-bg-light: #E5FCF7;
+    --primary-color-bg-dark: #00221a;
+
+    --secundary-color-light: #b9bdff;
+    --secundary-color-master: #727aff;
+    --secundary-color-dark: #393d7f;
+    --secundary-color-bg-light: #eaebff;
+    --secundary-color-bg-dark: #22254d;
+
+    --font-family-1: "Inter", sans-serif;
+}
+
+#hero.section-page {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    > .content {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        > .text {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            > h1 {
+                color: var(--primary-color-dark);
+            }
+            > h3 {
+                color: var(--primary-color-dark);
+                font-weight: 300;
+                width: 26ch;
+            }
+        }
+    }
+
+    > .bottom-side {
+        display: flex;
+        gap: 24px;
+
+        > div {
+            align-items: center;
+            background-color: var(--primary-color-light-1);
+            border-radius: 28px;
+            display: flex;
+            gap: 8px;
+            padding: 4px 24px 4px 4px;
+
+            > .icon {
+                align-items: center;
+                border-radius: 50%;
+                display: flex;
+                height: 48px;
+                justify-content: center;
+                width: 48px;
+            }
+
+            > p {
+                text-align: center;
+            }
+        }
+    }
+
+    @media (max-width: 1100px) {
+        > .content > .image > img {
+            width: 500px;
+        }
+    }
+
+    @media (max-width: 900px) {
+        > .content > .image > img {
+            width: 400px;
+        }
+
+        > .bottom-side > div {
+            > .icon {
+                height: 32px;
+                width: 32px;
+
+                > img {
+                    height: 24px;
+                    width: 24px;
+                }
+            }
+            > p {
+                font-size: 16px;
+            }
+        }
+    }
+
+    @media (max-width: 750px) {
+        > .content {
+            flex-direction: column;
+
+            > .text {
+                align-items: center;
+                order: 1;
+
+                > h3 {
+                    text-align: center;
+                }
+            }
+
+            > .image > img {
+                width: 450px;
+            }
+        }
+
+        > .bottom-side {
+            align-items: center;
+            flex-direction: column;
+            gap: 16px;
+
+            > div {
+                width: fit-content;                
+            }
+        }
+    }
+
+    @media (max-width:500px) {
+        > .content > .image > img {
+            width: 100vw;
+        }
+        
+    }
+}

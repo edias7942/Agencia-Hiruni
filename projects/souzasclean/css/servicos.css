@@ -1,0 +1,194 @@
+:root {
+    --primary-color-light-1: #c7fff2;
+    --primary-color-light-2: #80f3d7;
+    --primary-color-master: #00e6af;
+    --primary-color-dark: #007357;
+    --primary-color-bg-light: #e5fcf7;
+    --primary-color-bg-dark: #00221a;
+
+    --secundary-color-light: #b9bdff;
+    --secundary-color-master: #727aff;
+    --secundary-color-dark: #393d7f;
+    --secundary-color-bg-light: #eaebff;
+    --secundary-color-bg-dark: #22254d;
+
+    --font-family-1: "Inter", sans-serif;
+}
+
+#servicos.section-page {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    > .content {
+        display: grid;
+        gap: 24px;
+        grid-template-areas:
+            "a a b"
+            "c d e";
+        > div {
+            align-items: center;
+            border-radius: 32px;
+            box-sizing: border-box;
+            box-shadow: 0px 19px 8px rgba(0, 0, 0, 0.01),
+                0px 11px 7px rgba(0, 0, 0, 0.05),
+                0px 5px 5px rgba(0, 0, 0, 0.09), 0px 1px 3px rgba(0, 0, 0, 0.1);
+            height: 424px;
+            transition: 300ms ease-out;
+        }
+
+        > div:hover {
+            box-shadow: 0px 186px 74px rgba(0, 0, 0, 0.01),
+                0px 105px 63px rgba(0, 0, 0, 0.05),
+                0px 47px 47px rgba(0, 0, 0, 0.09),
+                0px 12px 26px rgba(0, 0, 0, 0.1);
+        }
+
+        > .video {
+            grid-area: a;
+            > img {
+                width: 624px;
+            }
+        }
+
+        > .item {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            padding: 32px;
+            width: 300px;
+
+            > h3 {
+                text-align: center;
+            }
+
+            > p {
+                font-weight: 400;
+                text-align: center;
+            }
+
+            > img {
+                height: 140px;
+                transition: 200ms;
+            }
+
+            > button {
+                border: 2px solid;
+                border-radius: 24px;
+                font-weight: 500;
+                letter-spacing: 1px;
+            }
+            > button:hover {
+                color: white;
+            }
+        }
+
+        > .item:hover > img {
+            transform: scale(1.1);
+        }
+
+        > .impermeabilizacao {
+            background-color: var(--primary-color-light-1);
+            grid-area: b;
+
+            > h3 {
+                color: var(--primary-color-dark);
+            }
+
+            > p {
+                color: var(--primary-color-bg-dark);
+            }
+            > button {
+                border-color: var(--primary-color-dark);
+                color: var(--primary-color-dark);
+            }
+            > button:hover {
+                background-color: var(--primary-color-dark);
+            }
+        }
+
+        > .estofados {
+            background-color: #ffd0a6;
+            grid-area: c;
+
+            > h3,
+            button {
+                color: #693200;
+            }
+
+            > p {
+                color: #221000;
+            }
+
+            > button:hover {
+                background-color: #693200;
+                border-color: #693200;
+            }
+        }
+
+        > .veiculos {
+            background-color: #80d3ff;
+            grid-area: d;
+
+            > h3,
+            p {
+                color: var(--secundary-color-bg-dark);
+            }
+
+            > button {
+                color: var(--secundary-color-dark);
+            }
+
+            > button:hover {
+                background-color: var(--secundary-color-dark);
+                border-color: var(--secundary-color-dark);
+            }
+        }
+
+        > .camas {
+            background-color: #f1c8ff;
+            grid-area: e;
+
+            > h3,
+            button {
+                color: #4d0067;
+            }
+
+            > p {
+                color: #190021;
+            }
+
+            > button:hover {
+                background-color: #4d0067;
+                border-color: #4d0067;
+            }
+        }
+    }
+
+    @media (max-width: 1300px) {
+    }
+
+    @media (max-width: 1100px) {
+        > .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    @media (max-width: 900px) {
+    }
+
+    @media (max-width: 700px) {
+        >.content{
+            width: 90vw;
+
+            >.video{
+                height: fit-content;
+                >img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

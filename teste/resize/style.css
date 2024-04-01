@@ -1,0 +1,77 @@
+.container {
+    background-color: blue;
+    display: flex;
+    height: 500px;
+    width: 1000px;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.element.one {
+    height: 250px;
+    background-color: yellow;
+    overflow: auto;
+    opacity: 0;
+    resize: horizontal;
+    max-width: 1016px;
+    width: 500px;
+    min-width: 16px;
+    margin-left: -8px;
+    z-index: 1;
+}
+.element.two {
+    align-items: center;
+    background-color: red;
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 8px);
+    z-index: 0;
+}
+.circle {
+    background-color: black;
+    border-radius: 50%;
+    height: 16px;
+    position: absolute;
+    right: -8px;
+    transform: translateY(-8px);
+    width: 16px;
+}
+
+
+/* Collapsable */
+
+
+/* Estilização básica */
+.collapsible {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.content {
+    display: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+}
+
+input.collapsible{
+    appearance: none;
+}
+
+/* Mostra o conteúdo quando o checkbox está marcado */
+.collapsible:checked + label + .content {
+    display: block;
+}
+

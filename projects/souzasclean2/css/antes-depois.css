@@ -1,0 +1,91 @@
+
+
+#antes-depois.section-page {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    text-align: center;
+
+    > .header {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: 80ch;
+    }
+
+    > .items-container {
+        > .item-1 {
+            background: url(./../assets/images/item-1-depois.png);
+            border: 3px solid var(--primary-color-dark);
+            display: flex;
+            height: 350px;
+            width: 700px;
+
+            > .content {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+
+                > .resize-element {
+                    height: 175px;
+                    background-color: yellow;
+                    overflow: auto;
+                    opacity: 0;
+                    resize: horizontal;
+                    max-width: 716px;
+                    width: 366px;
+                    min-width: 16px;
+                    margin-left: -8px;
+                    z-index: 1;
+                }
+
+                > .imagem-antes {
+                    align-items: center;
+                    background: url(./../assets/images/item-1-antes.png);
+                    border-right: 3px solid var(--primary-color-dark);
+                    display: flex;
+                    position: absolute;
+                    height: 100%;
+                    width: calc(100% - 8px);
+                    z-index: 0;
+
+                    .circle {
+                        align-items: center;
+                        background-color: white;
+                        border: 3px solid var(--primary-color-dark);
+                        border-radius: 50%;
+                        display: flex;
+                        height: 18px;
+                        justify-content: center;
+                        position: absolute;
+                        right: -12px;
+                        transform: translateY(-8px);
+                        width: 18px;
+
+                        > svg {
+                            transform: scale(0.9);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 750px) {
+        >.header{
+            width: 80%;
+        }
+        
+        > .items-container {
+            > .item-1 {
+                height: 250px;
+                width: 80vw;
+
+                > .content > .resize-element {
+                    width: 40vw;
+                }
+            }
+        }
+    }
+}

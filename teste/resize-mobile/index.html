@@ -1,0 +1,64 @@
+
+<html>
+ <head>
+  <style>
+   #box{
+    align-items: center;
+    display: flex;
+    position:relative;
+    height:50%;
+    justify-content: center;
+    width:50%;
+    background:#000;
+    border-radius:10px;
+    min-width: 100px;
+    max-width: 800px;
+   }
+   #handler{
+    position:absolute;
+    height:100px;
+    width:100px;
+    border:1px solid #000;
+    background:#fff;
+    border-radius:50%;
+    right:-50px;
+   }
+  </style>
+ </head>
+ <body>
+  <div id="box">
+   <div id="handler"
+   onmousedown="ts(event)"
+   onmousemove="tm(event)"
+   ontouchstart="ts(event)"
+   ontouchmove="tm(event)"
+   ></div>
+  </div>
+  <script>
+   const box = document.querySelector('#box');
+   
+   var x , y , h , w ;
+   
+   function ts(e){
+    x = e.touches[0].clientX;
+    // y = e.touches[0].clientY;
+    
+    // h = box.clientHeight;
+    w = box.clientWidth;
+   }
+   
+   function tm(e){
+    mx = e.touches[0].clientX;
+    // my = e.touches[0].clientY;
+    
+    cx = mx - x ;
+    // cy = my - y ;
+    
+    box.style.width=cx+w;
+    // box.style.height=cy+h;
+   }
+  </script>
+ </body>
+</html>
+Resizable div.html
+Displaying Resizable div.html.

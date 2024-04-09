@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>SouzasClean</title>
+        <link rel="stylesheet" href="./../../css/animations.css" />
         <link rel="stylesheet" href="./css/style.css" />
         <link rel="stylesheet" href="./css/hero.css" />
         <link rel="stylesheet" href="./css/sobre-nos.css" />
@@ -285,47 +286,52 @@
         </div>
         <div id="sobre-nos" class="section-page">
             <div class="left">
-                <h2>
+                <h2 class="hidden">
                     A Higienização que
                     <strong class="first">Protege</strong> sua
                     <strong class="second">Saúde</strong>
                 </h2>
-                <p class="p2 description">
+                <p class="p2 description hidden">
                     Nossa Higienização é completa, todos os nossos clientes
                     confirmam. Usamos as melhores ferramentas e produtos.
                     Proteja você também a sua Família.
                 </p>
-                <button class="secundary filled">Saber Mais</button>
+                <button class="secundary filled hidden">Saber Mais</button>
                 <div class="avaliacoes-container">
-                    <p class="p3">
+                    <p class="p3 hidden">
                         <a href="https://www.instagram.com/souzasclean/"
-                            >Visitar Instagram</a
+                            >Ver avaliações</a
                         >
                     </p>
                     <div class="avaliacoes">
                         <div class="estrelas">
                             <img
+                                class="star-1 hidden"
                                 src="./assets/icons/icon-filled-star.svg"
                                 alt="Estrela de Avaliação Totalmente preenchida."
                             /><img
+                                class="star-2 hidden"
                                 src="./assets/icons/icon-filled-star.svg"
                                 alt="Estrela de Avaliação Totalmente preenchida."
                             /><img
+                                class="star-3 hidden"
                                 src="./assets/icons/icon-filled-star.svg"
                                 alt="Estrela de Avaliação Totalmente preenchida."
                             /><img
+                                class="star-4 hidden"
                                 src="./assets/icons/icon-filled-star.svg"
                                 alt="Estrela de Avaliação Totalmente preenchida."
                             /><img
+                                class="star-5 hidden"
                                 src="./assets/icons/icon-half-star.svg"
                                 alt="Estrela de Avaliação parcialmente preenchida."
                             />
                         </div>
-                        <p class="p3">4.5</p>
+                        <p class="p3 hidden">4.5</p>
                     </div>
                 </div>
             </div>
-            <div id="sobre-nos-right" class="right">
+            <div id="sobre-nos-right" class="right hidden">
                 <div class="play-pause-container">
                     <svg
                         class="background"
@@ -343,7 +349,7 @@
                         />
                     </svg>
                     <svg
-                    onclick="changeClass('sobre-nos-right','paused')"
+                        onclick="changeClass('sobre-nos-right','paused')"
                         class="play-rotation-icon"
                         width="120"
                         height="131"
@@ -358,8 +364,8 @@
                         <path d="M85 87V60L106 73.5L85 87Z" fill="#FFE6A7" />
                     </svg>
                     <svg
-                    onclick="changeClass('sobre-nos-right', '', 'paused')"
-                    class="pause-rotation-icon"
+                        onclick="changeClass('sobre-nos-right', '', 'paused')"
+                        class="pause-rotation-icon"
                         width="120"
                         height="131"
                         viewBox="0 0 120 131"
@@ -431,10 +437,10 @@
             </div>
         </div>
         <div id="depoimento" class="section-page">
-            <div class="circle one"></div>
-            <div class="circle two"></div>
-            <div class="circle three"></div>
-            <div class="content">
+            <div class="circle one hidden"></div>
+            <div class="circle two hidden"></div>
+            <div class="circle three hidden"></div>
+            <div class="content hidden">
                 <p class="p1 avaliacao">
                     "Estou muito satisfeito com o serviço da Souzas Clean. Meu
                     sofá ficou novo de novo!"
@@ -449,17 +455,33 @@
         </div>
         <div id="antes-depois" class="section-page">
             <div class="header">
-                <h2>Antes e Depois</h2>
-                <p class="p3">
+                <h2 class="hidden">Antes e Depois</h2>
+                <p class="p3 hidden">
                     Veja você mesmo a diferença que temos feito para nossas
                     centenas de clientes que atendemos dia após dia.
                 </p>
             </div>
-            <div class="items-container">
+            <div class="items-container hidden">
                 <div class="item-1">
                     <div class="content">
-                        <div class="resize-element"></div>
-                        <div class="imagem-antes">
+                        <div
+                            id="antes-depois-resize-element"
+                            class="resize-element"
+                        >
+                            <div
+                                id="handler"
+                                ontouchstart="ts(event)"
+                                ontouchmove="tm(event)"
+                            ></div>
+                        </div>
+                        <div id="imagem-antes" class="imagem-antes">
+                            <div id="box">
+                                <div
+                                    id="handler"
+                                    ontouchstart="ts(event)"
+                                    ontouchmove="tm(event)"
+                                ></div>
+                            </div>
                             <div class="circle">
                                 <svg
                                     width="18"
@@ -482,18 +504,18 @@
                 <div class="item-4"></div>
                 <div class="item-5"></div>
             </div>
-            <button class="filled secundary">Ver Mais</button>
+            <button class="filled secundary hidden">Ver Mais</button>
         </div>
         <div id="processo-higienizacao" class="section-page">
-            <h2>Processo de Higienização</h2>
-            <p class="p3">
+            <h2 class="hidden">Processo de Higienização</h2>
+            <p class="p3 hidden">
                 Com 2 horas de trabalho, oferecemos 12 meses de um sofá
                 Higienizado. Nossos clientes recebem de brinde, um “Perfume”
                 para estofados, para que a sensação de sofá novo permaneça por
                 ainda mais tempo.
             </p>
             <div class="step-container">
-                <div class="aspiracao">
+                <div class="hidden item aspiracao">
                     <div class="icon">
                         <svg
                             width="44"
@@ -510,13 +532,13 @@
                     </div>
                     <h3>Aspiração</h3>
                 </div>
-                <div class="arrow">
+                <div class="hidden arrow">
                     <img
                         src="./assets/icons/icon-arrow-filled.svg"
                         alt="Seta para a direita passa a ideia de 'próximo passo'."
                     />
                 </div>
-                <div class="produto-extraction">
+                <div class="hidden item produto-extraction">
                     <div class="icon">
                         <svg
                             width="49"
@@ -543,13 +565,13 @@
                     </div>
                     <h3>Produto:<br />Extraction</h3>
                 </div>
-                <div class="arrow">
+                <div class="hidden arrow">
                     <img
                         src="./assets/icons/icon-arrow-filled.svg"
                         alt="Seta para a direita passa a ideia de 'próximo passo'."
                     />
                 </div>
-                <div class="escovacao">
+                <div class="hidden item escovacao">
                     <div class="icon">
                         <svg
                             width="37"
@@ -568,13 +590,13 @@
                     </div>
                     <h3>Escovação</h3>
                 </div>
-                <div class="arrow">
+                <div class="hidden arrow">
                     <img
                         src="./assets/icons/icon-arrow-filled.svg"
                         alt="Seta para a direita passa a ideia de 'próximo passo'."
                     />
                 </div>
-                <div class="extrair-produto">
+                <div class="hidden item extrair-produto">
                     <div class="icon">
                         <svg
                             width="49"
@@ -601,13 +623,13 @@
                     </div>
                     <h3>Extrair<br />Produto</h3>
                 </div>
-                <div class="arrow">
+                <div class="hidden arrow">
                     <img
                         src="./assets/icons/icon-arrow-filled.svg"
                         alt="Seta para a direita passa a ideia de 'próximo passo'."
                     />
                 </div>
-                <div class="produto-cbp">
+                <div class="hidden item produto-cbp">
                     <div class="icon">
                         <svg
                             width="27"
@@ -624,13 +646,13 @@
                     </div>
                     <h3>Produto:<br />CbP</h3>
                 </div>
-                <div class="arrow">
+                <div class="hidden arrow">
                     <img
                         src="./assets/icons/icon-arrow-filled.svg"
                         alt="Seta para a direita passa a ideia de 'próximo passo'."
                     />
                 </div>
-                <div class="extracao-enxague">
+                <div class="hidden item extracao-enxague">
                     <div class="icon">
                         <svg
                             width="45"

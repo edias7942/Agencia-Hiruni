@@ -25,3 +25,10 @@
         transform: translateY(-100%);
     }
 }
+
+@keyframes scale-up {
+    from{
+        opacity: 0;
+        scale: 0;
+    }
+}

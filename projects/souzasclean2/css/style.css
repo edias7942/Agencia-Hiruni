@@ -9,7 +9,7 @@
     --primary-color-bg-dark: #00221a;
 
     --secundary-color-light: #b9bdff;
-    --secundary-color-master: #1D868C;
+    --secundary-color-master: #1d868c;
     --secundary-color-dark: #393d7f;
     --secundary-color-bg-light: #eaebff;
     --secundary-color-bg-dark: #22254d;
@@ -34,6 +34,17 @@ body {
     flex-direction: column;
     overflow-x: hidden;
     width: 100vw;
+    transition: none;
+}
+
+/* Hidden and Show Elements */
+.hidden {
+    display: hidden;
+    opacity: 0;
+}
+
+.show {
+    opacity: 1;
 }
 
 /* Titles */
@@ -112,14 +123,14 @@ button.filled.primary:hover {
 }
 
 button.filled.secundary {
-    background-color: #FFE6A7;
-    border-color: #6A4D01;
-    color: #6A4D01;
+    background-color: #ffe6a7;
+    border-color: #6a4d01;
+    color: #6a4d01;
 }
 
 button.filled.secundary:hover {
     color: white;
-    background-color: #6A4D01;
+    background-color: #6a4d01;
 }
 
 button.outlined.primary {
@@ -174,7 +185,7 @@ button.outlined.secundary:hover {
 /* Configurando o Header */
 
 header {
-    animation: header 1.5s cubic-bezier(.24,.9,.6,.97) both;
+    animation: header 1.5s cubic-bezier(0.24, 0.9, 0.6, 0.97) both;
     animation-delay: 300ms;
     align-items: center;
     background-color: #1d868c;
@@ -226,19 +237,19 @@ header {
             border-color: #f8f1df;
         }
 
-        >.item-1{
+        > .item-1 {
             animation-delay: 1.7s;
         }
 
-        >.item-2{
+        > .item-2 {
             animation-delay: 1.9s;
         }
 
-        >.item-3{
+        > .item-3 {
             animation-delay: 2.1s;
         }
 
-        >.item-4{
+        > .item-4 {
             animation-delay: 2.3s;
         }
     }

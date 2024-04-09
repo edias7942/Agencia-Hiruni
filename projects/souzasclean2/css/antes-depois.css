@@ -1,5 +1,3 @@
-
-
 #antes-depois.section-page {
     align-items: center;
     display: flex;
@@ -12,15 +10,30 @@
         flex-direction: column;
         gap: 8px;
         width: 80ch;
+        > h2.show, p.show {
+            animation: bottom-top 1s ease-out backwards;
+        }
+
+        >p.show{
+            animation-delay: 200ms;
+        }
     }
 
     > .items-container {
+        transition: 1s ease-out;
+        
+        > div {
+            border-radius: 30px;
+        }
+
         > .item-1 {
             background: url(./../assets/images/item-1-depois.png);
+            background-size: auto 100%;
             border: 3px solid var(--primary-color-dark);
             display: flex;
             height: 350px;
-            width: 700px;
+            overflow: hidden;
+            width: 560px;
 
             > .content {
                 display: flex;
@@ -28,21 +41,34 @@
                 position: relative;
 
                 > .resize-element {
-                    height: 175px;
+                    height: 50%;
                     background-color: yellow;
                     overflow: auto;
                     opacity: 0;
                     resize: horizontal;
-                    max-width: 716px;
+                    max-width: 576px;
+                    position: relative;
                     width: 366px;
                     min-width: 16px;
                     margin-left: -8px;
                     z-index: 1;
+
+                    > #handler {
+                        bottom: -25px;
+                        position: absolute;
+                        height: 50px;
+                        width: 50px;
+                        border: 1px solid #000;
+                        background: #fff;
+                        right: 0;
+                    }
                 }
 
                 > .imagem-antes {
                     align-items: center;
                     background: url(./../assets/images/item-1-antes.png);
+                    background-size: auto 100%;
+                    border-radius: 30px;
                     border-right: 3px solid var(--primary-color-dark);
                     display: flex;
                     position: absolute;
@@ -72,20 +98,42 @@
         }
     }
 
+    >.items-container.hidden{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    >.items-container.show{
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    >button.show{
+        animation: bottom-top 1s ease-out backwards;
+        animation-delay: 200ms;
+    }
+
     @media (max-width: 750px) {
-        >.header{
+        > .header {
             width: 80%;
         }
-        
+
         > .items-container {
             > .item-1 {
-                height: 250px;
-                width: 80vw;
+                height: 59.3vw;
+                width: 95vw;
 
                 > .content > .resize-element {
                     width: 40vw;
                 }
             }
+        }
+    }
+
+    @media (max-width: 500px) {
+        > .items-container > .item-1 > .content > .imagem-antes > .circle {
+            scale: 1.3;
+            transform: translate(0px, -10px);
         }
     }
 }

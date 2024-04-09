@@ -1,11 +1,10 @@
-
-
 #depoimento.section-page {
     display: flex;
     justify-content: center;
     position: relative;
 
     > .circle {
+        transition: 1s ease-out;
         background-color: transparent;
         border: 2px solid var(--primary-color-dark);
         border-radius: 50%;
@@ -15,25 +14,49 @@
         z-index: 0;
     }
 
-    >.circle.one{
+    > .circle.one {
         border-color: rgb(11, 177, 11);
         height: 150px;
-        transform: translate(-100px, -110px);
+        transition-delay: 200ms;
         width: 150px;
     }
 
-    >.circle.two{
+    > .circle.one.hidden {
+        transform: translate(-100px, 0px);
+    }
+
+    > .circle.one.show {
+        transform: translate(-100px, -110px);
+    }
+
+    > .circle.two {
         border-color: blue;
         height: 180px;
-        transform: translate(250px, 80px);
+        transition-delay: 400ms;
         width: 180px;
     }
 
-    >.circle.three{
+    > .circle.two.hidden {
+        transform: translate(250px, 180px);
+    }
+
+    > .circle.two.show {
+        transform: translate(250px, 80px);
+    }
+
+    > .circle.three {
         border-color: var(--primary-color-dark);
         height: 200px;
-        transform: translate(-230px, 100px);
         width: 200px;
+    }
+
+    > .circle.three.hidden {
+        transform: translate(-230px, 200px);
+    }
+
+    > .circle.three.show {
+        transform: translate(-230px, 100px);
+        transition-delay: 600ms;
     }
 
     > .content {
@@ -49,56 +72,65 @@
         width: 82ch;
         z-index: 1;
 
-        >.client-name{
+        > .client-name {
             font-weight: 500;
         }
-        
-        >img{
+
+        > img {
             width: 48px;
         }
     }
-    
+
+    > .content.show {
+        animation: bottom-top 1s ease-out backwards;
+        animation-delay: 400ms;
+    }
+
     @media (max-width: 750px) {
         width: 80%;
 
-        >.circle.one, .circle.two, .circle.three {
+        > .circle.one,
+        .circle.two,
+        .circle.three {
             transform: scale(0.8);
         }
 
-        >.circle.one{
+        > .circle.one {
             left: 100px;
             top: 0px;
         }
 
-        >.circle.two{
+        > .circle.two {
             right: -10px;
             bottom: 20px;
         }
 
-        >.circle.three{
+        > .circle.three {
             left: -10px;
             bottom: 20px;
         }
     }
-    
+
     @media (max-width: 500px) {
         width: 80%;
 
-        >.circle.one, .circle.two, .circle.three {
+        > .circle.one,
+        .circle.two,
+        .circle.three {
             transform: scale(0.8);
         }
 
-        >.circle.one{
+        > .circle.one {
             left: 50px;
             top: 0px;
         }
 
-        >.circle.two{
+        > .circle.two {
             right: -40px;
             bottom: 50px;
         }
 
-        >.circle.three{
+        > .circle.three {
             left: -30px;
             bottom: 100px;
         }

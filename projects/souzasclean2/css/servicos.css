@@ -163,9 +163,6 @@
         }
     }
 
-    @media (max-width: 900px) {
-    }
-
     @media (max-width: 700px) {
         >.content{
             width: 90vw;
@@ -176,6 +173,11 @@
                     width: 100%;
                 }
             }
+
+            >.impermeabilizacao{
+                order: 5;
+            }
+            
         }
     }
 }

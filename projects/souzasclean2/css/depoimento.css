@@ -17,46 +17,41 @@
     > .circle.one {
         border-color: rgb(11, 177, 11);
         height: 150px;
+        margin-top: -110px;
+        margin-left: -200px;
         transition-delay: 200ms;
         width: 150px;
     }
 
-    > .circle.one.hidden {
-        transform: translate(-100px, 0px);
-    }
-
     > .circle.one.show {
-        transform: translate(-100px, -110px);
+        animation: bottom-top 1s ease-out backwards;
     }
 
     > .circle.two {
         border-color: blue;
         height: 180px;
         transition-delay: 400ms;
+        margin-left: 500px;
+        margin-top: 80px;
         width: 180px;
     }
 
-    > .circle.two.hidden {
-        transform: translate(250px, 180px);
-    }
-
     > .circle.two.show {
-        transform: translate(250px, 80px);
+        animation: bottom-top 1s ease-out backwards;
+        animation-delay: 400ms;
     }
 
     > .circle.three {
         border-color: var(--primary-color-dark);
         height: 200px;
+        margin-left: -460px;
+        margin-top: 100px;
         width: 200px;
     }
 
-    > .circle.three.hidden {
-        transform: translate(-230px, 200px);
-    }
-
-    > .circle.three.show {
-        transform: translate(-230px, 100px);
-        transition-delay: 600ms;
+    >.circle.three.show{
+        animation: bottom-top 1s ease-out backwards;
+        animation-delay: 400ms;
     }
 
     > .content {
@@ -87,52 +82,29 @@
     }
 
     @media (max-width: 750px) {
-        width: 80%;
-
-        > .circle.one,
-        .circle.two,
-        .circle.three {
-            transform: scale(0.8);
-        }
-
-        > .circle.one {
-            left: 100px;
-            top: 0px;
-        }
-
-        > .circle.two {
-            right: -10px;
-            bottom: 20px;
-        }
-
-        > .circle.three {
-            left: -10px;
-            bottom: 20px;
-        }
+        width: 100%;
     }
 
     @media (max-width: 500px) {
-        width: 80%;
+        overflow-x: hidden;
 
-        > .circle.one,
-        .circle.two,
-        .circle.three {
-            transform: scale(0.8);
+        >.content{
+            box-sizing: border-box;
+            max-width: 80vw;
         }
 
-        > .circle.one {
-            left: 50px;
-            top: 0px;
+        >.circle.one{
+            margin-top: -100px;
         }
-
+        
         > .circle.two {
-            right: -40px;
-            bottom: 50px;
+            margin-left: 300px;
+            margin-top: 50px;
         }
 
         > .circle.three {
-            left: -30px;
-            bottom: 100px;
+            margin-left: -300px;
+            margin-top: 150px;
         }
     }
 }

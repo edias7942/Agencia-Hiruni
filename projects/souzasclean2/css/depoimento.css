@@ -86,7 +86,7 @@
     }
 
     @media (max-width: 500px) {
-        overflow-x: hidden;
+        overflow: hidden;
 
         >.content{
             box-sizing: border-box;

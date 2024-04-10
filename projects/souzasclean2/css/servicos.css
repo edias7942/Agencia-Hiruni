@@ -1,10 +1,13 @@
-
-
 #servicos.section-page {
     align-items: center;
     display: flex;
     flex-direction: column;
     gap: 32px;
+
+    > h2.show {
+        animation: bottom-top 1s ease-out backwards;
+    }
+
     > .content {
         display: grid;
         gap: 24px;
@@ -20,6 +23,10 @@
                 0px 5px 5px rgba(0, 0, 0, 0.09), 0px 1px 3px rgba(0, 0, 0, 0.1);
             height: 424px;
             transition: 300ms ease-out;
+        }
+
+        > div.show {
+            animation: bottom-top 1s ease-out backwards;
         }
 
         > div:hover {
@@ -73,7 +80,7 @@
         }
 
         > .impermeabilizacao {
-            background-color: #268A8F;
+            background-color: #268a8f;
             grid-area: b;
 
             > h3 {
@@ -89,50 +96,59 @@
             }
             > button:hover {
                 background-color: white;
-                color: #268A8F;
+                color: #268a8f;
             }
         }
 
         > .estofados {
-            background-color: #C1DADC;
+            background-color: #c1dadc;
             grid-area: c;
 
             > h3,
             button {
-                color: #00373A;
+                color: #00373a;
             }
 
             > p {
-                color: #00373A;
+                color: #00373a;
             }
 
             > button:hover {
-                background-color: #00373A;
-                border-color: #00373A;
+                background-color: #00373a;
+                border-color: #00373a;
             }
         }
 
+        > .impermeabilizacao.show,
+        .estofados.show {
+            animation-delay: 200ms;
+        }
+
         > .veiculos {
-            background-color: #8DBFC1;
+            background-color: #8dbfc1;
             grid-area: d;
 
             > h3,
             p {
-                color: #00373A;
+                color: #00373a;
             }
 
             > button {
-                color:  #00373A;
+                color: #00373a;
             }
 
             > button:hover {
-                background-color: #00373A;
-                border-color: #00373A;
+                background-color: #00373a;
+                border-color: #00373a;
             }
         }
 
+        >.veiculos.show{
+            animation-delay: 400ms;
+        }
+
         > .camas {
-            background-color: #59A4A8;
+            background-color: #59a4a8;
             grid-area: e;
 
             > h3,
@@ -147,8 +163,12 @@
             > button:hover {
                 background-color: white;
                 border-color: white;
-                color: #59A4A8;
+                color: #59a4a8;
             }
+        }
+
+        >.camas.show{
+            animation-delay: 600ms;
         }
     }
 
@@ -164,20 +184,19 @@
     }
 
     @media (max-width: 700px) {
-        >.content{
+        > .content {
             width: 90vw;
 
-            >.video{
+            > .video {
                 height: fit-content;
-                >img{
+                > img {
                     width: 100%;
                 }
             }
 
-            >.impermeabilizacao{
+            > .impermeabilizacao {
                 order: 5;
             }
-            
         }
     }
 }

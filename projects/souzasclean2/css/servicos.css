@@ -73,79 +73,81 @@
         }
 
         > .impermeabilizacao {
-            background-color: var(--primary-color-light-1);
+            background-color: #268A8F;
             grid-area: b;
 
             > h3 {
-                color: var(--primary-color-dark);
+                color: white;
             }
 
             > p {
-                color: var(--primary-color-bg-dark);
+                color: white;
             }
             > button {
-                border-color: var(--primary-color-dark);
-                color: var(--primary-color-dark);
+                border-color: white;
+                color: white;
             }
             > button:hover {
-                background-color: var(--primary-color-dark);
+                background-color: white;
+                color: #268A8F;
             }
         }
 
         > .estofados {
-            background-color: #ffd0a6;
+            background-color: #C1DADC;
             grid-area: c;
 
             > h3,
             button {
-                color: #693200;
+                color: #00373A;
             }
 
             > p {
-                color: #221000;
+                color: #00373A;
             }
 
             > button:hover {
-                background-color: #693200;
-                border-color: #693200;
+                background-color: #00373A;
+                border-color: #00373A;
             }
         }
 
         > .veiculos {
-            background-color: #80d3ff;
+            background-color: #8DBFC1;
             grid-area: d;
 
             > h3,
             p {
-                color: var(--secundary-color-bg-dark);
+                color: #00373A;
             }
 
             > button {
-                color: var(--secundary-color-dark);
+                color:  #00373A;
             }
 
             > button:hover {
-                background-color: var(--secundary-color-dark);
-                border-color: var(--secundary-color-dark);
+                background-color: #00373A;
+                border-color: #00373A;
             }
         }
 
         > .camas {
-            background-color: #f1c8ff;
+            background-color: #59A4A8;
             grid-area: e;
 
             > h3,
             button {
-                color: #4d0067;
+                color: white;
             }
 
             > p {
-                color: #190021;
+                color: white;
             }
 
             > button:hover {
-                background-color: #4d0067;
-                border-color: #4d0067;
+                background-color: white;
+                border-color: white;
+                color: #59A4A8;
             }
         }
     }

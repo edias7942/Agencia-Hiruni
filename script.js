@@ -65,10 +65,10 @@ document
                             "./assets/images/bruna-hosti-perfil-img.png",
                     },
                     {
-                        company: "Jackson Ford",
-                        websiteType: "Portfolio",
+                        company: "Bloop Clean",
+                        websiteType: "Site OnePage",
                         description:
-                            "Um site de portfólio para Jackson Ford, banqueiro, destacando sua experiência, conquistas e serviços financeiros, com design elegante, depoimentos de clientes e informações de contato.",
+                            "Um site criado para apresentar os trabalhos e experiência da Empresa, que tem como ramo a Higienização e Hipermeabilização de Estofados.",
                         feedback: `"O site fez eu aumentar minhas vendas, obrigado!" - <b>Jackson Ford</b>`,
                         imageProfile:
                             "./assets/images/site-example-1-profile-photo.png",
@@ -220,7 +220,7 @@ hiddenElements.forEach((el) => observer.observe(el));
 // Criadno função para clicar e abrir o item atual do carrossel
 
 let carouselItemLinks = {
-    portfolio:["https://www.emstech.com.br/projects/brunahosti", "https://www.example.com"]
+    portfolio:["https://www.emstech.com.br/projects/brunahosti", "https://www.emstech.com.br/projects/souzasclean2"]
 }
 
 function carouselItemLink(carouselSection){

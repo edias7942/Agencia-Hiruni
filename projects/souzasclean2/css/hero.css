@@ -41,6 +41,9 @@
                 > .p-5 {
                     animation-delay: 500ms;
                 }
+                > .p-6 {
+                    animation-delay: 600ms;
+                }
                 > .p-7 {
                     animation-delay: 700ms;
                 }
@@ -55,6 +58,12 @@
                 }
                 > .p-11 {
                     animation-delay: 1100ms;
+                }
+                > .p-12 {
+                    animation-delay: 1200ms;
+                }
+                > .p-13 {
+                    animation-delay: 1300ms;
                 }
             }
 

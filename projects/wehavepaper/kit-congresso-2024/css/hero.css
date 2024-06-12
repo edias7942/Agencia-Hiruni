@@ -1,0 +1,190 @@
+#hero.section-page {
+    display: flex;
+    padding-top: 16px;
+
+    > .left {
+        z-index: 2;
+        > .text {
+            > .title {
+                > h1:not(.third) {
+                    height: 56px;
+                }
+
+                > h1.first {
+                    color: #58b8b6;
+                }
+
+                > h1.second {
+                    color: #7d8c77;
+                }
+
+                > h1.third {
+                    color: #e0a273;
+                }
+            }
+
+            > p.p1 {
+                color: #784c4b;
+            }
+        }
+
+        > img.agendas-3d {
+            margin-top: 20px;
+            width: 300px;
+        }
+    }
+
+    > .center {
+        z-index: 1;
+        > img.hero-image {
+            /* scale: 0.9; */
+            width: 530px;
+        }
+    }
+
+    > .right {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        z-index: 0;
+
+        > img.notion-template {
+            width: 440px;
+        }
+
+        > .cta-space {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            > p.p1 {
+                color: #002f00;
+                margin-top: 32px;
+                text-align: center;
+                width: 22ch;
+            }
+
+            > button.cta {
+                background-color: #a4ffa4;
+                border: none;
+                border-radius: 20px;
+                font-size: 18px;
+                font-weight: 600;
+                height: min-content;
+                margin-top: 8px;
+                padding: 8px 16px;
+                width: fit-content;
+                transition: 200ms ease-out;
+            }
+
+            > button.cta:hover {
+                background-color: #72e8e6;
+                color: #004d4b;
+            }
+        }
+    }
+
+    @media (max-width: 1300px) {
+        > .left {
+            min-width: 260px;
+
+            > .text {
+                > .title {
+                    > h1 {
+                        font-size: 48px;
+                    }
+                }
+            }
+
+            > img.agendas-3d {
+                width: 100%;
+            }
+        }
+
+        > .center {
+            > img.hero-image {
+                width: 480px;
+            }
+        }
+
+        > .right {
+            translate: -96px;
+            > img.notion-template {
+                width: 400px;
+            }
+        }
+    }
+
+    @media (max-width: 1100px) {
+        align-items: center;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: min-content min-content;
+
+        > .left {
+            > img.agendas-3d {
+                width: 300px;
+            }
+        }
+
+        > .right {
+            flex-direction: row;
+            max-width: 300px;
+            translate: 0;
+
+            > .cta-space {
+                align-items: center;
+                flex-direction: column;
+                > p.p1 {
+                    min-width: 22ch;
+                }
+
+                > button {
+                    min-width: max-content;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+
+        > .left {
+            align-items: center;
+            background: url(./../assets/hero-image-opacity-20.png);
+            background-size: 110%;
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: 100px;
+            width: 100vw;
+            overflow: visible;
+            text-align: center;
+
+            > .text {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                > .title {
+                    align-items: center;
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+
+        >.center{
+            display: none;
+        }
+
+        >.right{
+            flex-direction: column;
+            margin-top: 40px;
+            >img.notion-template{
+                width: 80vw;
+            }
+        }
+    }
+}

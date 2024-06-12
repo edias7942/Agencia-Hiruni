@@ -1,0 +1,106 @@
+#apresentation.section-page {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 0;
+
+    > div {
+        display: flex;
+        gap: 15%;
+        text-align: center;
+
+        > div {
+            align-items: center;
+            background-color: green;
+            border: 3px solid;
+            border-radius: 80px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            height: 120px;
+            justify-content: center;
+            padding: 0px 62px;
+            width: 30%;
+            position: relative;
+
+            > p {
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+
+            > .icon {
+                align-items: center;
+                display: flex;
+                background-color: white;
+                bottom: -40px;
+                border-radius: 50%;
+                height: 80px;
+                justify-content: center;
+                position: absolute;
+                width: 80px;
+
+                > img {
+                    width: 40px;
+                }
+            }
+        }
+    }
+
+    > .top {
+        justify-content: end;
+
+        > .container-01 {
+            background-color: #c9ffc9;
+            color: #113b00;
+        }
+
+        > .container-02 {
+            background-color: #ffc0cb;
+            color: #82006d;
+        }
+    }
+
+    > .bottom {
+        > .container-03 {
+            background-color: #bafffe;
+            color: #1b6c6a;
+        }
+
+        > .container-04 {
+            background-color: #ffd381;
+            color: #8a5900;
+        }
+    }
+
+    @media (max-width: 1100px) {
+        > div,
+        > .top {
+            justify-content: center;
+            gap: 5%;
+
+            > div {
+                width: 45%;
+            }
+        }
+
+        >.bottom{
+            margin-top: 20px;
+        }
+    }
+
+    @media (max-width:700px) {
+        >div>div>.icon{
+            scale: 0.8;
+        }
+    }
+
+    @media (max-width: 600px) {
+        > div {
+
+            > div {
+                height: auto;
+                padding: 34px;
+            }
+        }
+    }
+}

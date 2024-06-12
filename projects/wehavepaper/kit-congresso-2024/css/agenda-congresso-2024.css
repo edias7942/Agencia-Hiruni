@@ -1,0 +1,255 @@
+#agenda-congresso-2024.section-page {
+    align-items: center;
+    background-color: #e0efed;
+    display: flex;
+    flex-direction: column;
+
+    > h2 {
+        color: #00584d;
+    }
+
+    > .item {
+        align-items: center;
+        display: flex;
+        margin-top: 56px;
+
+        > .text {
+            display: flex;
+            flex-direction: column;
+
+            > .header {
+                display: flex;
+                gap: 24px;
+
+                > .icon {
+                    width: 96px;
+                }
+
+                > .title {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    > .top {
+                        font-size: 32px;
+                        height: 32px;
+                        padding-left: 3px;
+                    }
+                    > .bottom {
+                        font-size: 46px;
+                        height: 46px;
+                    }
+                }
+            }
+            > .content {
+                display: flex;
+
+                > .vertical-line {
+                    margin-top: -20px;
+                    width: 96px;
+                }
+
+                > p.p1 {
+                    margin-top: 24px;
+                    width: 26ch;
+                }
+            }
+        }
+
+        > .image {
+            width: 400px;
+            > img {
+                width: 100%;
+            }
+        }
+    }
+
+    > .item.first {
+        > .text {
+            > .header {
+                > .title {
+                    color: #4b5e3c;
+                }
+            }
+            > .content {
+                > p.p1 {
+                    color: #122900;
+                }
+            }
+        }
+    }
+
+    > .item.second {
+        flex-direction: row-reverse;
+        > .text {
+            > .header {
+                flex-direction: row-reverse;
+                > .title {
+                    color: #974100;
+                    text-align: end;
+                }
+            }
+            > .content {
+                flex-direction: row-reverse;
+                > p.p1 {
+                    text-align: end;
+                    color: #502200;
+                }
+            }
+        }
+    }
+
+    > .item.third {
+        > .text {
+            > .header {
+                > .title {
+                    color: #007a7a;
+                }
+            }
+            > .content {
+                > p.p1 {
+                    color: #004343;
+                }
+            }
+        }
+
+        > .image {
+            display: flex;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+
+            > img {
+                scroll-snap-align: start;
+                scroll-snap-stop: always;
+                scroll-margin-left: 0px;
+            }
+        }
+
+        > .image::-webkit-scrollbar {
+            height: 8px;
+            border-radius: 4px; /* width of the entire scrollbar */
+        }
+
+        > .image::-webkit-scrollbar-thumb {
+            /* color of the scroll thumb */
+            background-color: #1a9f9f;
+            border-radius: 20px; /* roundness of the scroll thumb */
+            border-bottom: 0;
+        }
+
+        > .image::-webkit-scrollbar-track {
+            /* color of the scroll thumb */
+            background-color: #1a9f9f2b;
+            border-radius: 20px; /* roundness of the scroll thumb */
+            border-bottom: 0;
+        }
+    }
+
+    @media (max-width: 1100px) {
+        > .item {
+            > .text {
+                > .header {
+                    > .title {
+                        > h2,
+                        > .top {
+                            font-size: 27px;
+                        }
+
+                        > .bottom {
+                            font-size: 36px;
+                        }
+                    }
+                }
+            }
+        }
+
+        > .item:not(.second) {
+            > .text {
+                > .header {
+                    > .title {
+                        > .top {
+                            height: 27px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 900px) {
+        > .item {
+            > .image {
+                width: 300px;
+            }
+        }
+    }
+
+    @media (max-width:700px) {
+        width: 100vw;
+        >.item{
+            >.text{
+                >.header{
+                    gap: 8px;
+
+                    >.icon{
+                        width: 64px;
+                    }
+
+
+                    >.title{
+                        >.top{
+
+                        }
+
+                        >.bottom{
+                            font-size: 27px;
+                            height: 27px;
+                        }
+                    }
+                }
+
+                >.content{
+                    >.vertical-line{
+                        width: 64px;
+                    }
+
+                    >p.p1{
+                        font-size: 16px;
+                        width: 20ch;
+                    }
+                }
+            }
+
+            >.image{
+                width: 270px;
+                >img{
+                    width: 270px;
+                }
+            }
+        }
+    }
+
+    @media (max-width:600px) {
+        >.item, >.item.second{
+            flex-direction: column;
+            margin-bottom: 56px;
+
+            >.text{
+                >.content{
+                    >.vertical-line{
+                        width: 64px;
+                    }
+
+                    >p.p1{
+                        width: calc(80vw - 64px);
+                    }
+                }
+            }
+
+            >.image{
+                /* width: 100vw; */
+            }
+        }
+    }
+
+}

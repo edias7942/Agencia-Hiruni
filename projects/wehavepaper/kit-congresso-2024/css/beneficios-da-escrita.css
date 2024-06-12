@@ -1,0 +1,202 @@
+#beneficios-da-escrita.section-page {
+
+    > h2.title {
+        color: #7d8c77;
+        text-align: center;
+    }
+
+    > .content {
+        margin-top: 32px;
+        > .principal {
+            display: flex;
+            justify-content: center;
+            gap: 5%;
+
+            > div {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                font-weight: bold;
+                justify-content: end;
+                text-align: center;
+                width: 20%;
+
+                > .title {
+                    margin-top: 8px;
+                    > .top {
+                        font-size: 22px;
+                        height: 22px;
+                        min-width: max-content;
+                    }
+
+                    > .bottom {
+                        font-size: 32px;
+                    }
+                }
+
+                > .connection {
+                    align-items: center;
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 24px;
+
+                    > .line {
+                        background-color: black;
+                        border-radius: 3px;
+                        height: 120px;
+                        width: 6px;
+                    }
+
+                    > .circle {
+                        background-color: black;
+                        border-radius: 50%;
+                        height: 32px;
+                        margin-top: -16px;
+                        width: 32px;
+                    }
+                }
+            }
+
+            > .first {
+                > .title {
+                    color: #4f2200;
+                }
+
+                > .connection {
+                    > .line,
+                    > .circle {
+                        background-color: #e0a273;
+                    }
+                }
+            }
+
+            > .second {
+                > .title {
+                    color: #006464;
+                }
+                > .connection {
+                    > .line {
+                        height: 180px;
+                    }
+
+                    > .line,
+                    > .circle {
+                        background-color: #a1d1d1;
+                    }
+                }
+            }
+
+            > .third {
+                > .title {
+                    color: #004d00;
+                }
+                > .connection {
+                    > .line,
+                    > .circle {
+                        background-color: #86b886;
+                    }
+                }
+            }
+        }
+
+        > .horizontal-line {
+            background-color: #ffc8ce;
+            border-radius: 3px;
+            height: 6px;
+            margin-top: -18px;
+            width: 100%;
+        }
+
+        > .paragraph {
+            display: flex;
+            justify-content: center;
+            gap: 5%;
+            margin-top: 24px;
+
+            > p {
+                text-align: center;
+                width: 20%;
+            }
+
+            > .first {
+                color: #823800;
+            }
+
+            > .second {
+                color: #006464;
+            }
+
+            > .third {
+                color: #004d00;
+            }
+        }
+    }
+
+    @media (max-width: 1100px) {
+        > .content {
+            > .principal {
+                > div {
+                    width: 30%;
+                }
+            }
+
+            > .paragraph {
+                > p {
+                    width: 30%;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 700px) {
+        
+        > .content {
+            > .principal {
+                > div {
+                    > .icon > img {
+                        width: 80px;
+                    }
+
+                    > .title {
+                        margin-top: 4px;
+                        > .top {
+                            font-size: 14px;
+                            height: 14px;
+                        }
+
+                        > .bottom {
+                            font-size: 21px;
+                        }
+                    }
+
+                    > .connection {
+                        margin-top: 8px;
+
+                        > .line {
+                            border-radius: 2px;
+                            width: 4px;
+                        }
+
+                        > .circle {
+                            height: 24px;
+                            margin-top: -12px;
+                            width: 24px;
+                        }
+                    }
+                }
+            }
+
+            > .horizontal-line {
+                height: 4px;
+                margin-top: -14px;
+            }
+
+            > .paragraph {
+                display: none;
+                > p.p1 {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    align-items: center;
+    background-color: #ffeada;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+a {
+    color: white;
+}
+
+h1 {
+    font-size: 5.6rem;
+    font-weight: 500;
+    width: fit-content;
+
+    @media (max-width: 1100px) {
+        font-size: 5.4rem;
+    }
+
+    @media (max-width: 500px) {
+        font-size: 4rem;
+    }
+}
+
+h2 {
+    font-size: 4rem;
+    font-weight: bold;
+
+    @media (max-width: 500px) {
+        font-size: 26px;
+    }
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 3.2rem;
+    font-weight: 400;
+
+    @media (max-width: 1100px) {
+        font-size: 2.4rem;
+    }
+
+    @media (max-width: 500px) {
+        font-size: 1.8rem;
+    }
+}
+
+p.p1 {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+}
+
+p.p2 {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+}
+
+p.p3 {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+}
+
+button:not(:disabled) {
+    cursor: pointer;
+    user-select: none;
+    transition: 200ms;
+}
+
+/* Hidden and Show Elements */
+.hidden {
+    display: hidden;
+    opacity: 0;
+    transition: none;
+}
+
+.show {
+    opacity: 1;
+}
+
+/* PAGE SECTION */
+.section-page {
+    padding: 100px calc((100vw - 1220px) / 2);
+    width: 1220px;
+
+    @media (max-width: 1300px) {
+        padding-left: calc((100vw - 1000px) / 2);
+        padding-right: calc((100vw - 1000px) / 2);
+        width: 1000px;
+    }
+
+    @media (max-width: 1100px) {
+        padding-left: calc((100vw - 800px) / 2);
+        padding-right: calc((100vw - 800px) / 2);
+        width: 800px;
+    }
+
+    @media (max-width: 900px) {
+        padding-left: calc((100vw - 700px) / 2);
+        padding-right: calc((100vw - 700px) / 2);
+        width: 700px;
+    }
+
+    @media (max-width: 700px) {
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+    }
+}
+
+/* Header */
+header {
+    align-items: center;
+    color: #5f2901;
+    display: flex;
+    width: 100vw;
+    > img {
+        padding: 20px;
+        width: 40px;
+    }
+
+    @media (max-width: 600px) {
+        > h3 {
+            font-size: 20px;
+        }
+    }
+}
+
+#decoration-congresso-2024 > img {
+    width: 90vw;
+}

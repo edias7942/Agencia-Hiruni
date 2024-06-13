@@ -1,0 +1,171 @@
+#explicacao-do-processo-de-compra.section-page {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    > .title {
+        > h2 {
+            color: #007d7a;
+        }
+
+        > p.p1 {
+            color: #58b8b6;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 8px;
+        }
+    }
+
+    > .time-line {
+        > .deadline {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 16px;
+        }
+
+        > svg {
+            width: 90vw;
+        }
+    }
+
+    > .steps-container {
+        display: flex;
+        gap: 2.5%;
+        justify-content: center;
+        margin-top: 24px;
+
+        > .step {
+            width: 18%;
+            > svg {
+                height: 48px;
+            }
+
+            > p.p1 {
+                align-items: center;
+                color: #784c4b;
+                display: flex;
+                font-size: 18px;
+                font-weight: bold;
+                height: 40px;
+                justify-content: center;
+                margin-top: 8px;
+            }
+        }
+
+        > .step.recebimento {
+            > p.p1 {
+                color: #008500;
+            }
+        }
+    }
+
+    > .bottom {
+        margin-top: 48px;
+        display: flex;
+        gap: 10%;
+
+        > .text {
+            align-items: center;
+            background-color: #ffd3b2;
+            border-radius: 16px;
+            color: #351700;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        > .cta-container {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            justify-content: center;
+
+            > h3 {
+                color: #206f00;
+            }
+
+            p.p1 {
+                color: #113d00;
+            }
+
+            > button.cta {
+                border-radius: 24px;
+                width: max-content;
+
+                > h3 {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 700px) {
+        > .title {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            > h2 {
+                font-size: 32px;
+                width: 15ch;
+            }
+        }
+
+        > .steps-container {
+            gap: 1.5%;
+            > .step {
+                > svg {
+                    height: 40px;
+                }
+
+                > p.p1 {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        > .bottom {
+            width: 90vw;
+            gap: 5%;
+            > .text {
+                padding: 24px;
+                > p.p1 {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    @media (max-width:600px) {
+        >.steps-container{
+            align-items: center;
+            flex-direction: column;
+            gap: 8px;
+            width: 90vw;
+
+            >.step{
+                align-items: center;
+                background-color: rgba(252, 210, 132, 0.46);
+                border-radius: 16px;
+                display: flex;
+                width: 100%;
+                display: flex;
+                gap: 8px;
+                padding: 12px 0;
+
+                >svg{
+                    width: 80px;
+                }
+
+                >p.p1{
+                    margin-top: 0;
+                }
+            }
+        }
+        >.bottom{
+            flex-direction: column;
+            gap: 32px;
+        }
+    }
+}

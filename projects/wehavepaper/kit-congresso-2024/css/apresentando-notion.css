@@ -1,0 +1,90 @@
+#apresentando-notion.section-page {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+
+    > h2.title {
+        color: #7d8c77;
+    }
+
+    > .content {
+        position: relative;
+        > img.notion-mockup {
+            width: 600px;
+            z-index: 1;
+        }
+
+        > .text {
+            align-items: center;
+            border: 2px dashed #005856;
+            border-radius: 50%;
+            color: #005856;
+            box-sizing: border-box;
+            display: flex;
+            height: 240px;
+            justify-content: center;
+            padding: 56px;
+            position: absolute;
+            right: -150px;
+            text-align: center;
+            bottom: -100px;
+            width: 240px;
+            z-index: -1;
+
+            >.icon{
+                position: absolute;
+                top: 0;
+                right: 0;
+                
+                >img{
+                    width: 80px;
+                }
+            }
+        }
+    }
+
+    @media (max-width:900px) {
+        >.content{
+            >img.notion-mockup{
+                width: 500px;
+            }
+
+            >.text{
+                height: 200px;
+                padding: 14px;
+                right: -100px;
+                width: 200px;
+
+                >.icon{
+                    >img{
+                        width: 64px;
+                    }
+                }
+
+                >p.p1{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    @media (max-width:700px) {
+        >.content{
+            align-items: center;
+            display: flex;
+            flex-direction: column-reverse;
+
+            >img.notion-mockup{
+                margin-top: -64px;
+                width: 90vw;
+            }
+            
+            >.text{
+                position: relative;
+                top: 0;
+                right: inherit;
+            }
+        }
+    }
+}

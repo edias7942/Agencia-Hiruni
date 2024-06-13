@@ -184,72 +184,67 @@
         }
     }
 
-    @media (max-width:700px) {
+    @media (max-width: 700px) {
         width: 100vw;
-        >.item{
-            >.text{
-                >.header{
+        > .item {
+            > .text {
+                > .header {
                     gap: 8px;
 
-                    >.icon{
+                    > .icon {
                         width: 64px;
                     }
 
-
-                    >.title{
-                        >.top{
-
-                        }
-
-                        >.bottom{
+                    > .title {
+                        > .bottom {
                             font-size: 27px;
                             height: 27px;
                         }
                     }
                 }
 
-                >.content{
-                    >.vertical-line{
+                > .content {
+                    > .vertical-line {
                         width: 64px;
                     }
 
-                    >p.p1{
+                    > p.p1 {
                         font-size: 16px;
                         width: 20ch;
                     }
                 }
             }
 
-            >.image{
+            > .image {
                 width: 270px;
-                >img{
+                > img {
                     width: 270px;
                 }
             }
         }
     }
 
-    @media (max-width:600px) {
-        >.item, >.item.second{
+    @media (max-width: 600px) {
+        > .item,
+        > .item.second {
             flex-direction: column;
             margin-bottom: 56px;
 
-            >.text{
-                >.content{
-                    >.vertical-line{
+            > .text {
+                > .content {
+                    > .vertical-line {
                         width: 64px;
                     }
 
-                    >p.p1{
+                    > p.p1 {
                         width: calc(80vw - 64px);
                     }
                 }
             }
 
-            >.image{
-                /* width: 100vw; */
-            }
+            /* > .image {
+                width: 100vw;
+            } */
         }
     }
-
 }

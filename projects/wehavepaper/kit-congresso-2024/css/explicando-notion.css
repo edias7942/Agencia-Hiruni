@@ -1,0 +1,75 @@
+#explicando-notion.section-page {
+    align-items: center;
+    display: flex;
+    padding-top: 0;
+
+    > .main-circle {
+        align-items: center;
+        background-color: #e1a26a;
+        border-radius: 50%;
+        color: #ffeada;
+        display: flex;
+        font-size: 24px;
+        font-weight: bold;
+        min-height: 240px;
+        justify-content: center;
+        text-align: center;
+        min-width: 240px;
+    }
+
+    > .content {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        > .item {
+            align-items: center;
+            color: #7E3B00;
+            display: flex;
+
+            > div.number {
+                align-items: center;
+                border: 3px solid #e1a26a;
+                border-radius: 50%;
+                display: flex;
+                min-height: 72px;
+                justify-content: center;
+                min-width: 72px;
+            }
+
+            > .text {
+                margin-left: 16px;
+            }
+        }
+
+        > .item.first {
+            > svg {
+                margin-top: 40px;
+                margin-left: -22px;
+                rotate: -15deg;
+            }
+        }
+        > .item.third {
+            > svg {
+                margin-bottom: 40px;
+                margin-left: -22px;
+                rotate: 15deg;
+            }
+        }
+    }
+
+    @media (max-width: 700px) {
+        flex-direction: column;
+        gap: 24px;
+        
+        > .content {
+
+            >.item{
+                width: 90vw;
+                >svg{
+                    display: none;
+                }
+            }
+        }
+    }
+}

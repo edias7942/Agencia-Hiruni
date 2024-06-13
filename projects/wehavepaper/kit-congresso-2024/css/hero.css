@@ -62,24 +62,6 @@
                 text-align: center;
                 width: 22ch;
             }
-
-            > button.cta {
-                background-color: #a4ffa4;
-                border: none;
-                border-radius: 20px;
-                font-size: 18px;
-                font-weight: 600;
-                height: min-content;
-                margin-top: 8px;
-                padding: 8px 16px;
-                width: fit-content;
-                transition: 200ms ease-out;
-            }
-
-            > button.cta:hover {
-                background-color: #72e8e6;
-                color: #004d4b;
-            }
         }
     }
 
@@ -152,7 +134,7 @@
 
         > .left {
             align-items: center;
-            background: url(./../assets/hero-image-opacity-20.png);
+            /* background: url(./../assets/hero-image-opacity-20.png); */
             background-size: 110%;
             background-repeat: no-repeat;
             background-position-x: center;

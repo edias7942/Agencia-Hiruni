@@ -6,10 +6,18 @@
     padding-top: 200px;
     text-align: center;
 
+    >h2.show{
+        animation: bottom-top 1s ease-out both;
+    }
+
     > img {
         margin-top: 80px;
         width: 90%;
         max-width: 800px;
+    }
+
+    >img.show{
+        animation: opacity 1s ease-out;
     }
 
     @media (max-width: 700px) {

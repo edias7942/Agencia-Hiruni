@@ -10,25 +10,36 @@
                     height: 56px;
                 }
 
+                > h1 {
+                    animation: bottom-top 1s both;
+                    font-weight: 600;
+                }
+
                 > h1.first {
                     color: #58b8b6;
                 }
 
                 > h1.second {
+                    animation-delay: 300ms;
                     color: #7d8c77;
                 }
 
                 > h1.third {
+                    animation-delay: 600ms;
                     color: #e0a273;
                 }
             }
 
             > p.p1 {
+                animation: scale-up 1s ease-out both;
+                animation-delay: 900ms;
                 color: #784c4b;
             }
         }
 
         > img.agendas-3d {
+            animation: opacity 2s both;
+            animation-delay: 600ms;
             margin-top: 20px;
             width: 300px;
         }
@@ -37,6 +48,7 @@
     > .center {
         z-index: 1;
         > img.hero-image {
+            animation: scale-up-7 1s cubic-bezier(0.68, 0.18, 0.73, 1.01) both;
             /* scale: 0.9; */
             width: 530px;
         }
@@ -49,6 +61,7 @@
         z-index: 0;
 
         > img.notion-template {
+            animation: left-right 1s ease-out both;
             width: 440px;
         }
 
@@ -157,14 +170,14 @@
             }
         }
 
-        >.center{
+        > .center {
             display: none;
         }
 
-        >.right{
+        > .right {
             flex-direction: column;
             margin-top: 40px;
-            >img.notion-template{
+            > img.notion-template {
                 width: 80vw;
             }
         }

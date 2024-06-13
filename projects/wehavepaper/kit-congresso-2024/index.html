@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Agenda Congresso 2024</title>
+        <link rel="shortcut icon" href="./assets/icons/whp-logo.svg" type="image/x-icon">
         <link rel="stylesheet" href="./css/animations.css" />
         <link rel="stylesheet" href="./css/style.css" />
         <link rel="stylesheet" href="./css/hero.css" />
@@ -17,7 +18,7 @@
             rel="stylesheet"
             href="./css/explicacao-do-processo-de-compra.css"
         />
-        <script src="script.js"></script>
+        <script src="script.js" defer></script>
     </head>
     <body>
         <header>
@@ -79,7 +80,7 @@
         <!--Line Info 01-->
         <div id="apresentation" class="section-page">
             <div class="top">
-                <div class="container-01">
+                <div class="container-01 hidden">
                     <p class="p1">Organize suas Anotações</p>
                     <div class="icon">
                         <img
@@ -88,7 +89,7 @@
                         />
                     </div>
                 </div>
-                <div class="container-02">
+                <div class="container-02 hidden">
                     <p class="p1">Unindo Tecnologia à sua Agenda</p>
                     <div class="icon">
                         <img
@@ -99,7 +100,7 @@
                 </div>
             </div>
             <div class="bottom">
-                <div class="container-03">
+                <div class="container-03 hidden">
                     <p class="p1">Agenda 100% Temática</p>
                     <div class="icon">
                         <img
@@ -108,7 +109,7 @@
                         />
                     </div>
                 </div>
-                <div class="container-04">
+                <div class="container-04 hidden">
                     <p class="p1">Cada Discurso tem sua própria página</p>
                     <div class="icon">
                         <img
@@ -130,71 +131,71 @@
 
         <!--Benefícios da Escrita-->
         <div id="beneficios-da-escrita" class="section-page">
-            <h2 class="title">
+            <h2 class="title hidden">
                 Veja os Benefícios da <br />
                 Escrita para você
             </h2>
             <div class="content">
                 <div class="principal">
                     <div class="first">
-                        <div class="icon">
+                        <div class="icon hidden">
                             <img
                                 src="./assets/icons/braind-connection-items.svg"
                                 alt="Ícone de um cérebro se conectando com 3 pontos."
                             />
                         </div>
-                        <div class="title">
+                        <div class="title hidden">
                             <div class="top">Aumento da</div>
                             <div class="bottom">Memória</div>
                         </div>
                         <div class="connection">
-                            <div class="line"></div>
-                            <div class="circle"></div>
+                            <div class="line hidden"></div>
+                            <div class="circle hidden"></div>
                         </div>
                     </div>
                     <div class="second">
-                        <div class="icon">
+                        <div class="icon hidden">
                             <img
                                 src="./assets/icons/three-screens-connect.svg"
                                 alt="Três telas se conectando em formato de pirâmide."
                             />
                         </div>
-                        <div class="title">
+                        <div class="title hidden">
                             <div class="top">Menos sono nos</div>
                             <div class="bottom">Discursos</div>
                         </div>
                         <div class="connection">
-                            <div class="line"></div>
-                            <div class="circle"></div>
+                            <div class="line hidden"></div>
+                            <div class="circle hidden"></div>
                         </div>
                     </div>
                     <div class="third">
-                        <div class="icon">
+                        <div class="icon hidden">
                             <img
                                 src="./assets/icons/green-brain.svg"
                                 alt="Cérebro verde."
                             />
                         </div>
-                        <div class="title">
+                        <div class="title hidden">
                             <div class="top">Exercitando o</div>
                             <div class="bottom">Cérebro</div>
                         </div>
                         <div class="connection">
-                            <div class="line"></div>
-                            <div class="circle"></div>
+                            <div class="line hidden"></div>
+                            <div class="circle hidden"></div>
                         </div>
                     </div>
                 </div>
-                <div class="horizontal-line"></div>
+                <div class="horizontal-line hidden"></div>
                 <div class="paragraph">
-                    <p class="p1 first">
+                    <p class="p1 first hidden">
                         Seu cérebro <b>memoriza</b> melhor escrevendo à mão.
                     </p>
-                    <p class="p1 second">
+                    <p class="p1 second hidden">
                         Escrever aumenta seu <b>foco</b> e <b>concentração</b>,
                         dispersando o sono.
                     </p>
-                    <p class="p1 third">
+                    <p class="p1 third hidden">
                         <b>Escrever</b> faz bem pra <b>mente</b>, assim como o
                         <b>exercício</b> faz bem para o <b>corpo</b>.
                     </p>
@@ -204,11 +205,12 @@
 
         <!--Kit do Congresso 2024-->
         <div id="kit-congresso-2024" class="section-page">
-            <h2 class="title">
+            <h2 class="title hidden">
                 O que vem dentro do seu <br />
                 Kit Congresso 2024
             </h2>
             <img
+                class="hidden"
                 src="./assets/mockup-kit-congresso-2024.webp"
                 alt="Kit do Congresso 2024. Nele, vemos os seguintes produtos: Marca páginas/tag, Caneta Personalizada, Garrafinha dobrável, Bolsinha, Cartela de adesivos e Agenda com bolsinho e divisórias."
             />
@@ -216,7 +218,7 @@
 
         <!--Conhecendo a Agenda do Congresso 2024-->
         <div id="agenda-congresso-2024" class="section-page">
-            <h2 class="title">
+            <h2 class="title hidden">
                 Conhecendo a Agenda <br />
                 do Kit Congresso 2024
             </h2>
@@ -226,16 +228,16 @@
                         <img
                             src="./assets/icons/agenda-edit.svg"
                             alt="Icone de Edição de Agenda mostrando que a personalizamoms para você."
-                            class="icon"
+                            class="icon hidden"
                         />
-                        <div class="title">
+                        <div class="title hidden">
                             <h2 class="top">Agenda</h2>
                             <h2 class="bottom">Personalizada</h2>
                         </div>
                     </div>
                     <div class="content">
                         <svg
-                            class="vertical-line"
+                            class="vertical-line hidden"
                             width="6"
                             height="186"
                             viewBox="0 0 6 186"
@@ -251,7 +253,7 @@
                                 stroke-dasharray="10 10"
                             />
                         </svg>
-                        <p class="p1">
+                        <p class="p1 hidden">
                             Sabe aquela agenda que pela capa já dá vontade de
                             encher ela de anotações? <br />
                             <br />
@@ -273,9 +275,9 @@
                         <img
                             src="./assets/icons/sticker-icon.svg"
                             alt="Icone de Adesivo mostrando que dentro da agenda vem Adesivos."
-                            class="icon"
+                            class="icon hidden"
                         />
-                        <div class="title">
+                        <div class="title hidden">
                             <h2>
                                 Cartela de Adesivos <br />
                                 + Marca Páginas &nbsp <br />
@@ -285,7 +287,7 @@
                     </div>
                     <div class="content">
                         <svg
-                            class="vertical-line"
+                            class="vertical-line hidden"
                             width="6"
                             height="280"
                             viewBox="0 0 6 280"
@@ -301,7 +303,7 @@
                                 stroke-dasharray="10 10"
                             />
                         </svg>
-                        <p class="p1">
+                        <p class="p1 hidden">
                             Sua Agenda fica ainda mais linda com nossos Adesivos
                             temáticos. <br />
                             <br />
@@ -325,16 +327,16 @@
                         <img
                             src="./assets/icons/document-edit.svg"
                             alt="Icone de Edição de Agenda mostrando que a personalizamoms para você."
-                            class="icon"
+                            class="icon hidden"
                         />
-                        <div class="title">
+                        <div class="title hidden">
                             <h2 class="top">Páginas</h2>
                             <h2 class="bottom">Personalizadas</h2>
                         </div>
                     </div>
                     <div class="content">
                         <svg
-                            class="vertical-line"
+                            class="vertical-line hidden"
                             width="6"
                             height="196"
                             viewBox="0 0 6 196"
@@ -350,7 +352,7 @@
                                 stroke-dasharray="10 10"
                             />
                         </svg>
-                        <p class="p1">
+                        <p class="p1 hidden">
                             Dividimos sua Agenda por dia para que você possa
                             separar e organizar melhor suas anotações.
                             <br />
@@ -359,7 +361,20 @@
                         </p>
                     </div>
                 </div>
-                <div class="image">
+                <button class="prev-image" onclick="clicando(-300)">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            fill="#006964"
+                            d="M12.7 17.925q-.35.2-.625-.062T12 17.25L14.425 13H3q-.425 0-.712-.288T2 12t.288-.712T3 11h11.425L12 6.75q-.2-.35.075-.612t.625-.063l7.975 5.075q.475.3.475.85t-.475.85z"
+                        />
+                    </svg>
+                </button>
+                <div id="alvo" class="image">
                     <img
                         src="./assets/sexta-feira.webp"
                         alt="Miolo da Agenda."
@@ -381,6 +396,19 @@
                         alt="Miolo da Agenda."
                     />
                 </div>
+                <button class="next-image" onclick="clicando(300)">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            fill="#006964"
+                            d="M12.7 17.925q-.35.2-.625-.062T12 17.25L14.425 13H3q-.425 0-.712-.288T2 12t.288-.712T3 11h11.425L12 6.75q-.2-.35.075-.612t.625-.063l7.975 5.075q.475.3.475.85t-.475.85z"
+                        />
+                    </svg>
+                </button>
             </div>
         </div>
 

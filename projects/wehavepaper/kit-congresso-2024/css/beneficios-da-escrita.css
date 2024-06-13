@@ -1,8 +1,12 @@
 #beneficios-da-escrita.section-page {
-
     > h2.title {
         color: #7d8c77;
         text-align: center;
+    }
+
+    >h2.title.show{
+        
+        animation: bottom-top 1s ease-out both;
     }
 
     > .content {
@@ -11,6 +15,7 @@
             display: flex;
             justify-content: center;
             gap: 5%;
+            z-index: 1;
 
             > div {
                 align-items: center;
@@ -20,6 +25,11 @@
                 justify-content: end;
                 text-align: center;
                 width: 20%;
+                z-index: 1;
+
+                > .icon.show {
+                    animation: scale-up-7 1s ease-out;
+                }
 
                 > .title {
                     margin-top: 8px;
@@ -32,6 +42,10 @@
                     > .bottom {
                         font-size: 32px;
                     }
+                }
+
+                > .title.show {
+                    animation: bottom-top 1s ease-out both;
                 }
 
                 > .connection {
@@ -47,12 +61,22 @@
                         width: 6px;
                     }
 
+                    > .line.show {
+                        animation: line-top-bottom 1s ease-out both;
+                        animation-delay: 600ms;
+                    }
+
                     > .circle {
                         background-color: black;
                         border-radius: 50%;
                         height: 32px;
                         margin-top: -16px;
                         width: 32px;
+                    }
+
+                    >.circle.show{
+                        animation: scale-up 0.6s ease-out both;
+                        animation-delay: 200ms;
                     }
                 }
             }
@@ -105,6 +129,13 @@
             height: 6px;
             margin-top: -18px;
             width: 100%;
+            z-index: -1;
+        }
+
+        >.horizontal-line.show{
+            animation: scale-up 1s ease-out both;
+            animation-delay: 300ms;
+            z-index: -1;
         }
 
         > .paragraph {
@@ -118,16 +149,32 @@
                 width: 20%;
             }
 
+            >p.show{
+                animation: left-right 1s ease-out both;
+            }
+
             > .first {
                 color: #823800;
+            }
+
+            >.first.show{
+                animation-delay: 100ms;
             }
 
             > .second {
                 color: #006464;
             }
 
+            >.second.show{
+                animation-delay: 400ms;
+            }
+
             > .third {
                 color: #004d00;
+            }
+
+            >.third.show{
+                animation-delay: 700ms;
             }
         }
     }
@@ -149,7 +196,6 @@
     }
 
     @media (max-width: 700px) {
-        
         > .content {
             > .principal {
                 > div {

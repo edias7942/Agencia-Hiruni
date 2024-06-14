@@ -8,7 +8,7 @@
         color: #00584d;
     }
 
-    >h2.show{
+    > h2.show {
         animation: bottom-top 1s ease-out both;
     }
 
@@ -29,7 +29,7 @@
                     width: 96px;
                 }
 
-                >.icon.show{
+                > .icon.show {
                     animation: scale-up-7 0.8s ease-out both;
                 }
 
@@ -49,7 +49,7 @@
                     }
                 }
 
-                >.title.show{
+                > .title.show {
                     animation: left-right 1s ease-out both;
                     animation-delay: 300ms;
                 }
@@ -62,7 +62,7 @@
                     width: 96px;
                 }
 
-                >.vertical-line.show{
+                > .vertical-line.show {
                     animation: line-top-bottom 1s ease-out both;
                     animation-delay: 300ms;
                 }
@@ -72,7 +72,7 @@
                     width: 26ch;
                 }
 
-                >p.p1.show{
+                > p.p1.show {
                     animation: left-right 1s ease-out both;
                     animation-delay: 300ms;
                 }
@@ -135,8 +135,8 @@
                 }
             }
         }
-    
-        >button{
+
+        > button {
             align-items: center;
             background-color: transparent;
             border: 2px solid rgb(49, 168, 162);
@@ -146,25 +146,24 @@
             padding: 6px;
             outline: none;
 
-            >svg{
+            > svg {
                 transition: 200ms ease-out;
             }
         }
 
-        >button.prev-image{
+        > button.prev-image {
             rotate: 180deg;
-
         }
 
-        >button:hover{
-            >svg{
+        > button:hover {
+            > svg {
                 translate: 2px;
             }
         }
 
-        >button:active{
+        > button:active {
             padding: 4px 6px;
-            >svg{
+            > svg {
                 translate: 6px;
             }
         }
@@ -176,7 +175,7 @@
             position: relative;
             scroll-snap-type: x mandatory;
 
-            >button.next-image{
+            > button.next-image {
                 right: 0;
             }
 
@@ -305,6 +304,18 @@
             }
 
             /* > .image {
+                width: 100vw;
+            } */
+        }
+    }
+
+    @media (max-width:500px) {
+        > .item.third {
+            > button {
+                display: none;
+            }
+
+            /* >.image{
                 width: 100vw;
             } */
         }

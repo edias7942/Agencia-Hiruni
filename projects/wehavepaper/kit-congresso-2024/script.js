@@ -15,8 +15,8 @@ const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
 
 
-function clicando(scrollNumber) {
-    let alvo = document.getElementById('alvo');
-    console.log(alvo.scrollLeft)
-    alvo.scrollLeft += scrollNumber;
+function scrollLateral(divId, scrollNumber) {
+    let divScroll = document.getElementById(divId);
+    console.log(divScroll.scrollLeft)
+    divScroll.scrollLeft += scrollNumber;
 };

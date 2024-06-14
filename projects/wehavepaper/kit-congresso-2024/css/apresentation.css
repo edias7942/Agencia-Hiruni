@@ -67,24 +67,24 @@
         justify-content: end;
 
         > .container-01 {
-            background-color: #c9ffc9;
+            background-color: #b7edb7;
             color: #113b00;
         }
 
         > .container-02 {
-            background-color: #ffc0cb;
+            background-color: #ffdde3;
             color: #82006d;
         }
     }
 
     > .bottom {
         > .container-03 {
-            background-color: #bafffe;
+            background-color: #c2e9e9;
             color: #1b6c6a;
         }
 
         > .container-04 {
-            background-color: #ffd381;
+            background-color: #ffe2cc;
             color: #8a5900;
         }
     }

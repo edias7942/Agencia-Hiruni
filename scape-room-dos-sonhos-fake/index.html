@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Scape Room dos Sonhos</title>
+
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <img src="./media/images/imagem-canto.png" id="imagem-de-canto-1" class="imagem-de-canto" alt="">
+        <img src="./media/images/imagem-canto.png" id="imagem-de-canto-2" class="imagem-de-canto" alt="">
+        <img src="./media/images/imagem-canto.png" id="imagem-de-canto-3" class="imagem-de-canto" alt="">
+        <img src="./media/images/imagem-canto.png" id="imagem-de-canto-4" class="imagem-de-canto" alt="">
+        
+        <div class="content">
+            <div class="pedido-casamento-coreano">결혼 제안</div>
+            <p>
+                Insira a senha, <br />
+                Revele a trama, <br />
+                Resolva o enigma, <br />
+                daquele que lhe ama.
+            </p>
+            <div id="input-container" class="input-container">
+                <input maxlength="1" type="text" id="input-1" class="input" onkeyup="digitar(event, this)"/>
+                <input maxlength="1" type="text" id="input-2" class="input" onkeyup="digitar(event, this)"/>
+                <input maxlength="1" type="text" id="input-3" class="input" onkeyup="digitar(event, this)"/>
+                <input maxlength="1" type="text" id="input-4" class="input" onkeyup="digitar(event, this)"/>
+                <input maxlength="1" type="text" id="input-5" class="input" onkeyup="digitar(event, this)"/>
+                <input maxlength="1" type="text" id="input-6" class="input" onkeyup="digitar(event, this)"/>
+                <input maxlength="1" type="text" id="input-7" class="input" onkeyup="digitar(event, this)"/>
+                <input maxlength="1" type="text" id="input-8" class="input" onkeyup="digitar(event, this)"/>
+            </div>
+            <button id="validar">Validar</button>
+            <button id="saida" onclick="saida()">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                >
+                    <path
+                        d="M1.63333 15.5833L0 13.95L11.2 2.75001H1.16667V0.416672H15.1667V14.4167H12.8333V4.38334L1.63333 15.5833Z"
+                        fill="white"
+                    />
+                </svg>
+            </button>
+        </div>
+    </body>
+</html>

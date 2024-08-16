@@ -208,7 +208,7 @@ opacity: 1;
                 scroll-snap-stop: always;
                 scroll-margin-left: 115px;
                 transition: 500ms ease-out;
-
+                
                 > img {
                     border-radius: 40px;
                     width: 500px;

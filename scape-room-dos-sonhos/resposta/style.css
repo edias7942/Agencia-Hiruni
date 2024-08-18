@@ -47,7 +47,7 @@ body{
 
     > p {
         text-align: center;
-        color: #a10000;
+        color: black;
         padding: 16px 0;
     }
 
@@ -59,7 +59,7 @@ body{
             background: #ffb3b3;
             border: none;
             border-radius: 8px;
-            color: black;
+            color: #a10000;
             font-size: 20px;
             font-weight: 500;
             height: 32px;

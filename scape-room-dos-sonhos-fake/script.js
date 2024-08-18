@@ -46,11 +46,23 @@ let saida = function () {
 
 setTimeout(() => {
     let saidaElement = $("saida");
-    saidaElement.style.display = "none";
-    setInterval(() => {
-        saidaElement.style.display = 'flex'
+    saidaElement.style.display = "flex";
+
+    setTimeout(() => {
+        saidaElement.style.display = "none";
+    }, 400);
+
+    setTimeout(() => {
+        saidaElement.style.display = "flex";
         setTimeout(() => {
-            saidaElement.style.display = 'none'
-        }, 200);
-    }, 5000);
-}, 1);
+            saidaElement.style.display = "none";
+        }, 400);
+
+        setInterval(() => {
+            saidaElement.style.display = "flex";
+            setTimeout(() => {
+                saidaElement.style.display = "none";
+            }, 400);
+        }, 10000);
+    }, 30000);
+}, 77000);
